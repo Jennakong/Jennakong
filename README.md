@@ -10,7 +10,7 @@ This is a **clean and minimal** personal website for a **marketing professional 
 - 📱 **Mobile-Friendly Design** for all devices.
 
 ## 🚀 **Live Demo**
-🔗 [View the Website](https://jennakong.github.io/your-repository-name/) 
+🔗 [View the Website](https://jennakong.github.io/Jennakong/) 
 
 
 <!---
