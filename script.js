@@ -47,4 +47,33 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    // Check if dark mode was previously enabled
+    if (localStorage.getItem("dark-mode") === "enabled") {
+        enableDarkMode();
+    }
+
+    darkModeToggle.addEventListener("click", () => {
+        if (body.classList.contains("dark-mode")) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
+    });
+
+    function enableDarkMode() {
+        body.classList.add("dark-mode");
+        localStorage.setItem("dark-mode", "enabled");
+        darkModeToggle.innerHTML = `<i class="bi bi-sun"></i>`; // Change to sun icon in dark mode
+    }
+
+    function disableDarkMode() {
+        body.classList.remove("dark-mode");
+        localStorage.setItem("dark-mode", "disabled");
+        darkModeToggle.innerHTML = `<i class="bi bi-moon"></i>`; // Change to moon icon in light mode
+    }
 });
