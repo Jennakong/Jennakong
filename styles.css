@@ -10,28 +10,20 @@ body {
 
 /* Navigation */
 .navbar {
-    background-color: #ffffff; /* Light mode */
-    color: #333;
     padding: 15px 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.dark-mode .navbar {
-    background-color: #222; /* Dark mode */
-    color: white;
+    transition: background-color 0.3s ease;
 }
 
 /* Hero Section */
 .hero {
     height: 90vh;
-    background: url('your-image.jpg') center/cover no-repeat;
+    background: url('logo.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-bottom: 10px; /* Reduce space below hero section */
+    padding: 10px;
 }
 
 .hero h1 {
@@ -42,12 +34,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* Services Section */
-#services {
-    padding-top: 20px; /* Reduce space above services section */
-    padding-bottom: 40px;
-}
-
 /* Services Grid */
 .service-grid {
     display: flex;
@@ -56,10 +42,8 @@ body {
     flex-wrap: wrap;
 }
 
-/* Individual Service Cards */
 .service {
     background: white;
-    color: #333;
     padding: 20px;
     border-radius: 5px;
     width: 100%;
@@ -74,13 +58,11 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Remove Underline from Service Links */
-#services a {
+.service a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Service Images */
 .service img {
     max-width: 60%;
     border-radius: 5px;
@@ -119,6 +101,10 @@ body {
     color: white;
 }
 
+.dark-mode .navbar {
+    background-color: #222;
+}
+
 .dark-mode .service {
     background: #1e1e1e;
     color: white;
@@ -129,31 +115,9 @@ body {
     color: white;
 }
 
-/* Buttons */
-.btn-primary {
-    background-color: #007bff;
-    color: white;
-    border: none;
-}
-
-.dark-mode .btn-primary {
-    background-color: #0056b3;
-    color: white;
-}
-
-/* Dark Mode Button */
 .dark-mode .btn-outline-dark {
     background: white;
     color: black;
-}
-
-/* Fix Link Colors */
-a {
-    color: #007bff;
-}
-
-.dark-mode a {
-    color: #66aaff;
 }
 
 /* Smooth Scroll */
