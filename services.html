@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Jennifer Akong</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdf9;
+      margin: 0;
+      padding: 0;
+    }
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background-color: #f5ebdd;
+    }
+    .logo img {
+      width: 100px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #1c1c1c;
+      font-weight: 500;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background-color: #f0e0cb;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #1c1c1c;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+    .services-container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .service-box {
+      background-color: #f5ebdd;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.06);
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    .service-box img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .service-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+    .service-box p {
+      font-size: 1rem;
+      color: #333;
+    }
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #e8d3b9;
+    }
+    .cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .cta a {
+      background-color: #C6A664;
+      color: #fff;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1c1c1c;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo"><img src="logo.png" alt="Jennifer Akong Logo"></a>
+      <ul>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>How I Can Help</h1>
+    <p>Strategy, creativity, and clarity—for brands that want to grow with purpose.</p>
+  </section>
+
+  <section class="services-container">
+    <a href="marketing-strategy.html" class="service-box">
+      <img src="images/marketing-strategy-banner.png" alt="Marketing Strategy">
+      <h3>Marketing Strategy</h3>
+      <p>Developing tailored marketing plans that align with your brand’s goals.</p>
+    </a>
+
+    <a href="brand-development.html" class="service-box">
+      <img src="images/brand-development.png" alt="Brand Development">
+      <h3>Brand Development</h3>
+      <p>Creating brand identities that stand out in the digital landscape.</p>
+    </a>
+
+    <a href="content-marketing.html" class="service-box">
+      <img src="images/content-marketing.png" alt="Content Marketing">
+      <h3>Content Marketing</h3>
+      <p>Crafting compelling content that engages and converts your audience.</p>
+    </a>
+
+    <a href="social-media-management.html" class="service-box">
+      <img src="images/social-media-management.png" alt="Social Media Management">
+      <h3>Social Media Management</h3>
+      <p>Helping brands dominate the digital space with high-impact strategies.</p>
+    </a>
+  </section>
+
+  <section class="cta">
+    <h2>Let’s bring your brand to life.</h2>
+    <a href="contact.html">Book a Discovery Call</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
