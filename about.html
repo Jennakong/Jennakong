@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Jennifer Akong</title>
-  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -79,6 +79,18 @@
       margin-bottom: 15px;
       color: #333;
     }
+    .btn {
+      background-color: #C6A664;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background-color: #a88a48;
+    }
     .about-quote {
       text-align: center;
       padding: 60px 20px;
@@ -87,6 +99,11 @@
       font-size: 1.5rem;
       font-style: italic;
       color: #1c1c1c;
+    }
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
     }
     footer {
       text-align: center;
@@ -125,6 +142,19 @@
 
       <h2>What I Believe</h2>
       <p>I believe in building brands that feel as good as they look. I believe in strategy with soul, content that connects, and showing up for yourself and your audience with clarity. Growth doesn’t have to be confusing—and creativity doesn’t have to be chaotic. I believe you can work smart, build beautifully, and leave a mark with your message.</p>
+
+      <h2>My Book</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin-bottom: 20px;">
+        <div style="flex: 1 1 250px; text-align: center;">
+          <img src="images/the-marketing-roadmap-cover.jpg" alt="The Marketing Roadmap Book Cover" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </div>
+        <div style="flex: 2 1 500px;">
+          <p><strong><em>The Marketing Roadmap: From Intern to an Expert</em></strong> shares the exact lessons, strategies, and stories that helped me grow from a marketing intern to a confident, results-driven professional.</p>
+          <p>It’s more than a guide—it’s a toolkit for ambitious creatives, professionals, and entrepreneurs ready to build their brand, grow their skills, and make their mark in the digital space.</p>
+          <p>Whether you're just starting out or levelling up, this book is your step-by-step manual to thriving in modern marketing—with real insight and zero fluff.</p>
+          <a href="https://your-book-link.com" class="btn" target="_blank">Get the Book</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -133,6 +163,11 @@
   </section>
 
   <footer>
+    <div class="social-icons mb-3">
+      <a href="https://instagram.com/jenn.akong" target="_blank"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+      <a href="https://linkedin.com/in/jenniferakong1" target="_blank"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
+      <a href="https://youtube.com/@jenniferakong1" target="_blank"><i class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
+    </div>
     <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
   </footer>
 
