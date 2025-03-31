@@ -1,57 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Strategy | Jennifer Akong</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Strategy | Jennifer Akong</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdf9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f5ebdd;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #1c1c1c;
+      text-decoration: none;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #1c1c1c;
+      font-weight: 500;
+    }
+    .page-header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background-color: #f0e0cb;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #1c1c1c;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: #333;
+      max-width: 700px;
+      margin: 10px auto 0;
+    }
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+    .content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      margin-top: 30px;
+    }
+    .content p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1c1c1c;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navigation -->
+  <header>
+    <a href="index.html" class="logo">Jennifer Akong</a>
     <nav>
-        <div class="logo">
-            <img src="logo.png" alt="Jennifer Akong Logo">
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Service Hero Section -->
- <header class="service-hero" style="background: url('marketing-strategy-banner.png') no-repeat center center/cover;">
-        <h1>Marketing Strategy</h1>
-    </header>
+  <section class="page-header">
+    <h1>Marketing Strategy</h1>
+    <p>Strategic planning tailored to your brand vision.</p>
+  </section>
 
-    <!-- Service Details -->
-    <section class="service-details">
-        <h2>What I Offer</h2>
-        <p>I provide comprehensive marketing strategy solutions tailored to your business needs.</p>
+  <section class="content">
+    <img src="images/marketing-strategy-banner.png" alt="Marketing Strategy Banner">
 
-        <h3>Past Work</h3>
-        <div class="portfolio-gallery">
-            <img src="project1.jpg" alt="Marketing Project 1">
-            <img src="project2.jpg" alt="Marketing Project 2">
-            <img src="project3.jpg" alt="Marketing Project 3">
-        </div>
+    <h2>What This Includes</h2>
+    <p>We dive deep into your goals, audience, and market to develop an actionable, customised marketing plan that delivers results. From competitive research to campaign mapping, this service is designed to help you move with confidence and clarity.</p>
 
-        <h3>Why Choose Me?</h3>
-        <p>With years of experience in the field, I create data-driven marketing plans that drive real results.</p>
-    </section>
+    <h2>Why It Matters</h2>
+    <p>This service is designed to help you grow with clarity and impact. Whether you're building from scratch or refining your brand, I’ll guide you through strategies that work and connect deeply with your audience.</p>
 
-    <!-- Back to Services Button -->
-    <div class="back-button">
-        <a href="index.html#services">← Back to Services</a>
+    <h2>Let’s Work Together</h2>
+    <p>Ready to get started? <a href="contact.html">Reach out here</a> to book a discovery call and we’ll map out your next steps.</p>
+  </section>
+
+<footer>
+    <div class="social-icons mb-3">
+      <a href="https://instagram.com/jenn.akong" target="_blank"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+      <a href="https://linkedin.com/in/jenniferakong1" target="_blank"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
+      <a href="https://youtube.com/@jenniferakong1" target="_blank"><i class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
     </div>
+    <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Jennifer Akong. All Rights Reserved.</p>
-    </footer>
 
 </body>
 </html>
