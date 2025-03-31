@@ -1,31 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Jennifer Akong</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdf9;
+      margin: 0;
+      padding: 0;
+    }
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background-color: #f5ebdd;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #1c1c1c;
+      text-decoration: none;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #1c1c1c;
+      font-weight: 500;
+    }
+    .about-container {
+      max-width: 1100px;
+      margin: 60px auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0 20px;
+      gap: 40px;
+    }
+    .about-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .about-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .about-text {
+      flex: 1 1 500px;
+    }
+    .about-text h1,
+    .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      color: #1c1c1c;
+    }
+    .about-text h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+    .about-text h2 {
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .about-quote {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #f0e0cb;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: #1c1c1c;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1c1c1c;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Jennifer Akong</a>
-            <ul>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="about-content">
-        <h1>About Me</h1>
-        <p>Professional Digital Marketer, Entrepreneur, and Brand Strategist helping businesses succeed.</p>
-        <img src="https://jennakong.github.io/jennakong/images/Jennifer-Akong.png" alt="Profile" class="auto-fit">
-    </section>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Jennifer Akong</a>
+      <ul>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <footer>
-        <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
-    </footer>
+  <section class="about-container">
+    <div class="about-image">
+      <img src="https://jennakong.github.io/jennakong/images/Jennifer-Akong.png" alt="Jennifer Akong">
+    </div>
+    <div class="about-text">
+      <h1>Meet Jennifer</h1>
+      <p>I’m Jennifer Akong — a fashion entrepreneur, digital marketing professional, creative consultant, and author. My work bridges strategy and storytelling across industries, blending visuals with results-driven content that moves people.</p>
+      <p>From launching fashion campaigns under MANIA by Jennifer, to driving growth through branded content and digital strategy, I help purpose-led brands build with clarity and confidence.</p>
+      <p>I believe in working smart, creating with meaning, and showing up with both heart and intention. Whether it's a brand story, a marketing plan, or a campaign vision—I bring the energy to make it unforgettable.</p>
+
+      <h2>My Story</h2>
+      <p>My journey started with a love for creativity—from designing garments to crafting marketing campaigns. Over the years, I’ve worked across fashion, education, branding, and digital strategy—blending storytelling with smart execution. I’ve built brands from the ground up, styled royalty, created campaigns rooted in culture, and mentored others on how to build with meaning. Everything I do is fuelled by purpose and passion.</p>
+
+      <h2>What I Believe</h2>
+      <p>I believe in building brands that feel as good as they look. I believe in strategy with soul, content that connects, and showing up for yourself and your audience with clarity. Growth doesn’t have to be confusing—and creativity doesn’t have to be chaotic. I believe you can work smart, build beautifully, and leave a mark with your message.</p>
+    </div>
+  </section>
+
+  <section class="about-quote">
+    “Style your strategy. Market your vision. Build with purpose.”
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
