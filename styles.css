@@ -1,145 +1,82 @@
-/* General */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset some default styles */
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #1C1C1C;
+    background-color: #FFFFFF;
+    margin-top: 70px;
 }
 
-/* Navigation */
+/* Navbar */
 .navbar {
-    padding: 15px 20px;
-    transition: background-color 0.3s ease;
+    background-color: rgba(245, 235, 221, 0.95);
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar-nav .nav-link {
+    color: #1C1C1C;
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #C6A664;
 }
 
 /* Hero Section */
 .hero {
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    background-color: #F5EBDD;
+    color: #1C1C1C;
+    padding: 100px 0;
     text-align: center;
-    padding: 10px;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-.hero p {
+.hero p.lead {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
-/* Services Grid */
-.service-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.hero .btn-primary {
+    background-color: #C6A664;
+    border: none;
+    color: #fff;
 }
 
-.service {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.hero .btn-primary:hover {
+    background-color: #a88a48;
 }
 
-.service:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+/* Services Section */
+#services h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-top: 15px;
 }
 
-.service a {
-    text-decoration: none;
-    color: inherit;
+#services p {
+    font-size: 0.95rem;
+    color: #444;
 }
 
-.service img {
-    max-width: 60%;
-    border-radius: 5px;
-    margin-bottom: 10px;
+.img-fluid {
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-/* Portfolio Gallery */
-.portfolio-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.portfolio-gallery img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 5px;
-}
-
-/* Back Button */
-.back-button {
-    text-align: center;
-    margin: 20px;
-}
-
-.back-button a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
-
-/* Dark Mode */
-.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-.dark-mode .navbar {
-    background-color: #222;
-}
-
-.dark-mode .service {
-    background: #1e1e1e;
-    color: white;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-.dark-mode .service a {
-    color: white;
-}
-
-.dark-mode .btn-outline-dark {
-    background: white;
-    color: black;
-}
-
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .service-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portfolio-gallery img {
-        width: 90%;
-    }
+/* Footer */
+footer {
+    background-color: #1C1C1C;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
 }
