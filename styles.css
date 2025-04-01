@@ -110,6 +110,8 @@ footer {
 /* Optional: Responsive tweak for smaller screens */
   .logo-img {
     max-width: 160px;
+@media (max-width: 576px) {
+    max-height: 45px;
   }
 }
 
