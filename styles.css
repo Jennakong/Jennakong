@@ -27,6 +27,30 @@ body {
 
 /* Hero Section */
 .hero {
+  background: url('images/hero-bg.png') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 140px 0;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(28, 28, 28, 0.4); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero {
     background-color: #F5EBDD;
     color: #1C1C1C;
     padding: 100px 0;
