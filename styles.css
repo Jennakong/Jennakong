@@ -80,3 +80,8 @@ footer {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
 }
+.logo img {
+    width: 120px;       /* or adjust to 100px–140px based on what looks best */
+    height: auto;
+    display: block;
+}
