@@ -1,35 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Talk to Me | Jennifer Akong</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdf9;
+      color: #1c1c1c;
+    }
+    header {
+      background-color: #f5ebdd;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo img {
+      width: 100px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #1c1c1c;
+      font-weight: 500;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #f0e0cb;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      gap: 40px;
+    }
+    .contact-left, .contact-right {
+      flex: 1 1 400px;
+    }
+    .contact-left h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .contact-left p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .contact-left .info {
+      margin-top: 20px;
+    }
+    .contact-left .info p {
+      margin: 6px 0;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin-right: 12px;
+    }
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+    .contact-right form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background-color: #f5ebdd;
+      padding: 30px;
+      border-radius: 12px;
+    }
+    .contact-right input,
+    .contact-right textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    .contact-right button {
+      background-color: #C6A664;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      width: fit-content;
+    }
+    .contact-right button:hover {
+      background-color: #a78c47;
+    }
+    footer {
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    footer .social-icons {
+      margin: 15px 0;
+    }
+    footer .social-icons a {
+      margin: 0 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Jennifer Akong</a>
-            <ul>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="contact-form">
-        <h1>Contact Me</h1>
-        <form>
-            <input type="text" placeholder="Jennifer Akong" required>
-            <input type="email" placeholder="akongjennifer@gmail.com" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+<header>
+  <a href="index.html" class="logo"><img src="logo.png" alt="Jennifer Akong Logo"></a>
+  <nav>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <footer>
-        <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
-    </footer>
+<section class="hero">
+  <h1>Talk to Me.</h1>
+  <p>Got a project, an idea, or just want to say hey? Slide into my inbox — I’d love to hear from you.</p>
+</section>
+
+<section class="contact-section">
+  <div class="contact-left">
+    <h2>Let’s Connect</h2>
+    <p>I’m always excited to hear from fellow creatives, business owners, or curious minds. Whether it’s a collaboration, a question, or just some encouragement — don’t hesitate to reach out.</p>
+
+    <div class="info">
+      <p>Email: <a href="mailto:hello@jennakong.com">hello@jennakong.com</a></p>
+      <p>Location: Manchester, UK</p>
+      <div class="social-icons">
+        <a href="https://instagram.com/yourhandle" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+        <a href="mailto:hello@jennakong.com"><img src="images/email-icon.png" alt="Email"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>Let’s stay connected</p>
+  <div class="social-icons">
+    <a href="https://instagram.com/yourhandle" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
+    <a href="https://linkedin.com/in/yourhandle" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+    <a href="mailto:hello@jennakong.com"><img src="images/email-icon.png" alt="Email"></a>
+  </div>
+  <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
