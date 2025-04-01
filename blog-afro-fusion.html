@@ -154,6 +154,44 @@
       width: 24px;
       height: 24px;
     }
+  .comments {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #f5ebdd;
+  border-radius: 12px;
+}
+.comments h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+.comments form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.comments input,
+.comments textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.comments button {
+  align-self: flex-start;
+  background-color: #C6A664;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.comments button:hover {
+  background-color: #a78c47;
+} 
   </style>
 </head>
 <body>
@@ -212,8 +250,15 @@
 <div class="back-link">
   <a href="blog.html">← Back to Blog</a>
 </div>
-
-<footer>
+<section class="comments">
+  <h3>Leave a Comment</h3>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Comment" rows="5" required></textarea>
+    <button type="submit">Post Comment</button>
+  </form>
+</section><footer>
   <p>Connect with me:</p>
   <div class="social-icons">
     <a href="https://instagram.com/yourhandle" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
