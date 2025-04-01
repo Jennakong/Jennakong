@@ -27,11 +27,13 @@ body {
 
 /* Hero Section */
 .hero {
-  background: url('images/hero-bg.png') no-repeat center center;
+  background: url('images/hero-bg.jpg') no-repeat center center;
   background-size: cover;
   color: #fff;
   padding: 140px 0;
   position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  min-height: 80vh;
 }
 
 .hero::before {
@@ -39,9 +41,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
-  background-color: rgba(28, 28, 28, 0.4); /* Dark overlay */
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(28, 28, 28, 0.5), rgba(28, 28, 28, 0.7));
   z-index: 1;
 }
 
@@ -50,34 +52,20 @@ body {
   z-index: 2;
 }
 
-.hero {
-    background-color: #F5EBDD;
-    color: #1C1C1C;
-    padding: 100px 0;
-    text-align: center;
-}
-
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.hero p.lead {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+.hero p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 15px;
+  line-height: 1.7;
 }
 
-.hero .btn-primary {
-    background-color: #C6A664;
-    border: none;
-    color: #fff;
-}
-
-.hero .btn-primary:hover {
-    background-color: #a88a48;
 }
 
 /* Services Section */
