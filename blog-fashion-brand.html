@@ -254,13 +254,15 @@
 </div>
 <section class="comments mt-5">
   <h3>Leave a Comment</h3>
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSczA5ei6cFjMQmbljQMsTRpMYDZ-l5Zq0vj_gk_hQl3T4Vb9A/formResponse" method="POST" target="_blank" onsubmit="this.reset(); alert('Thanks for your comment!');">
+  <form id="comment-form">
     <input type="text" name="entry.1914042022" placeholder="Your Name" required>
     <input type="email" name="entry.1782615829" placeholder="Your Email" required>
     <textarea name="entry.881876326" placeholder="Your Comment" rows="5" required></textarea>
     <button type="submit">Post Comment</button>
+    <p id="comment-msg" style="display:none; margin-top: 15px;"></p>
   </form>
 </section>
+
 
   <footer>
   <p>Connect with me:</p>
@@ -271,6 +273,32 @@
   </div>
   <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
 </footer>
+<script>
+  const form = document.getElementById("comment-form");
+  const message = document.getElementById("comment-msg");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLSczA5ei6cFjMQmbljQMsTRpMYDZ-l5Zq0vj_gk_hQl3T4Vb9A/formResponse", {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
+    }).then(() => {
+      form.reset();
+      message.innerText = "🎉 Thanks for your comment!";
+      message.style.display = "block";
+      message.style.color = "#1c1c1c";
+      message.style.fontWeight = "500";
+    }).catch(() => {
+      message.innerText = "Oops! Something went wrong. Try again later.";
+      message.style.display = "block";
+      message.style.color = "red";
+    });
+  });
+</script>
 
 </body>
 </html>
