@@ -182,19 +182,33 @@ Jesus lives in my house. And heaven is just a mile away from here</p>
   </div>
 
 </section>
-<section class="comments mt-5">
-  <h3>Leave a Comment</h3>
-  <form id="comment-form">
-    <h4 class="mt-5" style="font-family: 'Playfair Display', serif;">Recent Comments</h4>
-<div id="comment-list" class="comment-list"></div>
+<section class="comments mt-5" style="padding: 40px 20px; background-color: #f9f5ee;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 20px;">Leave a Comment</h3>
+    
+    <form id="comment-form" style="display: flex; flex-direction: column; gap: 15px;">
+      <input type="text" name="entry.1914042022" placeholder="Your Name" required 
+             style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
+      
+      <input type="email" name="entry.1782615829" placeholder="Your Email" required 
+             style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
+      
+      <textarea name="entry.881876326" placeholder="Your Comment" rows="5" required 
+                style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+      
+      <button type="submit" 
+              style="background-color: #C6A664; color: white; border: none; padding: 12px 20px; font-size: 1rem; border-radius: 8px; cursor: pointer;">
+        Post Comment
+      </button>
 
-    <input type="text" name="entry.1914042022" placeholder="Your Name" required>
-    <input type="email" name="entry.1782615829" placeholder="Your Email" required>
-    <textarea name="entry.881876326" placeholder="Your Comment" rows="5" required></textarea>
-    <button type="submit">Post Comment</button>
-    <p id="comment-msg" style="display:none; margin-top: 15px;"></p>
-  </form>
+      <p id="comment-msg" style="display: none; margin-top: 10px; text-align: center;"></p>
+    </form>
+
+    <!-- Display submitted comments -->
+    <div id="comment-list" class="comment-list" style="margin-top: 40px;"></div>
+  </div>
 </section>
+
 
 <footer class="text-center py-3 bg-dark text-white">
     <div class="social-icons mb-3">
@@ -213,13 +227,13 @@ Jesus lives in my house. And heaven is just a mile away from here</p>
     </div>
     <p>© 2025 Jennifer Akong. All Rights Reserved.</p>
 </footer>
+
 <script>
   const form = document.getElementById("comment-form");
   const message = document.getElementById("comment-msg");
 
   form.addEventListener("submit", function(e) {
     e.preventDefault();
-
     const formData = new FormData(form);
 
     fetch("https://docs.google.com/forms/d/e/1FAIpQLSczA5ei6cFjMQmbljQMsTRpMYDZ-l5Zq0vj_gk_hQl3T4Vb9A/formResponse", {
@@ -238,8 +252,8 @@ Jesus lives in my house. And heaven is just a mile away from here</p>
       message.style.color = "red";
     });
   });
-</script>
-<script>
+
+  // Display comments from your Google Apps Script JSON endpoint
   async function loadComments() {
     const response = await fetch('https://script.google.com/macros/s/AKfycbzaKVBlLqdwVYLHyz1ZHujQ-xKnXwT7kZ8fHO7-pCOrtyj5-H5X8wJc9TVWV1xVwlT9TQ/exec');
     const data = await response.json();
@@ -253,15 +267,20 @@ Jesus lives in my house. And heaven is just a mile away from here</p>
 
       const commentDiv = document.createElement('div');
       commentDiv.classList.add('comment-item');
+      commentDiv.style.marginBottom = "20px";
+      commentDiv.style.padding = "15px";
+      commentDiv.style.border = "1px solid #ddd";
+      commentDiv.style.borderRadius = "8px";
+      commentDiv.style.backgroundColor = "#fff";
+
       commentDiv.innerHTML = `
-        <h5>${name}</h5>
-        <p>${comment}</p>
+        <h5 style="margin: 0 0 8px;">${name}</h5>
+        <p style="margin: 0;">${comment}</p>
       `;
       commentList.appendChild(commentDiv);
     });
   }
 
-  // Call on page load
   document.addEventListener('DOMContentLoaded', loadComments);
 </script>
 
