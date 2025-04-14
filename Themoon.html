@@ -226,25 +226,26 @@
     const commentList = document.getElementById('comment-list');
     commentList.innerHTML = '';
 
-    data.forEach(entry => {
-      const name = entry.name || 'Anonymous';
-      const comment = entry.comment;
+  data.forEach(entry => {
+  console.log(entry); // 👈 See what data is actually coming through
+  
+  const name = entry.name || 'Anonymous';
+  const comment = entry.comment;
 
-      const commentDiv = document.createElement('div');
-      commentDiv.classList.add('comment-item');
-      commentDiv.style.marginBottom = "20px";
-      commentDiv.style.padding = "15px";
-      commentDiv.style.border = "1px solid #ddd";
-      commentDiv.style.borderRadius = "8px";
-      commentDiv.style.backgroundColor = "#fff";
+  const commentDiv = document.createElement('div');
+  commentDiv.classList.add('comment-item');
+  commentDiv.style.marginBottom = "20px";
+  commentDiv.style.padding = "15px";
+  commentDiv.style.border = "1px solid #ddd";
+  commentDiv.style.borderRadius = "8px";
+  commentDiv.style.backgroundColor = "#fff";
 
-      commentDiv.innerHTML = `
-        <h5 style="margin: 0 0 8px;">${name}</h5>
-        <p style="margin: 0;">${comment}</p>
-      `;
-      commentList.appendChild(commentDiv);
-    });
-  }
+  commentDiv.innerHTML = `
+    <h5 style="margin: 0 0 8px;">${name}</h5>
+    <p style="margin: 0;">${comment}</p>
+  `;
+  commentList.appendChild(commentDiv);
+});
 
   document.addEventListener('DOMContentLoaded', loadComments);
 </script>
