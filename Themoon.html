@@ -148,13 +148,13 @@
     <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 20px;">Leave a Comment</h3>
     
     <form id="comment-form" style="display: flex; flex-direction: column; gap: 15px;">
-      <input type="text" name="entry.1914042022" placeholder="Your Name" required 
+      <input type="text" name="entry.1012665514" placeholder="Your Name" required 
              style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
       
-      <input type="email" name="entry.1782615829" placeholder="Your Email" required 
+      <input type="email" name="entry.1141227850" placeholder="Your Email" required 
              style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
       
-      <textarea name="entry.881876326" placeholder="Your Comment" rows="5" required 
+      <textarea name="entry.752414235" placeholder="Your Comment" rows="5" required 
                 style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
       
       <button type="submit" 
@@ -190,6 +190,7 @@
     <p>© 2025 Jennifer Akong. All Rights Reserved.</p>
 </footer>
 
+<!-- Comment form functionality -->
 <script>
   const form = document.getElementById("comment-form");
   const message = document.getElementById("comment-msg");
@@ -208,17 +209,20 @@
       message.style.display = "block";
       message.style.color = "#1c1c1c";
       message.style.fontWeight = "500";
-      loadComments(); // Refresh comments immediately
     }).catch(() => {
       message.innerText = "Oops! Something went wrong. Try again later.";
       message.style.display = "block";
       message.style.color = "red";
     });
   });
+</script>
 
+<!-- Optional: Load submitted comments (if you have your JSON endpoint ready) -->
+<script>
   async function loadComments() {
     const response = await fetch('https://script.google.com/macros/s/AKfycbzaKVBlLqdwVYLHyz1ZHujQ-xKnXwT7kZ8fHO7-pCOrtyj5-H5X8wJc9TVWV1xVwlT9TQ/exec');
     const data = await response.json();
+
     const commentList = document.getElementById('comment-list');
     commentList.innerHTML = '';
 
@@ -234,7 +238,10 @@
       commentDiv.style.borderRadius = "8px";
       commentDiv.style.backgroundColor = "#fff";
 
-      commentDiv.innerHTML = `<h5 style="margin: 0 0 8px;">${name}</h5><p style="margin: 0;">${comment}</p>`;
+      commentDiv.innerHTML = `
+        <h5 style="margin: 0 0 8px;">${name}</h5>
+        <p style="margin: 0;">${comment}</p>
+      `;
       commentList.appendChild(commentDiv);
     });
   }
