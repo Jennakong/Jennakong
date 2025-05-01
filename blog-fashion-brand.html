@@ -5,107 +5,194 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Designing With Heritage | Jennifer Akong</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #fffdf9;
+      color: #1c1c1c;
       margin: 0;
       padding: 0;
-      color: #1c1c1c;
     }
+
+    header {
+      background-color: #f5ebdd;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 100px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1c1c1c;
+      font-weight: 500;
+    }
+
     .hero {
       text-align: center;
-      padding: 60px 20px 20px;
+      padding: 60px 20px;
+      background-color: #f0e0cb;
     }
-    .hero img {
-      width: 100%;
-      border-radius: 0;
-      margin-bottom: 20px;
-    }
+
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
     }
+
     .hero p {
       font-size: 1.1rem;
-      font-style: italic;
-      color: #444;
       max-width: 700px;
-      margin: 10px auto 40px;
+      margin: 10px auto;
     }
+
     .content {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px 40px;
+      margin: 50px auto;
+      padding: 0 20px;
     }
+
     .content p {
       line-height: 1.8;
       font-size: 1rem;
       margin-bottom: 20px;
     }
-    .grid-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 15px;
-      margin: 30px 0;
+
+    .content h3 {
+      font-size: 1.4rem;
+      font-family: 'Playfair Display', serif;
+      margin-top: 40px;
     }
-    .grid-gallery img {
+
+    .swiper {
+      margin: 20px 0 40px;
+      padding-bottom: 10px;
+    }
+
+    .swiper-slide {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 240px;
+      height: 240px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .swiper-slide img {
       width: 100%;
-      border-radius: 8px;
+      height: 100%;
       object-fit: cover;
-      height: 200px;
     }
-    .wide-image {
-      width: 100%;
-      border-radius: 10px;
-      margin: 30px 0;
-    }
-    .quote {
-      font-style: italic;
+
+    .media-title {
       font-size: 1.2rem;
+      font-weight: 500;
       text-align: center;
+      margin: 10px 0 20px;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: #fff;
       padding: 30px 20px;
-      background-color: #f5ebdd;
-      border-radius: 10px;
-      margin: 40px 0;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
+<header>
+  <a href="index.html" class="logo"><img src="logo.png" alt="Jennifer Akong Logo" /></a>
+  <nav>
+    <ul>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 <section class="hero">
-  <img src="images/tribe-x-trendz-cover.jpg" alt="Tribe x Trendz Lookbook Cover">
   <h1>Designing With Heritage: Why Afro-Fusion Fashion Is More Than a Trend</h1>
-  <p>“Fashion is not just fabric — it’s memory, identity, resistance, and how we carry legacy forward.”</p>
+  <p><em>“Fashion is not just fabric — it’s memory, identity, resistance, and how we carry legacy forward.”</em></p>
 </section>
 
 <section class="content">
-  <p>On the surface, fashion is fabric.<br>
-  But for many of us — especially those who carry generations in our stride — it’s much more than what we wear...</p>
+  <p><strong>By Jennifer Akong – Founder & Creative Director, MANIA by Jennifer</strong></p>
 
-  <p>When I launched <strong>MANIA by Jennifer</strong>, I knew I wasn’t just creating clothes...</p>
+  <p>On the surface, fashion is fabric. But for many of us — especially those who carry generations in our stride — it’s much more than what we wear. Fashion becomes memory, identity, resistance, expression, and a way of walking forward while holding onto where we come from.</p>
 
-  <div class="grid-gallery">
-    <img src="images/look1.jpg" alt="Model in orange look">
-    <img src="images/look2.jpg" alt="Close-up of detailed sleeve">
-    <img src="images/look3.jpg" alt="Styling setup">
-    <img src="images/look4.jpg" alt="Fabric samples">
+  <!-- MEDIA LOOKBOOK SWIPER -->
+  <h3 class="media-title">Tribe x Trendz Lookbook</h3>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/look1.jpg" alt="Afro-Fusion Look 1"></div>
+      <div class="swiper-slide"><img src="images/look2.jpg" alt="Afro-Fusion Look 2"></div>
+      <div class="swiper-slide"><img src="images/look3.jpg" alt="Afro-Fusion Look 3"></div>
+      <div class="swiper-slide"><img src="images/look4.jpg" alt="Afro-Fusion Look 4"></div>
+      <div class="swiper-slide"><img src="images/look5.jpg" alt="Afro-Fusion Look 5"></div>
+    </div>
   </div>
 
-  <p>MANIA was founded in 2015, but in many ways, it’s been living inside me...</p>
+  <!-- MAIN BLOG CONTENT -->
+  <p>When I launched <strong>MANIA by Jennifer</strong>, I knew I wasn’t just creating clothes. I was building a visual language for women like me — women who feel the beat of tradition in their chest but move boldly in modern spaces. Women who are multifaceted, cultured, creative, and never quite content with being one thing. The brand was born from that tension — and harmony — between roots and rhythm, between tribe and trend.</p>
 
-  <img class="wide-image" src="images/lookbook-banner.jpg" alt="Lookbook Banner Image">
+  <h3>A Way of Life, Not Just a Label</h3>
+  <p>MANIA was founded in 2015, but in many ways, it’s been living inside me my whole life. The name, inspired by the French word <em>“manière”</em> (meaning “a way”), reflects my belief that fashion is more than trends or aesthetics — it’s a way of life. Our garments are designed not just to be worn, but to be lived in. Styled. Moved in. Remembered.</p>
 
-  <h3>The Rise of Afro-Fusion Fashion</h3>
-  <p>There’s been a global shift in recent years. African prints and silhouettes now walk international runways...</p>
+  <p>Every collection is a journal entry. Every piece is a love letter to culture, crafted in colour.</p>
 
-  <div class="quote">We don’t produce in bulk. We produce with purpose.</div>
+  <h3>The Rise of Afro-Fusion Fashion — and Why It Matters</h3>
+  <p>African prints and silhouettes now walk international runways and glossy campaigns. But what excites me most isn’t the external gaze — it’s the reclaiming of cultural craftsmanship from within. It’s what happens when we honour our fabrics, remix them with modernity, and tell our stories our way.</p>
 
-  <h3>In Closing</h3>
-  <p>The <strong>Tribe x Trendz</strong> collection is more than a lookbook — it’s a statement...</p>
+  <p>It means using traditional fabrics like <strong>Aṣọ-Oke</strong> and <strong>Ankara</strong> in ways that feel powerful, playful, and personal. Silhouettes that tell stories. Designs reimagined through the lens of West African femininity.</p>
 
-  <img class="wide-image" src="images/legacy-shot.jpg" alt="Model looking into mirror">
+  <h3>Tribe x Trendz: Culture in Motion</h3>
+  <p>This collection is a celebration of balance — the old and the new, softness and strength. From the <strong>Ayoka Set</strong> (joy) to the <strong>Aṣọ Cargo Pants</strong>, each piece is stitched with legacy. It’s not about runways. It’s about walking your own.</p>
+
+  <h3>Why This Work Is Personal</h3>
+  <p>I grew up watching women use clothing as memory, celebration, armour. I design with that same spirit. For the woman who isn’t looking to be styled — she’s looking to be seen.</p>
+
+  <h3>Beyond the Hype</h3>
+  <p>African creatives aren’t just arriving — we’ve been here. What’s changing is that the world is listening. But sustaining this means building from within: nurturing our craft, telling our truth, honouring our makers.</p>
+
+  <h3>In Closing: Wear Your Story</h3>
+  <p>The <strong>Tribe x Trendz</strong> collection isn’t just a lookbook. It’s a reminder that fashion can carry memory. That colour can speak truth. That silhouette can carry soul.</p>
+
+  <p>So if you’ve ever wanted your outfit to speak before you do — you already understand what it means to wear a story.</p>
+
+  <p><strong>Jennifer Akong</strong><br>
+  Founder & Creative Director, MANIA by Jennifer<br>
+  <a href="https://www.maniabyjennifer.co.uk" target="_blank">maniabyjennifer.co.uk</a><br>
+  @maniabyjennifer</p>
 </section>
 
+<footer>
+  <p>© 2025 Jennifer Akong. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1.2,
+    spaceBetween: 15,
+    freeMode: true,
+    breakpoints: {
+      576: { slidesPerView: 2.2 },
+      768: { slidesPerView: 3 }
+    }
+  });
+</script>
 </body>
 </html>
