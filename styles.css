@@ -8,6 +8,19 @@ body {
   background-color: #FFFFFF;
   margin-top: 70px;
 }
+.tags {
+  margin-top: 15px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e8d3b9;
+  color: #1c1c1c;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
 
 /* Navbar */
 .navbar {
