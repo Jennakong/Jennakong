@@ -4,169 +4,109 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Talk to Me | Jennifer Akong</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fffdf9;
-      color: #1c1c1c;
-    }
-    header {
-      background-color: #f5ebdd;
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo img {
-      width: 100px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #1c1c1c;
-      font-weight: 500;
-    }
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: #f0e0cb;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-    }
-    .contact-section {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
-      gap: 40px;
-    }
-    .contact-left, .contact-right {
-      flex: 1 1 400px;
-    }
-    .contact-left h2 {
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
-    .contact-left p {
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-    .contact-left .info {
-      margin-top: 20px;
-    }
-    .contact-left .info p {
-      margin: 6px 0;
-    }
-    .social-icons a {
-      display: inline-block;
-      margin-right: 12px;
-    }
-    .social-icons img {
-      width: 24px;
-      height: 24px;
-    }
-    .contact-right form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      background-color: #f5ebdd;
-      padding: 30px;
-      border-radius: 12px;
-    }
-    .contact-right input,
-    .contact-right textarea {
-      padding: 12px;
-      font-size: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background-color: #fff;
-    }
-    .contact-right button {
-      background-color: #C6A664;
-      color: #fff;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 8px;
-      font-weight: 500;
-      cursor: pointer;
-      width: fit-content;
-    }
-    .contact-right button:hover {
-      background-color: #a78c47;
-    }
-    footer {
-      background-color: #1c1c1c;
-      color: #fff;
-      padding: 30px 20px;
-      text-align: center;
-      margin-top: 60px;
-    }
-    footer .social-icons {
-      margin: 15px 0;
-    }
-    footer .social-icons a {
-      margin: 0 10px;
-    }
-  </style>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWZ73DJBE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LSWZ73DJBE');
+  </script>
 </head>
 <body>
 
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">Meet Jenn</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="blog.html">Blog</a></li>
-    </ul>
-  </nav>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(245, 235, 221, 0.95);">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="left-spacer d-none d-lg-block"></div>
+    <a class="navbar-brand mx-auto" href="index.html">
+      <img src="logo.png" alt="Jennifer Akong Logo" class="logo-img">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Spacer -->
+<div style="height: 0px;"></div>
+
+<!-- Hero -->
+<header class="hero d-flex align-items-center text-center" style="background-color: #f5ebdd; padding: 100px 20px 60px;">
+  <div class="container">
+    <h1 class="display-5" style="font-family: 'Playfair Display', serif;">Talk to Me.</h1>
+    <p class="lead">Got a project, an idea, or just want to say hey? Slide into my inbox — I’d love to hear from you.</p>
+  </div>
 </header>
 
-<section class="hero">
-  <h1>Talk to Me.</h1>
-  <p>Got a project, an idea, or just want to say hey? Slide into my inbox — I’d love to hear from you.</p>
-</section>
+<!-- Contact Section -->
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-md-6">
+        <h2 class="mb-3">Let’s Connect</h2>
+        <p>I’m always excited to hear from fellow creatives, business owners, or curious minds. Whether it’s a collaboration, a question, or just some encouragement — don’t hesitate to reach out.</p>
 
-<section class="contact-section">
-  <div class="contact-left">
-    <h2>Let’s Connect</h2>
-    <p>I’m always excited to hear from fellow creatives, business owners, or curious minds. Whether it’s a collaboration, a question, or just some encouragement — don’t hesitate to reach out.</p>
+        <div class="mt-4">
+          <p>Email: <a href="mailto:akongjennifer@gmail.com">akongjennifer@gmail.com</a></p>
+          <p>Location: Manchester, UK</p>
+          <div class="social-icons mt-3">
+            <a href="https://instagram.com/jenn.akong" target="_blank" class="me-3"><img src="images/instagram-icon.png" alt="Instagram" width="24"></a>
+            <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="me-3"><img src="images/linkedin-icon.png" alt="LinkedIn" width="24"></a>
+            <a href="mailto:akongjennifer@gmail.com"><img src="images/email-icon.png" alt="Email" width="24"></a>
+          </div>
+        </div>
+      </div>
 
-    <div class="info">
-      <p>Email: <a href="mailto:akongjennifer@gmail.com">akongjennifer@gmail.com</a></p>
-      <p>Location: Manchester, UK</p>
-      <div class="social-icons">
-        <a href="https://instagram.com/jenn.akong1" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
-        <a href="https://linkedin.com/in/jenniferakong1" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-        <a href="mailto:akongjennifer@gmail.com"><img src="images/email-icon.png" alt="Email"></a>
+      <div class="col-md-6">
+        <form action="https://formspree.io/f/xzzbbgjk" method="POST" class="bg-light p-4 rounded shadow-sm">
+          <div class="mb-3">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea name="message" rows="6" class="form-control" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn" style="background-color: #C6A664; color: white;">Send Message</button>
+        </form>
       </div>
     </div>
   </div>
+</section>
 
- <div class="contact-right">
-  <form action="https://formspree.io/f/xzzbbgjk" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</div>
+<!-- Footer -->
+<footer class="text-center py-4 bg-dark text-white">
+  <p>Let’s stay connected</p>
+  <div class="mb-3">
+    <a href="https://instagram.com/jenn.akong" target="_blank" class="mx-2 text-white"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="mx-2 text-white"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
+    <a href="mailto:akongjennifer@gmail.com" class="mx-2 text-white"><i class="bi bi-envelope" style="font-size: 1.5rem;"></i></a>
+  </div>
+  <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
+</footer>
+
+<!-- Form Tracking -->
 <script>
   document.querySelector('form[action="https://formspree.io/f/xzzbbgjk"]').addEventListener('submit', function () {
     gtag('event', 'submit', {
@@ -176,17 +116,9 @@
     });
   });
 </script>
-</section>
 
-<footer>
-  <p>Let’s stay connected</p>
-  <div class="social-icons">
-    <a href="https://instagram.com/yourhandle" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
-    <a href="https://linkedin.com/in/yourhandle" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-    <a href="mailto:akongjennifer@gmail.com"><img src="images/email-icon.png" alt="Email"></a>
-  </div>
-  <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
-</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
