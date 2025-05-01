@@ -4,130 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Jennifer Akong</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
   <!-- Bootstrap 5 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fffdf9;
-      margin: 0;
-      padding: 0;
-    }
-    header nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 10%;
-      background-color: #f5ebdd;
-    }
-    .logo img {
-      width: 100px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #1c1c1c;
-      font-weight: 500;
-    }
-    .hero {
-      text-align: center;
-      padding: 80px 20px 40px;
-      background-color: #f0e0cb;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: #1c1c1c;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      color: #333;
-    }
-    .services-container {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-    .service-box {
-      background-color: #f5ebdd;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 10px rgba(0,0,0,0.06);
-      text-align: center;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .service-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    }
-    .service-box img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-    .service-box h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-    }
-    .service-box p {
-      font-size: 1rem;
-      color: #333;
-    }
-    .cta {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: #e8d3b9;
-    }
-    .cta h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    .cta a {
-      background-color: #C6A664;
-      color: #fff;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 15px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1c1c1c;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
+
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWZ73DJBE"></script>
   <script>
-  function toggleMenu() {
-    const nav = document.querySelector('.main-nav');
-    nav.classList.toggle('active');
-  }
-</script>
-
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LSWZ73DJBE');
+  </script>
+</head>
 <body>
-<div style="height: 80px;"></div>
 
- <header>
-  
- <!-- Navigation -->
+<!-- Spacing below fixed navbar -->
+<div style="height: 0px;"></div>
+
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(245, 235, 221, 0.95);">
   <div class="container d-flex justify-content-between align-items-center">
     <div class="left-spacer d-none d-lg-block"></div>
@@ -138,59 +42,80 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav"> 
+      <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero d-flex align-items-center text-center">
+  <div class="container">
+    <h1 class="display-5" style="font-family: 'Playfair Display', serif;">How I Can Help</h1>
+    <p class="lead">Strategy, creativity, and clarity for brands that want to grow with purpose.</p>
+  </div>
 </header>
 
-  <section class="hero">
-    <h1>How I Can Help</h1>
-    <p>Strategy, creativity, and clarity for brands that want to grow with purpose.</p>
-  </section>
+<!-- Services Grid -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 text-center">
+        <a href="marketing-strategy.html">
+          <img src="images/marketing-strategy-banner.png" alt="Marketing Strategy" class="img-fluid rounded mb-3">
+        </a>
+        <h3 style="font-family: 'Playfair Display', serif;">Marketing Strategy</h3>
+        <p>Developing tailored marketing plans that align with your brand’s goals.</p>
+      </div>
 
-  <section class="services-container">
-    <a href="marketing-strategy.html" class="service-box">
-      <img src="images/marketing-strategy-banner.png" alt="Marketing Strategy">
-      <h3>Marketing Strategy</h3>
-      <p>Developing tailored marketing plans that align with your brand’s goals.</p>
-    </a>
+      <div class="col-md-6 col-lg-3 text-center">
+        <a href="brand-development.html">
+          <img src="images/brand-development.png" alt="Brand Development" class="img-fluid rounded mb-3">
+        </a>
+        <h3 style="font-family: 'Playfair Display', serif;">Brand Development</h3>
+        <p>Creating brand identities that stand out in the digital landscape.</p>
+      </div>
 
-    <a href="brand-development.html" class="service-box">
-      <img src="images/brand-development.png" alt="Brand Development">
-      <h3>Brand Development</h3>
-      <p>Creating brand identities that stand out in the digital landscape.</p>
-    </a>
+      <div class="col-md-6 col-lg-3 text-center">
+        <a href="content-marketing.html">
+          <img src="images/content-marketing.png" alt="Content Marketing" class="img-fluid rounded mb-3">
+        </a>
+        <h3 style="font-family: 'Playfair Display', serif;">Content Marketing</h3>
+        <p>Crafting compelling content that engages and converts your audience.</p>
+      </div>
 
-    <a href="content-marketing.html" class="service-box">
-      <img src="images/content-marketing.png" alt="Content Marketing">
-      <h3>Content Marketing</h3>
-      <p>Crafting compelling content that engages and converts your audience.</p>
-    </a>
-
-    <a href="social-media-management.html" class="service-box">
-      <img src="images/social-media-management.png" alt="Social Media Management">
-      <h3>Social Media Management</h3>
-      <p>Helping brands dominate the digital space with high-impact strategies.</p>
-    </a>
-  </section>
-
-  <section class="cta">
-    <h2>Let’s bring your brand to life.</h2>
-    <a href="contact.html">Book a Discovery Call</a>
-  </section>
-
- <footer>
-    <div class="social-icons mb-3">
-      <a href="https://instagram.com/jenn.akong" target="_blank"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
-      <a href="https://linkedin.com/in/jenniferakong1" target="_blank"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
-      <a href="https://youtube.com/@jenniferakong1" target="_blank"><i class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
+      <div class="col-md-6 col-lg-3 text-center">
+        <a href="social-media-management.html">
+          <img src="images/social-media-management.png" alt="Social Media Management" class="img-fluid rounded mb-3">
+        </a>
+        <h3 style="font-family: 'Playfair Display', serif;">Social Media Management</h3>
+        <p>Helping brands dominate the digital space with high-impact strategies.</p>
+      </div>
     </div>
-    <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
-  </footer>
+  </div>
+</section>
 
-<!-- Bootstrap Bundle JS -->
+<!-- CTA Section -->
+<section class="cta text-center py-5" style="background-color: #e8d3b9;">
+  <h2 style="font-family: 'Playfair Display', serif;">Let’s bring your brand to life.</h2>
+  <a href="contact.html" class="btn btn-lg mt-3" style="background-color: #C6A664; color: #fff;">Book a Discovery Call</a>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4 bg-dark text-white">
+  <div class="mb-3">
+    <a href="https://instagram.com/jenn.akong" target="_blank" class="mx-2 text-white"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="mx-2 text-white"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
+    <a href="https://youtube.com/@jenniferakong1" target="_blank" class="mx-2 text-white"><i class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
+  </div>
+  <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
