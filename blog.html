@@ -4,135 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | Jennifer Akong</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-  <!-- Bootstrap 5 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
- <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWZ73DJBE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-LSWZ73DJBE');
-</script>
-  
-   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #fffdf9;
-      font-family: 'Poppins', sans-serif;
-      color: #1c1c1c;
-    }
-    header {
-      background-color: #f5ebdd;
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      font-weight: bold;
-      text-decoration: none;
-      color: #1c1c1c;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #1c1c1c;
-      font-weight: 500;
-    }
-    .page-header {
-      text-align: center;
-      padding: 60px 20px 20px;
-    }
-    .page-header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    .blog-container {
-      max-width: 1100px;
-      margin: 0 auto 80px;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-    .blog-card {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-    .blog-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    }
-    .blog-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .blog-card-content {
-      padding: 20px;
-    }
-    .blog-card h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      margin: 0 0 10px;
-    }
-    .blog-card p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #444;
-    }
-    .tags {
-      margin-top: 15px;
-    }
-    .tag {
-      display: inline-block;
-      background-color: #e8d3b9;
-      color: #1c1c1c;
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 6px;
-      margin-right: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1c1c1c;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-  </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWZ73DJBE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LSWZ73DJBE');
+  </script>
 </head>
 <body>
-<header>
 
- <!-- Navigation -->
+<!-- Spacing below fixed navbar -->
+<div style="height: 80px;"></div>
+
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(245, 235, 221, 0.95);">
   <div class="container d-flex justify-content-between align-items-center">
     <div class="left-spacer d-none d-lg-block"></div>
     <a class="navbar-brand mx-auto" href="index.html">
-      <img src="logo.png" alt="Jennifer Akong Logo" class="logo-img">
+      <img src="images/logo.png" alt="Jennifer Akong Logo" class="logo-img">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav"> 
+      <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -142,15 +49,14 @@
   </div>
 </nav>
 
-</header>
-
-<section class="page-header">
-  <h1>From My Notebook</h1>
+<!-- Blog Header -->
+<section class="page-header text-center">
+  <h1 style="font-family: 'Playfair Display', serif;">From My Notebook</h1>
   <p>Insights, stories, and strategies from my creative journey.</p>
 </section>
 
+<!-- Blog Posts -->
 <section class="blog-container">
-  
   <a href="Themoon.html" class="blog-card">
     <img src="images/Themoon.png" alt="The moon at 0:00am">
     <div class="blog-card-content">
@@ -162,7 +68,7 @@
       </div>
     </div>
   </a>
-  
+
   <a href="jesus-lives-in-my-house.html" class="blog-card">
     <img src="images/jesus-lives-blog-cover.png" alt="Sunrise at 6:58am">
     <div class="blog-card-content">
@@ -174,7 +80,7 @@
       </div>
     </div>
   </a>
-  
+
   <a href="blog-fashion-brand.html" class="blog-card">
     <img src="images/blog1.jpg" alt="How I Built a Fashion Brand">
     <div class="blog-card-content">
@@ -210,12 +116,13 @@
       </div>
     </div>
   </a>
-
 </section>
 
-<footer>
-  <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
+<!-- Footer -->
+<footer class="text-center py-3 bg-dark text-white">
+  <p>© 2025 Jennifer Akong. All Rights Reserved.</p>
 </footer>
+
 <!-- Bootstrap Bundle JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
