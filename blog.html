@@ -11,29 +11,80 @@
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Your Custom Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWZ73DJBE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LSWZ73DJBE');
-  </script>
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdf9;
+      color: #1c1c1c;
+      margin: 0;
+      padding-top: 80px;
+    }
+
+    .navbar {
+      background-color: rgba(245, 235, 221, 0.95);
+    }
+
+    .logo-img {
+      max-height: 55px;
+      width: auto;
+    }
+
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #e8d3b9;
+      color: #1c1c1c;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-right: 6px;
+    }
+
+    .tags {
+      margin-top: 10px;
+    }
+
+    .swiper {
+      padding-bottom: 10px;
+    }
+
+    .card {
+      border-radius: 10px;
+    }
+
+    .card-img-top {
+      border-radius: 10px 10px 0 0;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+    .alert-warning {
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Spacing below fixed navbar -->
-<div style="height: 0px;"></div>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(245, 235, 221, 0.95);">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
   <div class="container d-flex justify-content-between align-items-center">
-    <div class="left-spacer d-none d-lg-block"></div>
     <a class="navbar-brand mx-auto" href="index.html">
-      <img src="logo.png" alt="Jennifer Akong Logo" class="logo-img">
+      <img src="images/logo.png" alt="Jennifer Akong Logo" class="logo-img">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -49,182 +100,182 @@
   </div>
 </nav>
 
-<header class="hero d-flex align-items-center text-center" style="background-color: #f5ebdd; padding: 100px 0;">
-  <div class="container">
-    <h1 class="display-5" style="font-family: 'Playfair Display', serif;">From My Notebook</h1>
-    <p class="lead">Insights, stories, and strategies from my creative journey.</p>
-  </div>
-</header>
-
+<!-- Blog Sections -->
 <section class="container py-5">
 
-  <!-- 📝 Notebook Intro -->
+  <!-- Header -->
   <div class="text-center mb-5">
-    <h2 class="section-title" style="font-family: 'Playfair Display', serif;">From My Notebook</h2>
+    <h2>From My Notebook</h2>
     <p class="lead">Insights, stories, and strategies from my creative journey.</p>
   </div>
 
-  <!-- Fashion Articles -->
+  <!-- Fashion Section -->
   <div class="mb-5">
-    <h3 class="mb-2" style="font-family: 'Playfair Display', serif;">Fashion Articles</h3>
+    <h3>👗 Fashion Articles</h3>
     <p class="text-muted">Where fabric meets identity.</p>
-    <div class="row g-4">
+    <div class="swiper fashionSwiper">
+      <div class="swiper-wrapper">
 
-      <div class="col-md-6 col-lg-4">
-        <a href="blog-fashion-brand.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="images/blog1.jpg" class="card-img-top" alt="Fashion Brand">
-            <div class="card-body">
-              <h5 class="card-title">How I Built a Fashion Brand from Scratch</h5>
-              <p class="card-text">Behind the scenes of MANIA by Jennifer — from fabric sourcing to campaign launch.</p>
-              <div class="tags">
-                <span class="tag">Fashion</span>
-                <span class="tag">Business</span>
+        <div class="swiper-slide">
+          <a href="blog-fashion-brand.html" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="images/blog1.jpg" class="card-img-top" alt="Fashion Brand">
+              <div class="card-body">
+                <h5 class="card-title">How I Built a Fashion Brand</h5>
+                <p class="card-text small">Behind the scenes of MANIA by Jennifer...</p>
+                <div class="tags">
+                  <span class="tag">Fashion</span>
+                  <span class="tag">Business</span>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <a href="blog-afro-fusion.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="images/blog3.jpg" class="card-img-top" alt="Afro Fusion Campaign">
-            <div class="card-body">
-              <h5 class="card-title">The Afro Fusion Campaign: A Cultural Vision</h5>
-              <p class="card-text">How I merged fashion, heritage, and modern storytelling into a visual experience.</p>
-              <div class="tags">
-                <span class="tag">Campaign</span>
-                <span class="tag">Culture</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Future Post -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 text-center p-4 d-flex align-items-center justify-content-center">
-          <em class="text-muted">New outfit drop coming soon...</em>
+          </a>
         </div>
-      </div>
 
+        <div class="swiper-slide">
+          <a href="blog-afro-fusion.html" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="images/blog3.jpg" class="card-img-top" alt="Afro Fusion">
+              <div class="card-body">
+                <h5 class="card-title">Afro Fusion Campaign</h5>
+                <p class="card-text small">How I merged heritage and modern style...</p>
+                <div class="tags">
+                  <span class="tag">Culture</span>
+                  <span class="tag">Campaign</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
     </div>
   </div>
 
-  <!-- Personal Life & Reflections -->
+  <!-- Reflections Section -->
   <div class="mb-5">
-    <h3 class="mb-2" style="font-family: 'Playfair Display', serif;">Personal Life & Reflections</h3>
+    <h3>💭 Personal Life & Reflections</h3>
     <p class="text-muted">From my heart to the page.</p>
-    <div class="row g-4">
+    <div class="swiper reflectionSwiper">
+      <div class="swiper-wrapper">
 
-      <div class="col-md-6 col-lg-4">
-        <a href="jesus-lives-in-my-house.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="images/jesus-lives-blog-cover.png" class="card-img-top" alt="Jesus Lives">
-            <div class="card-body">
-              <h5 class="card-title">Jesus Lives in My House</h5>
-              <p class="card-text">A sunrise at 6:54 a.m. A new dawn. A story of surrender, storms, and the God who sees me — EL ROI.</p>
-              <div class="tags">
-                <span class="tag">Faith</span>
-                <span class="tag">Sobriety</span>
+        <div class="swiper-slide">
+          <a href="jesus-lives-in-my-house.html" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="images/jesus-lives-blog-cover.png" class="card-img-top" alt="Jesus Lives">
+              <div class="card-body">
+                <h5 class="card-title">Jesus Lives in My House</h5>
+                <p class="card-text small">A story of surrender, storms, and EL ROI...</p>
+                <div class="tags">
+                  <span class="tag">Faith</span>
+                  <span class="tag">Sobriety</span>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <a href="Themoon.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="images/Themoon.png" class="card-img-top" alt="The Moon">
-            <div class="card-body">
-              <h5 class="card-title">The Night Held Its Breath</h5>
-              <p class="card-text">The moon poured in through the tall windows, uninvited but sovereign, casting fractured patterns across the floor.</p>
-              <div class="tags">
-                <span class="tag">Dreams</span>
-                <span class="tag">Twilight</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 text-center p-4 d-flex align-items-center justify-content-center">
-          <em class="text-muted">More reflections coming soon...</em>
+          </a>
         </div>
-      </div>
 
+        <div class="swiper-slide">
+          <a href="Themoon.html" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="images/Themoon.png" class="card-img-top" alt="The Moon">
+              <div class="card-body">
+                <h5 class="card-title">The Night Held Its Breath</h5>
+                <p class="card-text small">The moon poured in, sovereign and silent...</p>
+                <div class="tags">
+                  <span class="tag">Dreams</span>
+                  <span class="tag">Twilight</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
     </div>
   </div>
 
-  <!-- Marketing Tips -->
+  <!-- Marketing Section -->
   <div class="mb-5">
-    <h3 class="mb-2" style="font-family: 'Playfair Display', serif;">Marketing Tips</h3>
+    <h3>📣 Marketing Tips</h3>
     <p class="text-muted">Work smart with Jenn.</p>
-    <div class="row g-4">
+    <div class="swiper marketingSwiper">
+      <div class="swiper-wrapper">
 
-      <div class="col-md-6 col-lg-4">
-        <a href="blog-marketing-tips.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="images/blog2.jpg" class="card-img-top" alt="Marketing Tips">
-            <div class="card-body">
-              <h5 class="card-title">3 Smart Marketing Tips for Creatives</h5>
-              <p class="card-text">Simple strategies you can implement today to boost your brand presence.</p>
-              <div class="tags">
-                <span class="tag">Marketing</span>
-                <span class="tag">Tips</span>
+        <div class="swiper-slide">
+          <a href="blog-marketing-tips.html" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="images/blog2.jpg" class="card-img-top" alt="Marketing Tips">
+              <div class="card-body">
+                <h5 class="card-title">3 Smart Marketing Tips</h5>
+                <p class="card-text small">Boost your brand with these quick wins...</p>
+                <div class="tags">
+                  <span class="tag">Marketing</span>
+                  <span class="tag">Tips</span>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 text-center p-4 d-flex align-items-center justify-content-center">
-          <em class="text-muted">More guides & growth hacks coming soon</em>
+          </a>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
 
-  <!-- Erotic Fanfictions -->
+  <!-- Fanfiction Section -->
   <div class="mb-5">
-    <h3 class="mb-2" style="font-family: 'Playfair Display', serif;">Erotic Fanfictions</h3>
+    <h3>🔥 Erotic Fanfictions</h3>
     <p class="text-muted">Stories to stir your soul (and your screen).</p>
-
-    <!-- NSFW Warning -->
-    <div class="alert alert-warning small mb-4" role="alert">
+    <div class="alert alert-warning small" role="alert">
       ⚠️ Contains mature themes. Reader discretion advised.
     </div>
+    <div class="swiper fanficSwiper">
+      <div class="swiper-wrapper">
 
-    <div class="row g-4">
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 text-center p-4 d-flex align-items-center justify-content-center">
-          <em class="text-muted">New series dropping soon...</em>
+        <div class="swiper-slide">
+          <div class="card shadow-sm border-0 text-center p-4 d-flex align-items-center justify-content-center">
+            <em class="text-muted">New series dropping soon...</em>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 text-center p-4 d-flex align-items-center justify-content-center">
-          <em class="text-muted">Short reads & fantasies loading...</em>
+        <div class="swiper-slide">
+          <div class="card shadow-sm border-0 text-center p-4 d-flex align-items-center justify-content-center">
+            <em class="text-muted">Short reads loading...</em>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
 
 </section>
+
 <!-- Footer -->
-<footer class="text-center py-3 bg-dark text-white">
+<footer>
   <p>© 2025 Jennifer Akong. All Rights Reserved.</p>
 </footer>
 
-<!-- Bootstrap Bundle JS -->
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Swiper Init -->
+<script>
+  const swipers = ['.fashionSwiper', '.reflectionSwiper', '.marketingSwiper', '.fanficSwiper'];
+  swipers.forEach(selector => {
+    new Swiper(selector, {
+      slidesPerView: 1.1,
+      spaceBetween: 16,
+      freeMode: true,
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        992: { slidesPerView: 3 }
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
