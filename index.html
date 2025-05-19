@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jennifer Akong | Marketing Professional</title>
+  <title>Jennifer Akong | Home</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-  <!-- Swiper.js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
   <style>
@@ -38,59 +34,20 @@
     .hero {
       background-color: #f5ebdd;
       text-align: center;
-      padding: 80px 20px 30px;
+      padding: 60px 20px;
     }
-    .hero-image-section img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .section-title {
+    .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      margin-bottom: 5px;
+      font-size: 2.8rem;
     }
-    .section-subtitle {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 20px;
-    }
-    .swiper {
-      padding: 20px 0 50px;
-    }
-    .swiper-slide {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      overflow: hidden;
-      max-width: 280px;
-    }
-    .swiper-slide img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
-    .blog-card-content {
-      padding: 15px 20px;
-    }
-    .blog-card-content h5 {
+    .hero p {
       font-size: 1.1rem;
-      font-weight: 600;
-      margin: 0 0 8px;
+      margin-top: 10px;
     }
-    .blog-card-content p {
-      font-size: 0.9rem;
-      color: #444;
-      margin-bottom: 10px;
-    }
-    .tag {
-      display: inline-block;
-      background-color: #e8d3b9;
-      color: #1c1c1c;
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 6px;
-      margin-right: 8px;
+    .hero-image {
+      width: 100%;
+      display: block;
+      margin-top: 20px;
     }
     footer {
       background-color: #1c1c1c;
@@ -99,25 +56,26 @@
       padding: 20px;
       font-size: 0.9rem;
     }
-    .section-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px 0;
+    .social-icons a {
+      margin: 0 10px;
+      color: #fff;
     }
   </style>
 </head>
 <body>
 
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand mx-auto" href="index.html">
+    <div class="left-spacer d-none d-lg-block"></div>
+    <a class="navbar-brand mx-auto" href="#">
       <img src="logo.png" alt="Jennifer Akong Logo" class="logo-img">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav text-center">
+      <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -128,20 +86,19 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero text-center">
+<section class="hero">
   <h1 class="display-5">Who is SHE?</h1>
   <p class="lead">Fashion Entrepreneur | Digital Marketing Professional | Project Manager | Brand Strategist | Author</p>
 </section>
 
-<!-- Hero Image -->
-<section class="hero-image-section">
-  <img src="images/hero-bg.png" alt="Jennifer Akong Hero Image">
+<!-- Hero Image Grid -->
+<section>
+  <img src="images/hero-bg.png" alt="Jennifer Akong Hero Photo Grid" class="hero-image">
 </section>
-
-<!-- Blog Swiper Sections -->
+<!-- Blog Highlights -->
 <div class="section-container">
 
-  <!-- Fashion Articles -->
+  <!-- Fashion -->
   <div class="mb-5">
     <h2 class="section-title">Fashion Articles</h2>
     <p class="section-subtitle">Where fabric meets identity.</p>
@@ -151,7 +108,7 @@
           <img src="images/blog1.jpg" alt="Fashion Brand">
           <div class="blog-card-content">
             <h5>Why Afro-Fusion Fashion Is More Than a Trend</h5>
-            <p>Fashion is not just fabric — it’s memory, identity, resistance....</p>
+            <p>Fashion is not just fabric — it’s memory, identity, resistance...</p>
             <span class="tag">Fashion</span><span class="tag">Business</span>
           </div>
         </a>
@@ -163,20 +120,13 @@
             <span class="tag">Culture</span><span class="tag">Campaign</span>
           </div>
         </a>
-        <div class="swiper-slide">
-          <img src="images/placeholder.png" alt="Coming Soon">
-          <div class="blog-card-content">
-            <h5>New Fashion Blog Coming Soon</h5>
-            <p>Watch this space for the next drop!</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- Marketing Tips -->
+  <!-- Marketing -->
   <div class="mb-5">
-    <h2 class="section-title">Marketing Tips</h2>
+    <h2 class="section-title">Marketing</h2>
     <p class="section-subtitle">Work smart with Jenn.</p>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
@@ -188,13 +138,6 @@
             <span class="tag">Marketing</span><span class="tag">Tips</span>
           </div>
         </a>
-        <div class="swiper-slide">
-          <img src="images/placeholder.png" alt="Coming Soon">
-          <div class="blog-card-content">
-            <h5>New Tips Coming Soon</h5>
-            <p>More brand growth hacks on the way!</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -221,13 +164,6 @@
             <span class="tag">Dreams</span><span class="tag">Twilight</span>
           </div>
         </a>
-        <div class="swiper-slide">
-          <img src="images/placeholder.png" alt="Coming Soon">
-          <div class="blog-card-content">
-            <h5>New Reflection Coming Soon</h5>
-            <p>Stay tuned for more personal stories.</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -235,10 +171,10 @@
   <!-- Creative Writing -->
   <div class="mb-5">
     <h2 class="section-title">Creative Writing</h2>
-    <p class="section-subtitle">Imaginative stories and poetic explorations.</p>
-    <div class="alert alert-secondary small" role="alert">
-      May include mature themes. Please read with discretion.
-    </div>
+    <p class="section-subtitle">Stories to stir your soul (and your screen).</p>
+    <div class="alert alert-warning small" role="alert">
+  ⚠️ Contains mature themes. Reader discretion advised.
+</div>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <a href="lust-in-the-city.html" class="swiper-slide">
@@ -246,22 +182,15 @@
           <div class="blog-card-content">
             <h5>Lust In The City</h5>
             <p>Late nights, wine, and tension she can't ignore.</p>
-            <span class="tag">Creative</span><span class="tag">Short Story</span>
+            <span class="tag">Fiction</span><span class="tag">LGBT</span>
           </div>
         </a>
-        <div class="swiper-slide">
-          <img src="images/placeholder.png" alt="Loading Stories">
-          <div class="blog-card-content">
-            <h5>Short Reads Loading</h5>
-            <p>Quick indulgent reads coming to your screen soon.</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
 </div>
-
+<!-- Footer -->
 <footer>
   <div class="social-icons mb-3">
     <a href="https://instagram.com/jenn.akong" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -271,20 +200,6 @@
   <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
 </footer>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.2,
-    spaceBetween: 15,
-    freeMode: true,
-    breakpoints: {
-      576: { slidesPerView: 2.2 },
-      768: { slidesPerView: 3 }
-    }
-  });
-</script>
-
 </body>
 </html>
