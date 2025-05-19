@@ -16,16 +16,26 @@
       background-color: #fffdf9;
       color: #1c1c1c;
       margin: 0;
+      padding-top: 80px;
+    }
+    .navbar {
+      background-color: rgba(245, 235, 221, 0.95);
+    }
+    .logo-img {
+      max-height: 60px;
     }
     .hero {
       background-color: #f5ebdd;
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 100px 20px 40px;
     }
     .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.6rem;
       margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.1rem;
     }
     .section {
       padding: 60px 20px;
@@ -42,7 +52,8 @@
       gap: 25px;
       margin-top: 30px;
     }
-    .portfolio-grid img, .portfolio-grid iframe {
+    .portfolio-grid img,
+    .portfolio-grid iframe {
       width: 100%;
       border-radius: 10px;
       object-fit: cover;
@@ -52,15 +63,42 @@
       font-size: 0.95rem;
       text-align: center;
     }
+    footer {
+      background-color: #1c1c1c;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 
 <body>
 
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand mx-auto" href="index.html">
+      <img src="logo.png" alt="Jennifer Akong Logo" class="logo-img">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <!-- Hero Section -->
 <section class="hero">
   <h1>Creative Portfolio</h1>
-  <p>Here’s a curated selection of my content work — from visual branding and strategy to e-books and multimedia campaigns.</p>
+  <p>Explore a curated collection of my creative work — from visuals and guides to digital storytelling.</p>
 </section>
 
 <!-- Visual Content -->
@@ -68,54 +106,57 @@
   <h2>Visual Content</h2>
   <div class="portfolio-grid container">
     <div>
-      <img src="images/content1.jpg" alt="Brand Style Guide">
+      <img src="images/content1.jpg" alt="Style Guide">
       <p class="caption">Brand Style Guide – MANIA by Jennifer</p>
     </div>
     <div>
       <img src="images/content2.jpg" alt="IG Grid Layout">
-      <p class="caption">Instagram Visuals – Product Grid for Lash MANIA</p>
+      <p class="caption">Instagram Visuals – Lash MANIA Launch</p>
     </div>
     <div>
       <img src="images/content3.jpg" alt="Campaign Poster">
-      <p class="caption">Afro-Fusion Campaign Teaser Design</p>
+      <p class="caption">Campaign Poster – Afro-Fusion Launch</p>
     </div>
   </div>
 </section>
 
-<!-- E-Books / Guides -->
+<!-- E-books / PDFs -->
 <section class="section bg-light">
   <h2>E-books & Digital Guides</h2>
   <div class="portfolio-grid container">
     <div>
-      <img src="images/ebook1.jpg" alt="Marketing Ebook Cover">
-      <p class="caption">"The Marketing Roadmap" – Free Download</p>
+      <img src="images/ebook1.jpg" alt="Ebook Cover">
+      <p class="caption">"The Marketing Roadmap" – Strategy eBook</p>
     </div>
     <div>
-      <img src="images/ebook2.jpg" alt="Brand Storytelling Workbook">
-      <p class="caption">Brand Storytelling Workbook – 12-Page PDF</p>
+      <img src="images/ebook2.jpg" alt="Workbook">
+      <p class="caption">Brand Storytelling Workbook (Free Download)</p>
     </div>
   </div>
 </section>
 
-<!-- Video Samples -->
+<!-- Video Content -->
 <section class="section bg-white">
-  <h2>Video Content</h2>
+  <h2>Video Campaigns</h2>
   <div class="portfolio-grid container">
     <div>
       <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
-      <p class="caption">Behind the Scenes: Tribe x Trendz Shoot</p>
+      <p class="caption">Tribe x Trendz Behind the Scenes</p>
     </div>
     <div>
       <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
-      <p class="caption">Content Campaign Launch – A Thousand Women</p>
+      <p class="caption">A Thousand Women Campaign Snippet</p>
     </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="text-center py-4 bg-dark text-white">
+<footer>
   <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
