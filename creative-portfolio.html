@@ -2,161 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creative Portfolio | Jennifer Akong</title>
-
-  <!-- Google Fonts & Bootstrap Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #fffdf9;
-      color: #1c1c1c;
       margin: 0;
-      padding-top: 80px;
+      padding: 0;
+      color: #1c1c1c;
     }
-    .navbar {
-      background-color: rgba(245, 235, 221, 0.95);
-    }
-    .logo-img {
-      max-height: 60px;
-    }
-    .hero {
+
+    header {
       background-color: #f5ebdd;
-      text-align: center;
-      padding: 100px 20px 40px;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
-      margin-bottom: 15px;
-    }
-    .hero p {
-      font-size: 1.1rem;
-    }
-    .section {
       padding: 60px 20px;
+      text-align: center;
     }
-    .section h2 {
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
-      margin-bottom: 20px;
-      text-align: center;
     }
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
+
+    .accordion-button::after {
+      font-size: 1rem;
     }
-    .portfolio-grid img,
-    .portfolio-grid iframe {
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .grid img, .grid video {
       width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
+      border-radius: 8px;
     }
-    .caption {
-      margin-top: 8px;
-      font-size: 0.95rem;
-      text-align: center;
+
+    .grid-item {
+      flex: 1 1 calc(33.333% - 20px);
     }
+
+    .pdf-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
     footer {
       background-color: #1c1c1c;
-      color: #fff;
+      color: white;
       text-align: center;
       padding: 20px;
-      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
+    @media(max-width: 768px) {
+      .grid-item {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand mx-auto" href="index.html">
-      <img src="logo.png" alt="Jennifer Akong Logo" class="logo-img">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav text-center">
-        <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero">
+<header>
   <h1>Creative Portfolio</h1>
-  <p>Explore a curated collection of my creative work — from visuals and guides to digital storytelling.</p>
-</section>
+  <p>Explore my work in visual content, campaign storytelling, and digital creation.</p>
+</header>
 
-<!-- Visual Content -->
-<section class="section bg-white">
-  <h2>Visual Content</h2>
-  <div class="portfolio-grid container">
-    <div>
-      <img src="images/content1.jpg" alt="Style Guide">
-      <p class="caption">Brand Style Guide – MANIA by Jennifer</p>
+<div class="container my-5">
+
+  <div class="accordion" id="portfolioAccordion">
+
+    <!-- Visual Content -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingPhotos">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhotos" aria-expanded="true">
+          <i class="bi bi-images me-2"></i> Visual Content – Photos
+        </button>
+      </h2>
+      <div id="collapsePhotos" class="accordion-collapse collapse show">
+        <div class="accordion-body grid">
+          <div class="grid-item"><img src="images/beauty-shoot1.jpg" alt="Beauty Campaign 1"></div>
+          <div class="grid-item"><img src="images/spa-content.jpg" alt="Spa Campaign"></div>
+          <div class="grid-item"><img src="images/fashion-portfolio.jpg" alt="Fashion Campaign"></div>
+        </div>
+      </div>
     </div>
-    <div>
-      <img src="images/content2.jpg" alt="IG Grid Layout">
-      <p class="caption">Instagram Visuals – Lash MANIA Launch</p>
+
+    <!-- Video Content -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingVideos">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVideos">
+          <i class="bi bi-camera-video me-2"></i> Video Portfolio
+        </button>
+      </h2>
+      <div id="collapseVideos" class="accordion-collapse collapse">
+        <div class="accordion-body grid">
+          <div class="grid-item">
+            <video controls>
+              <source src="videos/campaign-1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="grid-item">
+            <video controls>
+              <source src="videos/campaign-2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <img src="images/content3.jpg" alt="Campaign Poster">
-      <p class="caption">Campaign Poster – Afro-Fusion Launch</p>
+
+    <!-- eBooks -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingEbooks">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEbooks">
+          <i class="bi bi-book me-2"></i> eBooks & Digital Resources
+        </button>
+      </h2>
+      <div id="collapseEbooks" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <div class="pdf-link">
+            <i class="bi bi-file-earmark-pdf-fill text-danger"></i>
+            <a href="ebooks/social-media-guide.pdf" target="_blank">Social Media Growth Guide (Free Download)</a>
+          </div>
+          <div class="pdf-link">
+            <i class="bi bi-file-earmark-pdf-fill text-danger"></i>
+            <a href="ebooks/branding-playbook.pdf" target="_blank">Branding Playbook for Entrepreneurs</a>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
-</section>
 
-<!-- E-books / PDFs -->
-<section class="section bg-light">
-  <h2>E-books & Digital Guides</h2>
-  <div class="portfolio-grid container">
-    <div>
-      <img src="images/ebook1.jpg" alt="Ebook Cover">
-      <p class="caption">"The Marketing Roadmap" – Strategy eBook</p>
-    </div>
-    <div>
-      <img src="images/ebook2.jpg" alt="Workbook">
-      <p class="caption">Brand Storytelling Workbook (Free Download)</p>
-    </div>
+</div>
+
+<!-- Featured Campaign Block -->
+<div class="container my-5">
+  <hr>
+  <h3 class="section-title text-center mb-4">Featured Campaign</h3>
+  <p class="text-center mb-4">A fashion film exploring identity, fabric, and expression in urban spaces.</p>
+  <div class="ratio ratio-16x9">
+    <iframe src="https://www.youtube.com/embed/your-video-id" title="Afro Fusion Campaign Video" allowfullscreen></iframe>
   </div>
-</section>
+</div>
 
-<!-- Video Content -->
-<section class="section bg-white">
-  <h2>Video Campaigns</h2>
-  <div class="portfolio-grid container">
-    <div>
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
-      <p class="caption">Tribe x Trendz Behind the Scenes</p>
-    </div>
-    <div>
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
-      <p class="caption">A Thousand Women Campaign Snippet</p>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
 <footer>
   <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
