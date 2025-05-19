@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Portfolio | Jennifer Akong</title>
+
+  <!-- Google Fonts & Bootstrap Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdf9;
+      color: #1c1c1c;
+      margin: 0;
+    }
+    .hero {
+      background-color: #f5ebdd;
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      margin-bottom: 15px;
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .portfolio-grid img, .portfolio-grid iframe {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .caption {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Creative Portfolio</h1>
+  <p>Here’s a curated selection of my content work — from visual branding and strategy to e-books and multimedia campaigns.</p>
+</section>
+
+<!-- Visual Content -->
+<section class="section bg-white">
+  <h2>Visual Content</h2>
+  <div class="portfolio-grid container">
+    <div>
+      <img src="images/content1.jpg" alt="Brand Style Guide">
+      <p class="caption">Brand Style Guide – MANIA by Jennifer</p>
+    </div>
+    <div>
+      <img src="images/content2.jpg" alt="IG Grid Layout">
+      <p class="caption">Instagram Visuals – Product Grid for Lash MANIA</p>
+    </div>
+    <div>
+      <img src="images/content3.jpg" alt="Campaign Poster">
+      <p class="caption">Afro-Fusion Campaign Teaser Design</p>
+    </div>
+  </div>
+</section>
+
+<!-- E-Books / Guides -->
+<section class="section bg-light">
+  <h2>E-books & Digital Guides</h2>
+  <div class="portfolio-grid container">
+    <div>
+      <img src="images/ebook1.jpg" alt="Marketing Ebook Cover">
+      <p class="caption">"The Marketing Roadmap" – Free Download</p>
+    </div>
+    <div>
+      <img src="images/ebook2.jpg" alt="Brand Storytelling Workbook">
+      <p class="caption">Brand Storytelling Workbook – 12-Page PDF</p>
+    </div>
+  </div>
+</section>
+
+<!-- Video Samples -->
+<section class="section bg-white">
+  <h2>Video Content</h2>
+  <div class="portfolio-grid container">
+    <div>
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+      <p class="caption">Behind the Scenes: Tribe x Trendz Shoot</p>
+    </div>
+    <div>
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+      <p class="caption">Content Campaign Launch – A Thousand Women</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4 bg-dark text-white">
+  <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
