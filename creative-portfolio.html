@@ -76,30 +76,98 @@
 </head>
 <body>
 
-<header>
-  <h1>Creative Portfolio</h1>
-  <p>Explore my work in visual content, campaign storytelling, and digital creation.</p>
-</header>
+<!-- Visual Content – Photos -->
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingPhotos">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhotos" aria-expanded="true">
+      <i class="bi bi-images me-2"></i> Visual Content – Photos
+    </button>
+  </h2>
+  <div id="collapsePhotos" class="accordion-collapse collapse show">
+    <div class="accordion-body">
 
-<div class="container my-5">
+      <!-- Subcategories inside -->
+      <div class="accordion" id="photoPortfolio">
 
-  <div class="accordion" id="portfolioAccordion">
-
-    <!-- Visual Content -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingPhotos">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhotos" aria-expanded="true">
-          <i class="bi bi-images me-2"></i> Visual Content – Photos
-        </button>
-      </h2>
-      <div id="collapsePhotos" class="accordion-collapse collapse show">
-        <div class="accordion-body grid">
-          <div class="grid-item"><img src="images/beauty-shoot1.jpg" alt="Beauty Campaign 1"></div>
-          <div class="grid-item"><img src="images/spa-content.jpg" alt="Spa Campaign"></div>
-          <div class="grid-item"><img src="images/fashion-portfolio.jpg" alt="Fashion Campaign"></div>
+        <!-- Fashion -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="fashionHeading">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fashionCollapse">
+              <i class="bi bi-person-fill me-2"></i> Fashion
+            </button>
+          </h2>
+          <div id="fashionCollapse" class="accordion-collapse collapse show">
+            <div class="accordion-body grid">
+              <div class="grid-item"><img src="images/fashion1.jpg" alt="Fashion 1"></div>
+              <div class="grid-item"><img src="images/fashion2.jpg" alt="Fashion 2"></div>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <!-- Fashion & Lifestyle -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="lifestyleHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lifestyleCollapse">
+              <i class="bi bi-camera-fill me-2"></i> Fashion & Lifestyle
+            </button>
+          </h2>
+          <div id="lifestyleCollapse" class="accordion-collapse collapse">
+            <div class="accordion-body grid">
+              <div class="grid-item"><img src="images/lifestyle1.jpg" alt="Lifestyle 1"></div>
+              <div class="grid-item"><img src="images/lifestyle2.jpg" alt="Lifestyle 2"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beauty & Spa -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="beautyHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#beautyCollapse">
+              <i class="bi bi-droplet-fill me-2"></i> Beauty & Spa
+            </button>
+          </h2>
+          <div id="beautyCollapse" class="accordion-collapse collapse">
+            <div class="accordion-body grid">
+              <div class="grid-item"><img src="images/beauty1.jpg" alt="Beauty 1"></div>
+              <div class="grid-item"><img src="images/spa1.jpg" alt="Spa 1"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Travel -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="travelHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#travelCollapse">
+              <i class="bi bi-globe2 me-2"></i> Travel
+            </button>
+          </h2>
+          <div id="travelCollapse" class="accordion-collapse collapse">
+            <div class="accordion-body grid">
+              <div class="grid-item"><img src="images/travel1.jpg" alt="Travel 1"></div>
+              <div class="grid-item"><img src="images/travel2.jpg" alt="Travel 2"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Photography -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="productHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productCollapse">
+              <i class="bi bi-box-seam me-2"></i> Product Photography
+            </button>
+          </h2>
+          <div id="productCollapse" class="accordion-collapse collapse">
+            <div class="accordion-body grid">
+              <div class="grid-item"><img src="images/product1.jpg" alt="Product 1"></div>
+              <div class="grid-item"><img src="images/product2.jpg" alt="Product 2"></div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- end #photoPortfolio inner accordion -->
     </div>
+  </div>
+</div>
 
     <!-- Video Content -->
     <div class="accordion-item">
