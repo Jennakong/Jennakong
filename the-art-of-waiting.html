@@ -202,13 +202,51 @@
 <section class="comments mt-5" style="padding: 40px 20px; background-color: #f9f5ee;">
   <div style="max-width: 800px; margin: 0 auto;">
     <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 20px;">Leave a Comment</h3>
-    <p>I’d love to know what you’re holding onto. Your mustard seed. Your wait. Your hope.</p>
+    <p style="font-size: 1rem; margin-bottom: 30px;">I’d love to know what you’re holding onto. Your mustard seed. Your wait. Your hope.</p>
 
-    <div style="position: relative; width: 100%; height: 700px;">
-      <iframe src="https://forms.gle/7g9fNDuZDgd1HbYC9" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
+    <form id="comment-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdYJTIjXG7i57qdtO3Mio3_MyF7q9aevwDkzIr4-4ew6SSEjQ/formResponse" method="POST" target="hidden_iframe" onsubmit="showThankYou()" style="display: flex; flex-direction: column; gap: 15px;">
+
+      <label style="display: flex; align-items: center; gap: 10px;">
+        <span>👤</span>
+        <input type="text" name="entry.1012665514" placeholder="Your Name" required
+               style="flex: 1; padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;" />
+      </label>
+
+      <label style="display: flex; align-items: center; gap: 10px;">
+        <span>📧</span>
+        <input type="email" name="entry.1141227850" placeholder="Your Email" required
+               style="flex: 1; padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;" />
+      </label>
+
+      <label style="display: flex; align-items: flex-start; gap: 10px;">
+        <span style="margin-top: 12px;">💬</span>
+        <textarea name="entry.752414235" placeholder="Your Comment" rows="5" required
+                  style="flex: 1; padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+      </label>
+
+      <button type="submit"
+              style="background-color: #C6A664; color: white; border: none; padding: 12px 20px; font-size: 1rem; border-radius: 8px; cursor: pointer;">
+        ✉️ Post Comment
+      </button>
+
+      <p id="comment-msg" style="display: none; margin-top: 10px; font-weight: 500; color: #1c1c1c; text-align: center;">
+        🎉 Thank you for your comment! I’m genuinely grateful you shared this with me.
+      </p>
+    </form>
+
+    <!-- Hidden iframe for form submission -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
   </div>
 </section>
+
+<script>
+  function showThankYou() {
+    setTimeout(function () {
+      document.getElementById("comment-form").reset();
+      document.getElementById("comment-msg").style.display = "block";
+    }, 1000);
+  }
+</script>
 
 <footer>
   <p>© 2025 Jennifer Akong. All Rights Reserved.</p>
