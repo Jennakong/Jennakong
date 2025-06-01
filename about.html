@@ -8,27 +8,139 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap CSS & Icons -->
+  <!-- Bootstrap & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdf9;
+      color: #1c1c1c;
+      margin: 0;
+      padding: 0;
+    }
 
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .navbar-brand img {
+      height: 55px;
+    }
+
+    .nav-link {
+      color: #1c1c1c !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #C6A664 !important;
+    }
+
+    .hero-box {
+      background-color: #f6f1e7;
+      padding: 60px 20px 30px;
+      border-bottom: 2px solid #C6A664;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #1c1c1c;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .content-box {
+      background-color: #ffffff;
+      border: 1px solid #C6A664;
+      padding: 40px 25px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+
+    .content-box h2 {
+      font-family: 'Playfair Display', serif;
+      color: #1c1c1c;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .content-box p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .image-block {
+      width: 100%;
+      height: 280px;
+      background-color: #e9e3d4;
+      border: 2px dashed #C6A664;
+      margin: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a88a48;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    .btn-gold {
+      background-color: #C6A664;
+      color: #fff;
+      border-radius: 6px;
+      padding: 10px 18px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-gold:hover {
+      background-color: #a88a48;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .content-box {
+        padding: 30px 15px;
+      }
+    }
+  </style>
+</head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand mx-auto" href="index.html">
-      <img src="logo1.png" alt="Jennifer Akong Logo" class="logo-img">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="logo.png" alt="Jennifer Akong Logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav text-center">
+      <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -38,88 +150,63 @@
   </div>
 </nav>
 
-<!-- Hero Image -->
-<section class="hero-image-section pt-5 mt-3">
-  <img src="images/about-banner.png" alt="Jennifer Akong About Banner" class="img-fluid">
+<!-- Spacer -->
+<div style="height: 80px;"></div>
+
+<!-- Hero Section -->
+<section class="hero-box">
+  <h1 class="hero-title">Meet Jennifer</h1>
 </section>
 
-<!-- Gold Line -->
-<div class="gold-line"></div>
+<!-- Story Section -->
+<section class="content-box">
+  <h2>My Story</h2>
+  <p>I come from a family of tailors. My aunt was a local champion—she made clothes for everyone in our community, from the chiefs and their wives to the children eagerly waiting on Christmas Eve. Watching her work, season after season, stirred something in me. That joy on people’s faces as they received their festive outfits—that was where my love for fashion was born.</p>
 
-<!-- WHO IS SHE -->
-<section class="who-section">
-  <h2>WHO IS SHE?</h2>
-  <p>A Fashion Entrepreneur. A Certified Project Manager. A Digital Marketing Guru. A Creative Genius. A Philanthropist. An Author. And an all-around force of nature.</p>
+  <div class="image-block">[Insert Image: Childhood sewing memory]</div>
+
+  <p>At 14, I got my first sewing machine. I started stitching for myself and my siblings, and then for friends and neighbours. Soon after, I began modelling and met designers who opened my eyes to the global fashion scene. From that point on, the vision was clear.</p>
+
+  <div class="image-block">[Insert Image: Modelling / early sewing creations]</div>
+
+  <p>For over a decade, I’ve had the honour of designing for royalty, brides, celebrities, and everyday icons. I’ve poured my heritage into every piece, crafting fashion that celebrates culture with confidence. This journey isn’t just mine—it’s about elevating African fashion and telling our stories through every stitch. I believe Africa deserves to be seen, celebrated, and represented in global spaces—and fashion is my loudest language.</p>
+
+  <div class="image-block">[Insert Image: Runway / cultural fashion work]</div>
 </section>
 
-<div class="gold-line"></div>
+<!-- Beliefs Section -->
+<section class="content-box">
+  <h2>What I Believe</h2>
+  <p>I believe in fashion that speaks—fashion that remembers where it came from and dreams of where it’s going. I believe in building brands that feel as good as they look. Strategy with soul. Content that connects. And creating work that reflects both purpose and pride.</p>
 
-<!-- ABOUT ME Section -->
-<section class="gold-box-soft text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">Meet Jennifer</h2>
-    <p>I’m Jennifer Akong — a fashion entrepreneur, digital marketing professional, creative consultant, and author. My work bridges strategy and storytelling across industries, blending visuals with results-driven content that moves people.</p>
-    <p>From launching fashion campaigns under MANIA by Jennifer to driving growth through branded content and digital strategy, I help purpose-led brands build with clarity and confidence.</p>
-    <p>I believe in working smart, creating with meaning, and showing up with both heart and intention. Whether it's a brand story, a marketing plan, or a campaign vision—I bring the energy to make it unforgettable.</p>
+  <p>To me, creativity is more than aesthetics. It’s how we show up, how we solve problems, how we express identity and inspire others. That’s the kind of energy I bring to everything I create—from garments to campaigns.</p>
+
+  <div class="image-block">[Insert Image: Brand work / creative workspace]</div>
+</section>
+
+<!-- Book Section -->
+<section class="content-box">
+  <h2>My Book</h2>
+  <p><strong><em>The Marketing Roadmap: From Intern to an Expert</em></strong> shares the exact lessons, strategies, and stories that helped me grow from a marketing intern to a confident, results-driven professional.</p>
+  <p>It’s more than a guide—it’s a toolkit for ambitious creatives, professionals, and entrepreneurs ready to build their brand, grow their skills, and make their mark in the digital space.</p>
+  <p>Whether you're just starting out or levelling up, this book is your step-by-step manual to thriving in modern marketing—with real insight and zero fluff.</p>
+  <a href="https://www.amazon.co.uk/Marketing-Roadmap-Beginners-Jennifer-Akong/dp/B0DHTL51LF" target="_blank" class="btn-gold">Get the Book</a>
+
+  <div class="image-block">[Insert Image: The Marketing Roadmap book cover]</div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="social-icons mb-3">
+    <a href="https://instagram.com/jenn.akong" target="_blank"><i class="bi bi-instagram"></i></a>
+    <a href="https://linkedin.com/in/jenniferakong1" target="_blank"><i class="bi bi-linkedin"></i></a>
+    <a href="https://youtube.com/@jenniferakong1" target="_blank"><i class="bi bi-youtube"></i></a>
   </div>
-</section>
-
-<div class="gold-line"></div>
-
-<!-- MY STORY -->
-<section class="gold-box-soft text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">My Story</h2>
-    <p>I come from a family of tailors. My aunt was a local champion—she made clothes for everyone in our community: chiefs, their wives, maidens, the young and the old. I remember Christmas Eves with children lined up, excited for their new outfits. That joy—that atmosphere—sparked something in me.</p>
-    <p>I got my first sewing machine at 14. From making outfits for myself and my siblings, I started designing for friends and neighbours. I later became a model and met amazing fashion designers who inspired me deeply. Over the past decade, I’ve styled brides, celebrities, and royalty. Fashion is more than craft to me—it’s a calling.</p>
-    <p>And with that calling came a mission: to promote African fashion unapologetically. I tell stories through fabric, silhouette, and colour—stories rooted in culture, boldness, and pride. Today, I’m joining a movement of a thousand African creatives with one mission: ✨ <em>To put Africa on the global stage, one outfit at a time.</em></p>
-    <a href="about.html" class="btn btn-outline-gold mt-3">Read My Full Story</a>
-  </div>
-</section>
-
-<div class="gold-line"></div>
-
-<!-- MY BOOK -->
-<section class="gold-box-soft text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">My Book</h2>
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <img src="images/the-marketing-roadmap-cover.jpg" alt="The Marketing Roadmap" class="img-fluid rounded shadow-sm mb-3">
-      </div>
-      <div class="col-md-6 text-start">
-        <p><strong><em>The Marketing Roadmap: From Intern to an Expert</em></strong> shares the exact lessons, strategies, and stories that helped me grow from a marketing intern to a confident, results-driven professional.</p>
-        <p>It’s more than a guide—it’s a toolkit for ambitious creatives, professionals, and entrepreneurs ready to build their brand, grow their skills, and make their mark in the digital space.</p>
-        <p>Whether you're just starting out or levelling up, this book is your step-by-step manual to thriving in modern marketing—with real insight and zero fluff.</p>
-        <a href="https://www.amazon.co.uk/Marketing-Roadmap-Beginners-Jennifer-Akong/dp/B0DHTL51LF" target="_blank" class="btn btn-gold-solid">Buy the Book</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EMAIL SIGNUP -->
-<section class="email-signup">
-  <div class="container text-center py-5">
-    <h4>Join my creative circle</h4>
-    <p class="mb-4">Get exclusive content, fashion guides, and behind-the-scenes straight to your inbox.</p>
-    <form class="d-flex flex-column align-items-center gap-3">
-      <input type="email" placeholder="Enter your email" required class="form-control w-75 w-md-50" style="max-width: 400px;">
-      <button type="submit" class="btn btn-gold-solid">Subscribe</button>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer-green text-center text-white py-4">
-  <div class="mb-3">
-    <a href="https://instagram.com/jenn.akong" target="_blank" class="footer-icon"><i class="bi bi-instagram"></i></a>
-    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-linkedin"></i></a>
-    <a href="https://youtube.com/@jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-youtube"></i></a>
-  </div>
-  <p class="mb-0">&copy; 2025 Jennifer Akong. All rights reserved.</p>
+  <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
 </footer>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
