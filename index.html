@@ -18,18 +18,21 @@
       font-family: 'Playfair Display', serif;
     }
     .navbar {
-  background-color: #ffffff; /* or use rgba(255,255,255,0.9) for slight transparency */
+       padding: 0.5rem 1rem;
+  background-color: #ffffff; /* or use rgba(255,255,255,0.95) for slight transparency */
   box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* optional soft shadow */
 }
 .navbar-brand {
   margin-left: auto;
   margin-right: auto;
 }
-    .logo-img {
+ .logo-img {
+  max-height: 70px;   /* or adjust to 60–80px range */
   height: auto;
-  max-height: 120px;
   width: auto;
-  display: block;
+  object-fit: contain;
+  padding: 0;
+  margin: 0;
 }
     .hero-image-section img {
       width: 100%;
