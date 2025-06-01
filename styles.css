@@ -115,7 +115,10 @@ body {
   font-size: 0.95rem;
   color: #444;
 }
-
+h3 {
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
 .img-fluid {
   border-radius: 8px;
   margin-bottom: 15px;
