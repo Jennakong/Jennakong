@@ -21,6 +21,7 @@
        padding: 0.5rem 1rem;
   background-color: rgba(255,255,255,0.95; /* or use rgba(255,255,255,0.95) for slight transparency */
   box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* optional soft shadow */
+    z-index: 9999;
 }
 .navbar-brand {
   margin-left: auto;
@@ -168,14 +169,19 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
-<div class="container d-flex justify-content-center align-items-center py-2">
-  <a class="navbar-brand" href="index.html">
-    <img src="logo1.png" alt="Jennifer Akong Logo" class="logo-img">
-  </a>
-</div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+  <div class="container position-relative d-flex justify-content-center align-items-center">
+
+    <!-- Centered Logo -->
+    <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="index.html">
+      <img src="logo1.png" alt="Jennifer Akong Logo" class="logo-img">
+    </a>
+
+    <!-- Toggle aligned right -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Navigation Links -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav text-center">
         <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
@@ -184,9 +190,9 @@
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
+
   </div>
 </nav>
-
 <!-- Hero Image -->
 <section class="hero-image-section pt-5 mt-3">
   <img src="images/hero-bg1.png" alt="Jennifer Akong Hero Image">
