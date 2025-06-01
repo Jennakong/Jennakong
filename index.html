@@ -3,136 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jennifer Akong | Official Website</title>
-<meta name="description" content="Welcome to the official site of Jennifer Akong — Fashion Entrepreneur, Brand Strategist, and Digital Storyteller. Explore her blog, creative projects, and insights on marketing, fashion, and faith." />
-<meta name="author" content="Jennifer Akong" />
-<meta name="keywords" content="Jennifer Akong, fashion entrepreneur, digital marketing, branding, Afro-Fusion fashion, lifestyle blog, faith, Manchester creatives" />
-
-<!-- Open Graph for better social previews -->
-<meta property="og:title" content="Jennifer Akong | Official Website" />
-<meta property="og:description" content="The digital home of Jennifer Akong — blending fashion, faith, and creative strategy." />
-<meta property="og:image" content="https://www.jenniferakong.com/images/og-cover.jpg" />
-<meta property="og:url" content="https://www.jenniferakong.com" />
-<meta property="og:type" content="website" />
-
-<!-- Structured data for Google -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Jennifer Akong",
-  "url": "https://www.jenniferakong.com",
-  "sameAs": [
-    "https://www.instagram.com/jenn.akong",
-    "https://www.linkedin.com/in/jenniferakong1",
-    "https://youtube.com/@jenniferakong1"
-  ]
-}
-</script>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  <!-- Google Fonts -->
+  <title>Jennifer Akong | Fashion & Marketing</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #fffdf9;
-      margin: 0;
       color: #1c1c1c;
+      margin: 0;
+      padding-top: 80px;
     }
-    .navbar {
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    nav {
       background-color: rgba(245, 235, 221, 0.95);
     }
-    .logo-img {
-      max-height: 60px;
-    }
     .hero {
-      background-color: #f5ebdd;
+      background-image: url('images/hero-bg.png'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 100px 20px 40px;
+      color: white;
     }
     .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 10px;
     }
-    .hero p {
-      font-size: 1.1rem;
-      margin-top: 10px;
-    }
-    .hero-image {
-      width: 100%;
-      height: auto;
-      margin-bottom: 40px;
+    .section-divider {
+      border-top: 1px solid #c6a664;
+      margin: 40px auto;
+      width: 80%;
     }
     .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      margin-bottom: 5px;
+      text-align: center;
+      color: #0c2d21;
+      margin-bottom: 10px;
     }
-    .section-subtitle {
-      font-size: 1rem;
-      color: #555;
+    .highlight-block {
+      background-color: #0c2d21;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .highlight-block h2 {
+      font-size: 2rem;
+      color: #c6a664;
       margin-bottom: 20px;
     }
-    .swiper {
-      padding: 20px 0 50px;
+    .about-brief {
+      text-align: center;
+      padding: 40px 20px;
     }
-    .swiper-slide {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      overflow: hidden;
-      max-width: 280px;
-      text-decoration: none;
-      color: inherit;
+    .about-brief a.btn {
+      background-color: #c6a664;
+      border: none;
+      color: white;
+      font-weight: 500;
     }
-    .swiper-slide img {
+    .blog-categories {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0;
+      font-weight: 500;
+    }
+    .blog-categories span {
+      border-bottom: 2px solid transparent;
+      padding-bottom: 5px;
+      cursor: pointer;
+    }
+    .blog-categories span:hover {
+      border-color: #c6a664;
+    }
+    .resource-banner {
+      background-color: #f5ebdd;
+      padding: 40px 20px;
+      text-align: center;
+      border: 1px solid #c6a664;
+    }
+    .resource-banner a.btn {
+      margin-top: 20px;
+      background-color: #0c2d21;
+      color: white;
+      border: none;
+    }
+    .video-container {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+    .video-container iframe {
       width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
-    .blog-card-content {
-      padding: 15px 20px;
-    }
-    .blog-card-content h5 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .blog-card-content p {
-      font-size: 0.9rem;
-      color: #444;
-    }
-    .tag {
-      display: inline-block;
-      background-color: #e8d3b9;
-      color: #1c1c1c;
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 6px;
-      margin-right: 8px;
+      height: 450px;
+      border-radius: 10px;
     }
     footer {
       background-color: #1c1c1c;
-      color: #fff;
-      padding: 20px;
+      color: white;
       text-align: center;
+      padding: 20px;
     }
     .social-icons a {
+      color: white;
       margin: 0 10px;
-      color: #fff;
       font-size: 1.5rem;
     }
   </style>
@@ -141,9 +121,9 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand mx-auto" href="index.html">
-      <img src="logo.png" alt="Jennifer Akong Logo" class="logo-img">
+  <div class="container">
+    <a class="navbar-brand mx-auto" href="#">
+      <img src="logo.png" alt="Jennifer Akong Logo" style="max-height: 60px;">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -159,174 +139,79 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
-<header class="hero">
-  <div class="container">
-    <h1 class="display-4">Who is SHE?</h1>
-    <p class="lead">Fashion Entrepreneur | Digital Marketing Professional | Project Manager | Brand Strategist | Author</p>
-  </div>
-</header>
-
-<!-- Hero Image -->
-<section class="hero-image-section">
-  <img src="images/hero-bg.png" alt="Jennifer Akong Hero Image" class="hero-image">
-</section>
-<div class="text-center my-4">
-  <a href="contact.html" class="btn btn-dark px-4 py-2">Work With Me</a>
-</div>
-<!-- Notebook Intro Section -->
-<section id="notebook" class="text-center mt-5">
-  <h2 class="section-title" style="font-family: 'Playfair Display', serif; font-size: 2.2rem;">
-    <i class="bi bi-journal-bookmark-fill" style="font-size: 1.5rem; color: #C6A664;"></i>
-    From My Notebook
-  </h2>
-  <p class="lead">Insights, stories, and strategies from my creative journey.</p>
-  <hr style="width: 60px; height: 3px; background-color: #C6A664; margin: 20px auto;">
-</section>
-<!-- Blog Sections -->
-<section class="section-container px-3">
-
-  <!-- Fashion -->
-  <div class="mb-5">
-    <h2 class="section-title">Fashion Articles</h2>
-    <p class="section-subtitle">Where fabric meets identity.</p>
-    <div class="swiper swiper-fashion">
-      <div class="swiper-wrapper">
-        <a href="blog-fashion-brand.html" class="swiper-slide">
-          <img src="images/blog1.jpg" alt="Fashion Brand">
-          <div class="blog-card-content">
-            <h5>Why Afro-Fusion Fashion Is More Than a Trend</h5>
-            <p>Fashion is not just fabric — it’s memory, identity...</p>
-            <span class="tag">Fashion</span><span class="tag">Business</span>
-          </div>
-        </a>
-        <a href="blog-afro-fusion.html" class="swiper-slide">
-          <img src="images/blog3.jpg" alt="Afro Fusion Campaign">
-          <div class="blog-card-content">
-            <h5>Afro Fusion Campaign</h5>
-            <p>How I merged heritage and modern style...</p>
-            <span class="tag">Culture</span><span class="tag">Campaign</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Marketing -->
-<div class="mb-5">
-  <h2 class="section-title">Marketing Tips</h2>
-  <p class="section-subtitle">Work smart with Jenn.</p>
-  <div class="swiper swiper-marketing">
-    <div class="swiper-wrapper">
-      
-      <!-- Blog Post -->
-      <a href="blog-marketing-tips.html" class="swiper-slide">
-        <img src="images/blog2.jpg" alt="Marketing Tips">
-        <div class="blog-card-content">
-          <h5>3 Smart Marketing Tips</h5>
-          <p>Simple strategies to grow your creative brand...</p>
-          <span class="tag">Marketing</span><span class="tag">Growth</span>
-        </div>
-      </a>
-
-      <!-- Creative Portfolio -->
-      <a href="creative-portfolio.html" class="swiper-slide">
-        <img src="images/creative-preview.jpg" alt="Creative Portfolio Preview">
-        <div class="blog-card-content">
-          <h5>Creative Portfolio</h5>
-          <p>Product photos, video content, and resourceful eBooks.</p>
-          <span class="tag">Design</span><span class="tag">Campaigns</span>
-        </div>
-      </a>
-
-    </div>
-  </div>
+<!-- Hero -->
+<div class="hero">
+  <h1>Fashion Meets Storytelling</h1>
 </div>
 
-  <!-- Life Events -->
-  <div class="mb-5">
-    <h2 class="section-title">Life Events</h2>
-    <p class="section-subtitle">From my heart to the page.</p>
-    <div class="swiper swiper-life">
-      <div class="swiper-wrapper">
-        <a href="the-art-of-waiting.html" class="swiper-slide">
-          <img src="images/Theartofwaiting.blogcard.png" alt="The Wait">
-          <div class="blog-card-content">
-            <h5>The Quiet Art of Waiting</h5>
-            <p>God, It's Me Again.... Just Checking In.</p>
-            <span class="tag">Faith</span><span class="tag">Hope</span>
-          </div>
-        </a>
-        <a href="jesus-lives-in-my-house.html" class="swiper-slide">
-          <img src="images/jesus-lives-blog-cover.png" alt="Jesus Lives">
-          <div class="blog-card-content">
-            <h5>Jesus Lives in My House</h5>
-            <p>A story of surrender, storms, and the God who sees me — EL ROI.</p>
-            <span class="tag">Faith</span><span class="tag">Growth</span>
-          </div>
-        </a>
-        <a href="Themoon.html" class="swiper-slide">
-          <img src="images/Themoon.png" alt="The Night">
-          <div class="blog-card-content">
-            <h5>The Night Held Its Breath</h5>
-            <p>The moon poured through the window, casting memory across the floor...</p>
-            <span class="tag">Dreams</span><span class="tag">Twilight</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
+<!-- Who is SHE -->
+<section class="highlight-block">
+  <h2>WHO IS SHE?</h2>
+  <p>A designer, a storyteller—ever-enchanted by the art of dress.<br>
+  Her work unfolds boldly, an ode to passion in silhouette, texture, and form.</p>
+</section>
 
-  <!-- Creative Writing -->
-  <div class="mb-5">
-    <h2 class="section-title">Creative Writing</h2>
-    <p class="section-subtitle">Stories to stir your soul.</p>
-    <div class="alert alert-warning small" role="alert">
-      ⚠️ Some stories may contain mature content. Reader discretion advised.
-    </div>
-    <div class="swiper swiper-creative">
-      <div class="swiper-wrapper">
-        <a href="lust-in-the-city.html" class="swiper-slide">
-          <img src="images/Lust+in+the+City+Header.png" alt="Lust in the City">
-          <div class="blog-card-content">
-            <h5>Lust In The City</h5>
-            <p>Late nights, wine, and tension she can't ignore.</p>
-            <span class="tag">Fiction</span><span class="tag">Romance</span>
-          </div>
-        </a>
-        <a href="the-art-of-waiting.html" class="swiper-slide">
-          <img src="images/Theartofwaiting.blogcard.png" alt="The Wait">
-          <div class="blog-card-content">
-            <h5>The Quiet Art of Waiting</h5>
-            <p>God, It's Me Again.... Just Checking In.</p>
-            <span class="tag">Faith</span><span class="tag">Hope</span>
-          </div>
-        </a>
-           <a href="jesus-lives-in-my-house.html" class="swiper-slide">
-          <img src="images/jesus-lives-blog-cover.png" alt="Jesus Lives">
-          <div class="blog-card-content">
-            <h5>Jesus Lives in My House</h5>
-            <p>A story of surrender, storms, and the God who sees me — EL ROI.</p>
-            <span class="tag">Faith</span><span class="tag">Growth</span>
-          </div>
-        </a>
-        <a href="Themoon.html" class="swiper-slide">
-          <img src="images/Themoon.png" alt="The Night">
-          <div class="blog-card-content">
-            <h5>The Night Held Its Breath</h5>
-            <p>The moon poured through the window, casting memory across the floor...</p>
-            <span class="tag">Dreams</span><span class="tag">Twilight</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
+<!-- About Section -->
+<section class="about-brief">
+  <h2>ABOUT ME</h2>
+  <p>I’m Jennifer Akong, fashion designer and marketing writer.<br>
+     Welcome to my creative space, where style meets strategy.</p>
+  <a href="about.html" class="btn btn-lg mt-3">READ MY STORY</a>
+</section>
 
+<!-- Blog Categories -->
+<div class="section-divider"></div>
+<div class="blog-categories">
+  <span>FASHION</span>
+  <span>MARKETING</span>
+  <span>LIFE EVENTS</span>
+  <span>CREATIVE WRITING</span>
+</div>
+
+<!-- Fashion Guide CTA -->
+<section class="resource-banner">
+  <h2>THE MAXIMALIST GUIDE TO FASHION</h2>
+  <p>Discover bold, statement styling in my free downloadable guide.</p>
+  <a href="fashion-guide.html" class="btn btn-lg">Get the Guide</a>
+</section>
+
+<!-- Featured Blog -->
+<section class="about-brief">
+  <h2>FEATURED FASHION BLOG</h2>
+  <p><strong>Why Afro-Fusion Fashion Is More Than a Trend</strong><br>
+     Fashion is not just fabric—it’s memory, identity, and resistance.</p>
+  <a href="blog-fashion-brand.html" class="btn btn-outline-dark mt-2">Read Article</a>
+</section>
+
+<!-- Book on Amazon -->
+<section class="resource-banner">
+  <h2>THE MARKETING ROADMAP</h2>
+  <p>My bestselling guide for creatives—now available on Amazon.</p>
+  <a href="https://www.amazon.com/dp/YOUR_BOOK_ID" target="_blank" class="btn btn-lg">Buy on Amazon</a>
+</section>
+
+<!-- Campaign Video -->
+<div class="video-container">
+  <h2 class="text-center mb-3">Featured Campaign</h2>
+  <p class="text-center">A fashion film exploring identity, fabric, and expression in urban spaces.</p>
+  <iframe src="https://www.youtube.com/embed/4um-X6-EZcI" allowfullscreen></iframe>
+</div>
+
+<!-- Optional Additions -->
+<section class="about-brief">
+  <h2>AS SEEN IN</h2>
+  <p>[Placeholder for brand logos / testimonials]</p>
+</section>
+
+<section class="about-brief">
+  <h2>JOIN MY CREATIVE CIRCLE</h2>
+  <p>Behind-the-scenes stories, style tips, and exclusive guides—straight to your inbox.</p>
+  <a href="https://forms.gle/YOUR_FORM" class="btn btn-dark mt-2">Sign Up</a>
 </section>
 
 <!-- Footer -->
 <footer>
-  <div class="social-icons mb-3">
+  <div class="social-icons mb-2">
     <a href="https://instagram.com/jenn.akong" target="_blank"><i class="bi bi-instagram"></i></a>
     <a href="https://linkedin.com/in/jenniferakong1" target="_blank"><i class="bi bi-linkedin"></i></a>
     <a href="https://youtube.com/@jenniferakong1" target="_blank"><i class="bi bi-youtube"></i></a>
@@ -334,23 +219,7 @@
   <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
 </footer>
 
-<!-- JS Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const swipers = ['swiper-fashion', 'swiper-marketing', 'swiper-life', 'swiper-creative'];
-  swipers.forEach(cls => {
-    new Swiper(`.${cls}`, {
-      slidesPerView: 1.2,
-      spaceBetween: 15,
-      freeMode: true,
-      breakpoints: {
-        576: { slidesPerView: 2.2 },
-        768: { slidesPerView: 3 }
-      }
-    });
-  });
-</script>
 
 </body>
 </html>
