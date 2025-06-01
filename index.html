@@ -3,224 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jennifer Akong | Fashion & Marketing</title>
-  <link rel="icon" href="images/favicon.png" />
+  <title>Jennifer Akong | Official Website</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
   <style>
     body {
       background-color: #fffdf9;
       font-family: 'Poppins', sans-serif;
       color: #1c1c1c;
-      margin: 0;
     }
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
     }
     .navbar {
-      background-color: #1c1c1c;
+      background-color: rgba(245, 235, 221, 0.95);
     }
-    .navbar-nav .nav-link {
-      color: white;
-      font-weight: 500;
+    .logo-img {
+      max-height: 60px;
     }
     .hero-image-section img {
       width: 100%;
       display: block;
     }
     .who-section {
-      background-color: #083a2b;
+      background-color: #0f2e1f;
       color: white;
       text-align: center;
       padding: 40px 20px;
+      margin: 0;
     }
     .who-section h2 {
       color: #C6A664;
-      font-weight: 700;
+      font-weight: bold;
+      font-size: 1.75rem;
     }
-    .about-section {
-      padding: 60px 20px;
+    .gold-line {
+      height: 2px;
+      background-color: #C6A664;
+      margin: 40px auto 10px;
+      width: 90%;
+    }
+    .section-title {
       text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-top: 20px;
     }
-    .about-section button {
-      background-color: transparent;
-      border: 2px solid #C6A664;
+    .blog-categories {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .blog-categories a {
+      text-decoration: none;
       color: #1c1c1c;
-      padding: 10px 20px;
+      margin: 0 15px;
       font-weight: 500;
-      margin-top: 15px;
-    }
-    .section-line {
-      border-top: 2px solid #C6A664;
-      margin: 40px auto;
-      width: 80%;
-    }
-    .blog-preview {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .blog-preview h3 {
-      font-weight: 700;
     }
     .gold-box {
-      border: 1.5px solid #C6A664;
+      border: 1px solid #C6A664;
       padding: 30px 20px;
-      margin: 40px 20px;
+      margin: 40px 0;
       background-color: #fffdf9;
     }
-    .gold-box h3 {
-      font-weight: 700;
-    }
-    .gold-button {
-      display: inline-block;
-      border: 2px solid #C6A664;
+    .btn-outline-gold {
+      border: 1.5px solid #C6A664;
+      background: transparent;
       color: #1c1c1c;
-      padding: 10px 25px;
-      margin-top: 20px;
+      padding: 10px 22px;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      border-radius: 0;
       font-weight: 500;
-      background-color: transparent;
-      text-decoration: none;
     }
-    .email-signup {
-      background-color: #f5ebdd;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .email-signup input[type="email"] {
-      padding: 10px;
-      width: 60%;
-      max-width: 300px;
-      margin-right: 10px;
-    }
-    .email-signup button {
-      padding: 10px 20px;
-      background-color: #1c1c1c;
-      color: white;
-      border: none;
-    }
-    .testimonial {
-      padding: 40px 20px;
-      background-color: #fff;
-      text-align: center;
-      font-style: italic;
-      color: #555;
-    }
-    .press-logos {
-      text-align: center;
-      padding: 30px 20px;
-      border-top: 1px solid #ddd;
-    }
-    .press-logos img {
-      height: 40px;
-      margin: 0 15px;
+    .btn-outline-gold:hover {
+      background-color: #C6A664;
+      color: #fff;
     }
     footer {
       background-color: #1c1c1c;
-      color: white;
+      color: #fff;
       text-align: center;
-      padding: 30px 20px;
+      padding: 20px 10px;
     }
-    footer a {
-      color: white;
+    .social-icons a {
       margin: 0 10px;
+      color: #fff;
       font-size: 1.5rem;
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">JENNIFER AKONG</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand mx-auto" href="index.html">
+      <img src="logo.png" alt="Jennifer Akong Logo" class="logo-img">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO IMAGE -->
-<section class="hero-image-section">
+<!-- Hero Image -->
+<section class="hero-image-section pt-5 mt-3">
   <img src="images/hero-bg.png" alt="Jennifer Akong Hero Image">
 </section>
 
-<!-- WHO IS SHE -->
+<!-- Who is SHE -->
 <section class="who-section">
   <h2>WHO IS SHE?</h2>
-  <p>A designer, a storyteller—ever-enchanted by the art of dress.<br>Her work unfolds boldly, an ode to passion in silhouette, texture, and form.</p>
+  <p class="mt-3">A designer, a storyteller—ever-enchanted by the art of dress. Her work unfolds boldly, an ode to passion in silhouette, texture, and form.</p>
 </section>
 
-<!-- ABOUT -->
-<section class="about-section">
-  <h2>ABOUT ME</h2>
-  <p>I’m Jennifer Akong, fashion designer and marketing writer.<br>
-     Welcome to my creative space, where style meets strategy.</p>
-  <button onclick="window.location.href='about.html'">READ MY STORY</button>
+<!-- ABOUT ME Section -->
+<section class="text-center my-5">
+  <h2 class="section-title">ABOUT ME</h2>
+  <p class="mb-3">I’m Jennifer Akong, fashion designer and marketing writer. Welcome to my creative space, where style meets strategy.</p>
+  <a href="about.html" class="btn btn-outline-gold">Read My Story</a>
 </section>
 
 <!-- BLOG SECTION -->
-<div class="section-line"></div>
-<section class="blog-preview">
-  <h3>FEATURED FASHION BLOG</h3>
-  <p>Layered in textures, wrapped in stories—discover the art of intentional extravagance.</p>
-  <a href="blog-feature.html" class="gold-button">READ THE STORY</a>
-</section>
-<div class="section-line"></div>
-
-<!-- RESOURCES SECTION -->
-<div class="gold-box text-center">
-  <h3>THE MAXIMALIST GUIDE TO FASHION</h3>
-  <p>Discover bold, statement styling in my free downloadable guide.</p>
-  <a href="https://forms.gle/xC2JGNr9JN556UrUA" class="gold-button" target="_blank">DOWNLOAD FREE GUIDE</a>
+<div class="gold-line"></div>
+<div class="blog-categories">
+  <a href="fashion.html">FASHION</a>
+  <a href="marketing.html">MARKETING</a>
+  <a href="creative.html">CREATIVE WRITING</a>
 </div>
+<div class="gold-line"></div>
 
-<!-- BOOK PROMO -->
-<div class="gold-box text-center">
-  <h3>THE MARKETING ROADMAP</h3>
-  <p>My latest book is now available on Amazon. A guide to building brands that speak boldly.</p>
-  <a href="https://amazon.com/marketing-roadmap" class="gold-button" target="_blank">BUY ON AMAZON</a>
+<!-- FEATURED CONTENT -->
+<div class="container">
+  <div class="gold-box">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h3>The Maximalist Guide to Fashion</h3>
+        <p>Discover bold, statement styling in my free downloadable guide.</p>
+        <a href="https://forms.gle/YOUR_FORM" class="btn btn-outline-gold mt-2">Download Guide</a>
+      </div>
+      <div class="col-md-6">
+        <img src="images/maximalist-guide.png" class="img-fluid" alt="Maximalist Guide">
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-box">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="images/fashion-blog.png" class="img-fluid" alt="Fashion Blog">
+      </div>
+      <div class="col-md-6">
+        <h3>Featured Fashion Blog</h3>
+        <p>Layered in textures, wrapped in stories—discover the art of intentional extravagance.</p>
+        <a href="blog-fashion-brand.html" class="btn btn-outline-gold mt-2">Read the Story</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-box">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="images/the-marketing-roadmap.png" class="img-fluid" alt="Marketing Roadmap">
+      </div>
+      <div class="col-md-6">
+        <h3>The Marketing Roadmap</h3>
+        <p>My latest book is now available on Amazon. A guide to building brands that speak boldly.</p>
+        <a href="https://www.amazon.com/dp/YOUR_BOOK_ID" class="btn btn-outline-gold mt-2">Buy on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-box text-center">
+    <h3>Latest Campaign</h3>
+    <p>A fashion film exploring identity, fabric, and expression in urban spaces.</p>
+    <div class="ratio ratio-16x9 mb-3">
+      <iframe src="https://www.youtube.com/embed/4um-X6-EZcI" allowfullscreen></iframe>
+    </div>
+    <a href="creative-portfolio.html" class="btn btn-outline-gold">View My Portfolio</a>
+  </div>
 </div>
-
 <!-- TESTIMONIALS -->
 <section class="testimonial">
-  <p>"Jennifer's work is a blend of style and soul. Every piece tells a story." – Editorial Review</p>
+  <p>"Jennifer's work is a blend of style and soul. Every piece tells a story." – Editorial Review</p>
 </section>
 
 <!-- PRESS -->
 <section class="press-logos">
-  <h5>AS SEEN IN</h5>
-  <img src="images/vogue.png" alt="Vogue" />
-  <img src="images/elle.png" alt="Elle" />
-  <img src="images/guardian.png" alt="Guardian" />
+  <h5>AS SEEN IN</h5>
+  <img src="images/vogue.png" alt="Vogue" />
+  <img src="images/elle.png" alt="Elle" />
+  <img src="images/guardian.png" alt="Guardian" />
 </section>
 
 <!-- EMAIL SIGNUP -->
 <section class="email-signup">
-  <h4>Join my creative circle</h4>
-  <p>Get exclusive content, fashion guides, and behind-the-scenes straight to your inbox.</p>
-  <form>
-    <input type="email" placeholder="Enter your email">
-    <button type="submit">Subscribe</button>
-  </form>
+  <h4>Join my creative circle</h4>
+  <p>Get exclusive content, fashion guides, and behind-the-scenes straight to your inbox.</p>
+  <form>
+    <input type="email" placeholder="Enter your email">
+    <button type="submit">Subscribe</button>
+  </form>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div>
-    <a href="https://instagram.com/jenn.akong" target="_blank"><i class="bi bi-instagram"></i></a>
-    <a href="https://linkedin.com/in/jenniferakong1" target="_blank"><i class="bi bi-linkedin"></i></a>
-    <a href="https://youtube.com/@jenniferakong1" target="_blank"><i class="bi bi-youtube"></i></a>
-  </div>
-  <p>&copy; 2025 Jennifer Akong. All rights reserved.</p>
+  <div>
+    <a href="https://instagram.com/jenn.akong" target="_blank"><i class="bi bi-instagram"></i></a>
+    <a href="https://linkedin.com/in/jenniferakong1" target="_blank"><i class="bi bi-linkedin"></i></a>
+    <a href="https://youtube.com/@jenniferakong1" target="_blank"><i class="bi bi-youtube"></i></a>
+  </div>
+  <p>&copy; 2025 Jennifer Akong. All rights reserved.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
