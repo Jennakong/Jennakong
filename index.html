@@ -7,6 +7,7 @@
   <link rel="icon" href="images/favicon.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
     body {
       background-color: #fffdf9;
@@ -86,10 +87,19 @@
       text-align: center;
       padding: 20px 10px;
     }
-    .social-icons a {
+    footer .social-icons a {
       margin: 0 10px;
       color: #C6A664;
       font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    footer .social-icons a:hover {
+      color: #fff;
+    }
+    .email-signup input[type="email"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 0;
     }
   </style>
 </head>
@@ -138,6 +148,7 @@
 <div class="blog-categories">
   <a href="fashion.html">FASHION</a>
   <a href="marketing.html">MARKETING</a>
+  <a href="life-events.html">LIFE EVENTS</a>
   <a href="creative.html">CREATIVE WRITING</a>
 </div>
 <div class="gold-line"></div>
@@ -149,7 +160,7 @@
       <div class="col-md-6">
         <h3>The Maximalist Guide to Fashion</h3>
         <p>Discover bold, statement styling in my free downloadable guide.</p>
-        <a href="https://forms.gle/YOUR_FORM" class="btn btn-outline-gold mt-2">Download Guide</a>
+        <a href="https://forms.gle/YOUR_FORM_LINK" class="btn btn-outline-gold mt-2">Download Guide</a>
       </div>
       <div class="col-md-6">
         <img src="images/maximalist-guide.png" class="img-fluid" alt="Maximalist Guide">
@@ -192,37 +203,43 @@
     <a href="creative-portfolio.html" class="btn btn-outline-gold">View My Portfolio</a>
   </div>
 </div>
-<!-- TESTIMONIALS -->
-<section class="testimonial">
-  <p>"Jennifer's work is a blend of style and soul. Every piece tells a story." – Editorial Review</p>
+
+<!-- TESTIMONIAL -->
+<section class="text-center my-5">
+  <blockquote class="blockquote">
+    <p class="mb-0">"Jennifer's work is a blend of style and soul. Every piece tells a story."</p>
+    <footer class="blockquote-footer">Editorial Review</footer>
+  </blockquote>
 </section>
 
 <!-- PRESS -->
-<section class="press-logos">
-  <h5>AS SEEN IN</h5>
-  <img src="images/vogue.png" alt="Vogue" />
-  <img src="images/elle.png" alt="Elle" />
-  <img src="images/guardian.png" alt="Guardian" />
+<section class="text-center my-5">
+  <h5 class="mb-3">AS SEEN IN</h5>
+  <div class="d-flex justify-content-center gap-4 flex-wrap">
+    <img src="images/vogue.png" alt="Vogue" style="height: 40px;">
+    <img src="images/elle.png" alt="Elle" style="height: 40px;">
+    <img src="images/guardian.png" alt="Guardian" style="height: 40px;">
+  </div>
 </section>
 
 <!-- EMAIL SIGNUP -->
-<section class="email-signup">
-  <h4>Join my creative circle</h4>
-  <p>Get exclusive content, fashion guides, and behind-the-scenes straight to your inbox.</p>
-  <form>
-    <input type="email" placeholder="Enter your email">
-    <button type="submit">Subscribe</button>
-  </form>
+<section class="email-signup text-center my-5">
+  <h4 class="mb-2">Join my creative circle</h4>
+  <p class="mb-4">Get exclusive content, fashion guides, and behind-the-scenes straight to your inbox.</p>
+  <form class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
+    <input type="email" placeholder="Enter your email" class="form-control w-auto" style="max-width: 300px;" required>
+    <button type="submit" class="btn btn-outline-gold">Subscribe</button>
+  </form>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div>
-    <a href="https://instagram.com/jenn.akong" target="_blank"><i class="bi bi-instagram"></i></a>
-    <a href="https://linkedin.com/in/jenniferakong1" target="_blank"><i class="bi bi-linkedin"></i></a>
-    <a href="https://youtube.com/@jenniferakong1" target="_blank"><i class="bi bi-youtube"></i></a>
-  </div>
-  <p>&copy; 2025 Jennifer Akong. All rights reserved.</p>
+  <div class="social-icons mb-3">
+    <a href="https://instagram.com/jenn.akong" target="_blank"><i class="bi bi-instagram"></i></a>
+    <a href="https://linkedin.com/in/jenniferakong1" target="_blank"><i class="bi bi-linkedin"></i></a>
+    <a href="https://youtube.com/@jenniferakong1" target="_blank"><i class="bi bi-youtube"></i></a>
+  </div>
+  <p>&copy; 2025 Jennifer Akong. All rights reserved.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
