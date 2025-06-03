@@ -123,6 +123,24 @@
       background-color: #C6A664;
       color: #fff;
     }
+    .blog-tags .tag-button {
+  display: inline-block;
+  font-size: 0.75rem;
+  background-color: #0f2e1f;
+  color: #C6A664;
+  border: 1px solid #C6A664;
+  padding: 4px 10px;
+  margin-top: 4px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.blog-tags .tag-button:hover {
+  background-color: #C6A664;
+  color: #fffdf9;
+}
+
     .footer-green {
   background-color: #0f2e1f;
   color: #fff;
@@ -239,27 +257,23 @@
     </div>
   </div>
   
-
-
+ <div class="swiper mySwiper gold-swiper-container">
   <div class="swiper-wrapper">
-  <section class="text-center my-5">
-    <h3 class="fw-bold text-center">Featured Articles</h3>
-  </div>
+
     <!-- Slide 1 -->
     <div class="swiper-slide gold-box p-4">
       <div class="row align-items-center">
         <div class="col-md-6">
           <img src="images/Afro-fusion.png" class="img-fluid" alt="Fashion Blog">
         </div>
-        
+        <div class="col-md-6">
           <h3>Why Afro-Fusion Fashion Is More Than a Trend</h3>
           <p>Fashion is not just fabric. It is memory, identity, resistance, and how we carry legacy forward.</p>
-          <a href="blog-fashion-brand.html" class="btn btn-outline-gold mt-2">Read the Story</a>
-        <div class="col-md-6">
-          <!-- Tags -->
-          <div class="blog-buttons mb-2">
-            <a href="#" class="btn btn-green-gold btn-sm me-2">Fashion</a>
-            <a href="#" class="btn btn-green-gold btn-sm">Culture</a>
+          <a href="blog-fashion-brand.html" class="btn btn-outline-gold mt-2 mb-3">Read the Story</a>
+          <!-- Blog Tags -->
+          <div class="blog-tags">
+            <a href="#" class="tag-button me-2">Fashion</a>
+            <a href="#" class="tag-button">Culture</a>
           </div>
         </div>
       </div>
@@ -272,14 +286,13 @@
           <img src="images/new-story-placeholder.png" class="img-fluid" alt="New Story">
         </div>
         <div class="col-md-6">
-         
           <h3>Coming Soon: The Next Chapter</h3>
           <p>A new perspective on colour, culture, and storytelling in modern design.</p>
-          <a href="#" class="btn btn-outline-gold mt-2">Explore Soon</a>
-            <!-- Tags -->
-          <div class="blog-buttons mb-2">
-            <a href="#" class="btn btn-green-gold btn-sm me-2">Design</a>
-            <a href="#" class="btn btn-green-gold btn-sm">Storytelling</a>
+          <a href="#" class="btn btn-outline-gold mt-2 mb-3">Explore Soon</a>
+          <!-- Blog Tags -->
+          <div class="blog-tags">
+            <a href="#" class="tag-button me-2">Design</a>
+            <a href="#" class="tag-button">Storytelling</a>
           </div>
         </div>
       </div>
@@ -289,8 +302,7 @@
 
   </div>
 </div>
-
-
+  
   <div class="gold-box">
     <div class="row align-items-center">
       <div class="col-md-6">
