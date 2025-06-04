@@ -22,7 +22,9 @@
     margin: 0;
     padding: 0;
   }
-
+#mainNav {
+  transition: top 0.3s;
+}
   .navbar {
     background-color: rgba(255,255,255,0.9);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -133,7 +135,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="mainNav">
   <div class="container d-flex justify-content-between align-items-center py-2">
     <a class="navbar-brand mx-auto" href="index.html">
       <img src="logo1.png" alt="Jennifer Akong Logo" class="logo-img">
@@ -202,7 +204,7 @@
     <p>It’s more than a guide—it’s a toolkit for ambitious creatives, professionals, and entrepreneurs ready to build their brand, grow their skills, and make their mark in the digital space.</p>
     <p>Whether you're just starting out or levelling up, this book is your step-by-step manual to thriving in modern marketing—with real insight and zero fluff.</p>
     <a href="https://www.amazon.co.uk/Marketing-Roadmap-Beginners-Jennifer-Akong/dp/B0DHTL51LF" target="_blank" class="btn btn-gold">Get the Book</a>
-    <a href="images/the-marketing-roadmap.png" class="glightbox" data-gallery="about"><img src="images/marketing-roadmap.png" alt="The Marketing Roadmap book cover" class="img-fluid my-3"></a>
+    <a href="images/the-marketing-roadmap.png" class="glightbox" data-gallery="about"><img src="images/the-marketing-roadmap.png" alt="The Marketing Roadmap book cover" class="img-fluid my-3"></a>
   </div>
   
 </section>
@@ -223,5 +225,22 @@
 <script>
   const lightbox = GLightbox({ selector: '.glightbox' });
 </script>
+  <script>
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("mainNav");
+
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      navbar.style.top = "-100px";
+    } else {
+      // Scrolling up
+      navbar.style.top = "0";
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+</script>
+
 </body>
 </html>
