@@ -14,112 +14,121 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <link rel="stylesheet" href="style.css"> <!-- Your custom stylesheet -->
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fffdf9;
-      color: #1c1c1c;
-      margin: 0;
-      padding: 0;
-    }
-     .navbar {
-  background-color: rgba(255,255,255,0.9); /* or use rgba(255,255,255,0.9) for slight transparency */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* optional soft shadow */
-}
-    .logo-img {
-      max-height: 100px;
-      height: auto;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-    }
-.hero-box {
-  background-color: #0f2e1f;
-  padding: 120px 20px 30px;
-  border-bottom: 2px solid #C6A664;
-  text-align: center;
-}
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fffdf9;
+    color: #1c1c1c;
+    margin: 0;
+    padding: 0;
+  }
 
-.hero-box h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #C6A664;
-  margin-bottom: 12px;
-}
+  .navbar {
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
 
-.hero-box p {
-  margin: 0;
-  color: #fff;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-    .section-box {
-      padding: 40px 20px;
+  .logo-img {
+    max-height: 100px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hero-box {
+    background-color: #0f2e1f;
+    padding: 60px 20px 30px;
+    border-bottom: 2px solid #C6A664;
+    text-align: center;
+    margin-top: 80px; /* added to fix navbar overlap */
+  }
+
+  .hero-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #C6A664;
+    margin-bottom: 12px;
+  }
+
+  .hero-box p {
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .section-box {
+    padding: 40px 20px;
+  }
+
+  .soft-box {
+    background-color: #ffffff;
+    border: 1px solid #C6A664;
+    padding: 40px 30px;
+    margin-bottom: 40px;
+  }
+
+  .soft-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .soft-box p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .btn-gold {
+    background-color: #C6A664;
+    color: #fff;
+    padding: 10px 18px;
+    font-weight: 500;
+    border-radius: 0;
+    text-decoration: none;
+  }
+
+  .btn-gold:hover {
+    background-color: #a88a48;
+    color: #fffdf9;
+  }
+
+  .footer-green {
+    background-color: #0f2e1f;
+    color: #fff;
+  }
+
+  .footer-icon {
+    margin: 0 12px;
+    color: #C6A664;
+    font-size: 1.6rem;
+    transition: color 0.3s;
+  }
+
+  .footer-icon:hover {
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .hero-box {
+      margin-top: 90px;
+      padding-top: 100px;
+    }
+
+    .hero-box h2 {
+      font-size: 1.8rem;
     }
 
     .soft-box {
-      background-color: #ffffff;
-      border: 1px solid #C6A664;
-      padding: 40px 30px;
-      margin-bottom: 40px;
+      padding: 30px 20px;
     }
+  }
+</style>
 
-    .soft-box h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .soft-box p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    .btn-gold {
-      background-color: #C6A664;
-      color: #fff;
-      padding: 10px 18px;
-      font-weight: 500;
-      border-radius: 0;
-      text-decoration: none;
-    }
-
-    .btn-gold:hover {
-      background-color: #a88a48;
-      color: #fffdf9;
-    }
-    .footer-green {
-  background-color: #0f2e1f;
-  color: #fff;
-}
-
-.footer-icon {
-  margin: 0 12px;
-  color: #C6A664;
-  font-size: 1.6rem;
-  transition: color 0.3s;
-}
-
-.footer-icon:hover {
-  color: #fff;
-}
-
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.2rem;
-        .hero-box {
-          padding-top: 140px;
-          }
-      }
-
-      .soft-box {
-        padding: 30px 20px;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -193,7 +202,7 @@
     <p>It’s more than a guide—it’s a toolkit for ambitious creatives, professionals, and entrepreneurs ready to build their brand, grow their skills, and make their mark in the digital space.</p>
     <p>Whether you're just starting out or levelling up, this book is your step-by-step manual to thriving in modern marketing—with real insight and zero fluff.</p>
     <a href="https://www.amazon.co.uk/Marketing-Roadmap-Beginners-Jennifer-Akong/dp/B0DHTL51LF" target="_blank" class="btn btn-gold">Get the Book</a>
-    <a href="images/the-marketing-roadmap.png" class="glightbox" data-gallery="about"><img src="images/marketing-roadmap-book.jpg" alt="The Marketing Roadmap book cover" class="img-fluid my-3"></a>
+    <a href="images/the-marketing-roadmap.png" class="glightbox" data-gallery="about"><img src="images/marketing-roadmap.png" alt="The Marketing Roadmap book cover" class="img-fluid my-3"></a>
   </div>
   
 </section>
