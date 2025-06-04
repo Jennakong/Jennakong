@@ -22,12 +22,11 @@
     margin: 0;
     padding: 0;
   }
-#mainNav {
-  transition: top 0.3s;
 }
   .navbar {
-    background-color: rgba(255,255,255,0.9);
+    background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 999;  
   }
 
   .logo-img {
@@ -134,7 +133,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="mainNav">
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
   <div class="container d-flex justify-content-between align-items-center py-2">
     <a class="navbar-brand mx-auto" href="index.html">
       <img src="logo1.png" alt="Jennifer Akong Logo" class="logo-img">
@@ -224,22 +223,5 @@
 <script>
   const lightbox = GLightbox({ selector: '.glightbox' });
 </script>
-  <script>
-  let lastScrollTop = 0;
-  const navbar = document.getElementById("mainNav");
-
-  window.addEventListener("scroll", function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-      // Scrolling down
-      navbar.style.top = "-100px";
-    } else {
-      // Scrolling up
-      navbar.style.top = "0";
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  });
-</script>
-
 </body>
 </html>
