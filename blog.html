@@ -14,6 +14,9 @@
   <!-- Swiper.js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -22,8 +25,12 @@
       margin: 0;
       padding-top: 80px;
     }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
     .navbar {
-      background-color: rgba(245, 235, 221, 0.95);
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
     .navbar-nav .nav-link {
       color: #1c1c1c;
@@ -32,12 +39,15 @@
       color: #C6A664;
     }
     .logo-img {
-      max-height: 60px;
+      max-height: 90px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
     }
     .hero {
       background-color: #f5ebdd;
       text-align: center;
-      padding: 100px 0;
+      padding: 100px 20px 80px;
     }
     .hero h1 {
       font-family: 'Playfair Display', serif;
@@ -48,8 +58,8 @@
       color: #333;
     }
     .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
+      font-size: 1.7rem;
+      font-weight: 600;
       margin-bottom: 5px;
     }
     .section-subtitle {
@@ -96,17 +106,44 @@
       border-radius: 6px;
       margin-right: 8px;
     }
-    footer {
-      background-color: #1c1c1c;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
+    .gold-box-soft {
+      background-color: #fffdf9;
+      border: 1px solid #C6A664;
+      padding: 30px 20px;
+      margin: 40px auto;
+      max-width: 1000px;
     }
-    .section-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px 0;
+    .email-signup {
+      background-color: #f5f2e9;
+      border-top: 1px solid #C6A664;
+      border-bottom: 1px solid #C6A664;
+    }
+    .btn-gold-solid {
+      background-color: #C6A664;
+      color: #1c1c1c;
+      border: none;
+      padding: 10px 22px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      border-radius: 0;
+    }
+    .btn-gold-solid:hover {
+      background-color: #bfa055;
+      color: white;
+    }
+    .footer-green {
+      background-color: #0f2e1f;
+      color: #fff;
+    }
+    .footer-icon {
+      margin: 0 12px;
+      color: #C6A664;
+      font-size: 1.6rem;
+      transition: color 0.3s;
+    }
+    .footer-icon:hover {
+      color: #fff;
     }
   </style>
 </head>
@@ -117,7 +154,7 @@
   <div class="container d-flex justify-content-between align-items-center">
     <div class="left-spacer d-none d-lg-block"></div>
     <a class="navbar-brand mx-auto" href="index.html">
-      <img src="logo.png" alt="Jennifer Akong Logo" class="logo-img">
+      <img src="logo1.png" alt="Jennifer Akong Logo" class="logo-img">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -133,21 +170,18 @@
   </div>
 </nav>
 
-<!-- Blog Hero Section -->
-<header class="hero d-flex align-items-center text-center">
-  <div class="container">
-    <h1 class="display-5" style="font-family: 'Playfair Display', serif;">From My Notebook</h1>
-    <p class="lead">Insights, stories, and strategies from my creative journey.</p>
-  </div>
+<!-- Hero Section -->
+<header class="hero">
+  <h1>From My Notebook</h1>
+  <p>Insights, stories, and strategies from my creative journey.</p>
 </header>
 
-<!-- Blog Sections -->
-<div class="section-container">
+<!-- Blog Section Blocks in Soft Box -->
+<div class="container">
 
-  <!-- Fashion Articles -->
-  <div class="mb-5">
-    <h2 class="section-title">Fashion Articles</h2>
-    <p class="section-subtitle">Where fabric meets identity.</p>
+  <div class="gold-box-soft">
+    <h2 class="section-title text-center">Fashion Articles</h2>
+    <p class="section-subtitle text-center">Where fabric meets identity.</p>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <a href="blog-fashion-brand.html" class="swiper-slide">
@@ -166,21 +200,13 @@
             <span class="tag">Culture</span><span class="tag">Campaign</span>
           </div>
         </a>
-        <div class="swiper-slide">
-          <img src="images/placeholder.png" alt="Coming Soon">
-          <div class="blog-card-content">
-            <h5>New Fashion Blog Coming Soon</h5>
-            <p>Watch this space for the next drop!</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- Personal Life -->
-  <div class="mb-5">
-    <h2 class="section-title">Creative Writing - Life & Reflections</h2>
-    <p class="section-subtitle">From my heart to the page.</p>
+  <div class="gold-box-soft">
+    <h2 class="section-title text-center">Creative Writing </h2>
+    <p class="section-subtitle text-center">From my heart to the page.</p>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <a href="the-art-of-waiting.html" class="swiper-slide">
@@ -199,29 +225,13 @@
             <span class="tag">Faith</span><span class="tag">Sobriety</span>
           </div>
         </a>
-        <a href="Themoon.html" class="swiper-slide">
-          <img src="images/Themoon.png" alt="The Night">
-          <div class="blog-card-content">
-            <h5>The Night Held Its Breath</h5>
-            <p>The moon poured through the window, uninvited...</p>
-            <span class="tag">Dreams</span><span class="tag">Twilight</span>
-          </div>
-        </a>
-        <div class="swiper-slide">
-          <img src="images/placeholder.png" alt="Coming Soon">
-          <div class="blog-card-content">
-            <h5>New Reflection Coming Soon</h5>
-            <p>Stay tuned for more personal stories.</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- Marketing Tips -->
-  <div class="mb-5">
-    <h2 class="section-title">Marketing Tips</h2>
-    <p class="section-subtitle">Work smart with Jenn.</p>
+  <div class="gold-box-soft">
+    <h2 class="section-title text-center">Marketing Tips</h2>
+    <p class="section-subtitle text-center">Work smart with Jenn.</p>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <a href="blog-marketing-tips.html" class="swiper-slide">
@@ -232,55 +242,56 @@
             <span class="tag">Marketing</span><span class="tag">Tips</span>
           </div>
         </a>
-        <div class="swiper-slide">
-          <img src="images/placeholder.png" alt="Coming Soon">
-          <div class="blog-card-content">
-            <h5>New Tips Coming Soon</h5>
-            <p>More brand growth hacks on the way!</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- Erotic Fanfictions -->
-  <div class="mb-5">
-    <h2 class="section-title">Erotic Fanfictions</h2>
-    <p class="section-subtitle">Stories to stir your soul (and your screen).</p>
-    <div class="alert alert-warning small" role="alert">
+  <div class="gold-box-soft">
+    <h2 class="section-title text-center">Erotic Fanfictions</h2>
+    <p class="section-subtitle text-center">Stories to stir your soul (and your screen).</p>
+    <div class="alert alert-warning text-center small" role="alert">
       ⚠️ Contains mature themes. Reader discretion advised.
     </div>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-     <a href="lust-in-the-city.html" class="swiper-slide">
+        <a href="lust-in-the-city.html" class="swiper-slide">
           <img src="images/Lust+in+the+City+Header.png" alt="Lust In The City">
           <div class="blog-card-content">
             <h5>Lust In The City</h5>
             <p>Late nights, wine, and tension she can't ignore.</p>
-              <span class="tag">Erotica</span><span class="tag">LGBT</span>
+            <span class="tag">Erotica</span><span class="tag">LGBT</span>
           </div>
-     </a>
-        <div class="swiper-slide">
-          <img src="images/placeholder.png" alt="Loading Stories">
-          <div class="blog-card-content">
-            <h5>Short Reads Loading</h5>
-            <p>Quick indulgent reads coming to your screen soon.</p>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
 
 </div>
 
-<!-- Footer -->
-<footer>
-  <div class="social-icons mb-3">
-    <a href="https://instagram.com/jenn.akong" target="_blank"><i class="bi bi-instagram"></i></a>
-    <a href="https://linkedin.com/in/jenniferakong1" target="_blank"><i class="bi bi-linkedin"></i></a>
-    <a href="https://youtube.com/@jenniferakong1" target="_blank"><i class="bi bi-youtube"></i></a>
+<!-- Email Signup Section -->
+<section class="email-signup py-5">
+  <div class="container text-center">
+    <h3 class="mb-3" style="font-family: 'Playfair Display', serif; color: #0f2e1f;">Stay Inspired</h3>
+    <p class="mb-4" style="color: #1c1c1c;">Join my newsletter for fashion, marketing, and creative updates straight to your inbox.</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="row justify-content-center">
+      <div class="col-md-6 col-10">
+        <input type="email" name="email" class="form-control mb-3" placeholder="Enter your email" required>
+      </div>
+      <div class="col-md-3 col-6">
+        <button type="submit" class="btn-gold-solid">Subscribe</button>
+      </div>
+    </form>
   </div>
-  <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
+</section>
+
+<!-- Footer -->
+<footer class="footer-green text-center text-white py-4">
+  <div class="mb-3">
+    <a href="https://instagram.com/jenn.akong" target="_blank" class="footer-icon"><i class="bi bi-instagram"></i></a>
+    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+    <a href="https://youtube.com/@jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-youtube"></i></a>
+  </div>
+  <p class="mb-0">&copy; 2025 Jennifer Akong. All rights reserved.</p>
 </footer>
 
 <!-- Scripts -->
@@ -300,3 +311,4 @@
 
 </body>
 </html>
+
