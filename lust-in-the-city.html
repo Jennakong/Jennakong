@@ -6,10 +6,10 @@
   <title>Lust in the City | Jennifer Akong</title>
   <meta name="description" content="A Wattpad-style fanfiction blog post by Jennifer Akong. Explore romantic tension, softness, and sensuality in this unfolding chaptered series." />
   <link rel="icon" type="image/png" href="images/favicon.png">
-  
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-  
+
   <!-- Bootstrap & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -18,21 +18,77 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdf9;
+      color: #1c1c1c;
+    }
+    .navbar {
+      background-color: white;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .navbar-brand img {
+      height: 50px;
+    }
+    .hero-section {
+      background-color: #0f2e1f;
+    }
+    .hero-section h1 {
+      color: #C6A664;
+      font-family: 'Playfair Display', serif;
+    }
+    .hero-section p {
+      color: #ffffff;
+    }
+    .btn-custom {
+      background-color: #0f2e1f;
+      color: #C6A664;
+      border-radius: 0;
+      border: none;
+      padding: 10px 20px;
+      font-weight: 500;
+    }
+    .btn-custom:hover {
+      background-color: #C6A664;
+      color: #ffffff;
+    }
+    .blog-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px;
+      border: 1px solid #C6A664;
+      background-color: #ffffff;
+    }
+    .blog-content img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 30px auto;
+    }
+    .chapter-links a {
+      text-decoration: none;
+      display: inline-block;
+      margin: 8px 0;
+      color: #0f2e1f;
+      font-weight: 500;
+    }
+  </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg bg-white border-bottom fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand mx-auto" href="index.html">
-      <img src="logo1.png" alt="Jennifer Akong Logo" class="img-fluid" style="height: 50px;">
+      <img src="logo1.png" alt="Jennifer Akong Logo" class="img-fluid">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
       <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -41,39 +97,29 @@
   </div>
 </nav>
 
-<!-- HERO IMAGE SECTION -->
-<section class="hero-section text-center text-white py-5" style="background-color: #0f2e1f; margin-top: 80px;">
+<!-- HERO -->
+<section class="hero-section text-center text-white py-5" style="margin-top: 80px;">
   <div class="container">
-    <h1 class="display-5" style="font-family: 'Playfair Display', serif; color: #C6A664;">Lust in the City</h1>
+    <h1 class="display-5">Lust in the City</h1>
     <p class="lead mb-4">A Wattpad Fan Fiction Series by Jennifer Akong</p>
     <img src="images/Lust+in+the+City+Header.png" alt="Lust in the City Banner" class="img-fluid rounded" style="max-width: 900px;">
   </div>
 </section>
 
-<!-- BLOG CONTENT SECTION -->
-<section class="container py-5" style="background-color: #fffdf9;">
-  <div class="border p-4" style="border: 1px solid #C6A664; border-radius: 0;">
-    <div class="mb-4 text-center">
-      <button class="btn btn-outline-dark" onclick="toggleChapters()">📖 Jump to Chapter</button>
-      <div id="chapterList" class="mt-3 d-none">
-        <a href="#chapter1" class="d-block mb-2">Chapter One: Backseat Confessions</a>
-        <a href="#chapter2" class="d-block mb-2">Chapter Two: Wine and Whispers</a>
-        <a href="#chapter3" class="d-block">Chapter Three: The Rough Side of Want</a>
+<!-- BLOG CONTENT -->
+<section class="py-5">
+  <div class="blog-content">
+    <div class="text-center mb-4">
+      <button class="btn btn-custom" onclick="toggleChapters()">📖 Jump to Chapter</button>
+      <div id="chapterList" class="chapter-links mt-3 d-none">
+        <a href="#chapter1">Chapter One: Backseat Confessions</a><br>
+        <a href="#chapter2">Chapter Two: Wine and Whispers</a><br>
+        <a href="#chapter3">Chapter Three: The Rough Side of Want</a>
       </div>
     </div>
 
-
-<div class="content">
-
-  <div class="chapter-dropdown" onclick="toggleChapters()">📖 Jump to Chapter</div>
-  <div id="chapterList" class="chapter-list">
-    <a href="#chapter1">Chapter One: Backseat Confessions</a>
-    <a href="#chapter2">Chapter Two: Wine and Whispers</a>
-    <a href="#chapter3">Chapter Three: The Rough Side of Want</a>
-  </div>
-
-  <section id="chapter1" class="chapter-text">
-    <h3>Chapter One: Backseat Confessions</h3>
+    <div id="chapter1">
+      <h2 style="font-family: 'Playfair Display', serif;" class="mt-5">Chapter One: Backseat Confessions</h2>
     <p>Sitting in the back seat of the taxi, her thighs pressed tightly together as she bit her lower lip, hard. The city lights blurred outside the window, but her mind was sharper than everplaying reel after reel of the things she wanted Alex to do to her. Needed her to do.</p>
     <p>God, the things that woman could do with just a look.</p> 
     <p>They hadn’t even kissed yet, not properly. But the way Alex moved - calm, sure, and just a little recklesshad her melting with anticipation. Their connection was magnetic. Dangerous. And utterly addictive.</p>
@@ -92,11 +138,10 @@
     <p>“Typical,” she spat under her breath. “Fucking men.”</p>
     <p>She turned her head back to the window, heart pounding, but not from him. From Alex. From everything she was going to let happen next time.</p>
     <p>Because next time, she wouldn't hesitate. Next time, she'd show up, lips parted and ready.</p>
-    <p><strong>To be continued…</strong></p>
-  </section>
+    </div>
 
-  <section id="chapter2" class="chapter-text">
-    <h3>Chapter Two: Wine and Whispers</h3>
+    <div id="chapter2">
+   <h2 style="font-family: 'Playfair Display', serif;" class="mt-5">Chapter Two: Wine and Whispers</h2>
 <p>It was a cool Wednesday night, June’s favourite kind. A night to herself. No noise, no obligations. Just soft lights, her ridiculous but therapeutic skincare routine, and that feel good kind of silence that only came when you lived alone downtown. </p>
 
 <p>She had just smeared on her green clay face mask, the one that made her look like Princess Fiona from Shrek - and slipped under her duvet with a glass of wine, ready to binge her comfort series on Netflix, when her phone buzzed. </p>
@@ -232,27 +277,12 @@
   <p>June smiled against her skin. “Good. Because I am not leaving anytime soon.”</p>
 
       <p><strong>To be continued…</strong></p>
-  </section>
-  
-  <section id="chapter3" class="chapter-text">
-    <h3>Chapter Three: The Rough Side of Want</h3>
-    <p>Coming soon...</p>
-  </section>
-</div>
+      <p>Coming soon...</p>
+    </div>
 
-<!-- COMMENT SECTION -->
-<section class="comments py-5" style="background-color: #f9f5ee;">
-  <div class="container">
-    <div class="border p-4" style="border: 1px solid #C6A664;">
-      <h3 class="mb-4" style="font-family: 'Playfair Display', serif;">Leave a Comment</h3>
-      <form id="comment-form" class="d-flex flex-column gap-3">
-        <input type="text" name="entry.1012665514" placeholder="Your Name" required class="form-control" />
-        <input type="email" name="entry.1141227850" placeholder="Your Email" required class="form-control" />
-        <textarea name="entry.752414235" placeholder="Your Comment" rows="5" required class="form-control"></textarea>
-        <button type="submit" class="btn" style="background-color: #0f2e1f; color: #fff;">Post Comment</button>
-        <p id="comment-msg" class="mt-2 text-center fw-medium" style="display: none;"></p>
-      </form>
-      <div id="comment-list" class="mt-5"></div>
+    <div id="chapter3">
+      <h2 style="font-family: 'Playfair Display', serif;" class="mt-5">Chapter Three: The Rough Side of Want</h2>
+      <p>Coming soon...</p>
     </div>
   </div>
 </section>
@@ -267,55 +297,16 @@
   <p class="mb-0">&copy; 2025 Jennifer Akong. All rights reserved.</p>
 </footer>
 
-<!-- SCRIPTS -->
+<!-- CHAPTER TOGGLE SCRIPT -->
 <script>
   function toggleChapters() {
     const list = document.getElementById("chapterList");
     list.classList.toggle("d-none");
   }
-
-  const form = document.getElementById("comment-form");
-  const message = document.getElementById("comment-msg");
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-
-    fetch("https://docs.google.com/forms/d/e/1FAIpQLSdYJTIjXG7i57qdtO3Mio3_MyF7q9aevwDkzIr4-4ew6SSEjQ/formResponse", {
-      method: "POST",
-      mode: "no-cors",
-      body: formData
-    }).then(() => {
-      form.reset();
-      message.innerText = "🎉 Thanks for your comment!";
-      message.style.display = "block";
-      message.style.color = "#1c1c1c";
-    }).catch(() => {
-      message.innerText = "Oops! Something went wrong.";
-      message.style.display = "block";
-      message.style.color = "red";
-    });
-  });
-
-  async function loadComments() {
-    const response = await fetch('https://script.google.com/macros/s/AKfycbz69qDugQiVrmKGVzSDPH2SdLLVNtUJRkNDa8PFmUe1wr0n3f2OcGdZi8an2uDWJ5KM/exec');
-    const data = await response.json();
-
-    const commentList = document.getElementById('comment-list');
-    commentList.innerHTML = '';
-
-    data.forEach(entry => {
-      const name = entry.name || 'Anonymous';
-      const comment = entry.comment;
-
-      const commentDiv = document.createElement('div');
-      commentDiv.classList.add('border', 'rounded', 'p-3', 'mb-3', 'bg-white');
-      commentDiv.innerHTML = `<h5>${name}</h5><p>${comment}</p>`;
-      commentList.appendChild(commentDiv);
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', loadComments);
 </script>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
