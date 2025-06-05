@@ -9,7 +9,7 @@
   <meta name="keywords" content="Wattpad-style, fanfiction, romance, LGBTQ, intimacy, Jennifer Akong blog">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/logo1.png">
 
   <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -336,6 +336,11 @@
 
 <!-- SCRIPTS -->
 <script>
+  function toggleChapters() {
+    const list = document.getElementById("chapterList");
+    list.classList.toggle("d-none");
+  }
+
   const form = document.getElementById("comment-form");
   const message = document.getElementById("comment-msg");
 
