@@ -18,7 +18,43 @@
       color: #1c1c1c;
       margin: 0;
     }
+  /* NAVIGATION */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      border-bottom: 1px solid #e2e2e2;
+    }
 
+    .navbar img {
+      height: 60px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      position: absolute;
+      right: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1c1c1c;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    /* HERO IMAGE */
+    .hero-img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
     .hero {
       background-color: #0f2e1f;
       text-align: center;
@@ -124,16 +160,37 @@
 </head>
 <body>
   
-<!-- Hero Image -->
-<section style="width: 100%; overflow: hidden;">
-  <img src="images/Afro-fusion.png" alt="Designing With Heritage Banner" style="width: 100%; display: block; object-fit: cover;">
-</section>
+  <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="left-spacer d-none d-lg-block"></div>
+    <a class="navbar-brand mx-auto" href="index.html">
+      <img src="logo1.png" alt="Jennifer Akong Logo" class="logo-img">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
 <!-- Hero -->
 <section class="hero">
   <h2>Why Afro-Fusion Fashion Is More Than a Trend</h2>
   <p>“Fashion is not just fabric — it’s memory, identity, resistance, and how we carry legacy forward.”</p>
 </section>
-
+<!-- Hero Image -->
+<section style="width: 100%; overflow: hidden;">
+  <img src="images/Afro-fusion.png" alt="Designing With Heritage Banner" style="width: 100%; display: block; object-fit: cover;">
+</section>
+  
 <section class="content">
   <p><strong>By Jennifer Akong – Founder & Creative Director, MANIA by Jennifer</strong></p>
 
