@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Designing With Heritage | Jennifer Akong</title>
+  <meta name="description" content="Explore why Afro-Fusion fashion is more than just a trend. A rich story by Jennifer Akong, founder of MANIA by Jennifer.">
+  <meta name="author" content="Jennifer Akong">
+  <link rel="icon" href="images/favicon.png" type="image/png"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <style>
     body {
@@ -13,48 +17,27 @@
       background-color: #fffdf9;
       color: #1c1c1c;
       margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #f5ebdd;
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo img {
-      width: 100px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #1c1c1c;
-      font-weight: 500;
     }
 
     .hero {
+      background-color: #0f2e1f;
       text-align: center;
-      padding: 60px 20px;
-      background-color: #f0e0cb;
+      padding: 60px 20px 40px;
     }
 
-    .hero h1 {
+    .hero h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
+      color: #C6A664;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
     }
 
     .hero p {
+      color: #fff;
+      max-width: 800px;
+      margin: 0 auto;
       font-size: 1.1rem;
-      max-width: 700px;
-      margin: 10px auto;
+      font-style: italic;
     }
 
     .content {
@@ -75,57 +58,80 @@
       margin-top: 40px;
     }
 
-    .swiper {
-      margin: 20px 0 40px;
-      padding-bottom: 10px;
+    .comments {
+      background-color: #f5f2e9;
+      padding: 40px 20px;
     }
 
-    .swiper-slide {
-      background-color: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      width: 240px;
-      height: 240px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .media-title {
-      font-size: 1.2rem;
-      font-weight: 500;
+    .comments h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
       text-align: center;
-      margin: 10px 0 20px;
+    }
+
+    .comments input,
+    .comments textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0;
+    }
+
+    .comments button {
+      background-color: #0f2e1f;
+      color: #C6A664;
+      border: 1.5px solid #C6A664;
+      padding: 12px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 0;
+    }
+
+    .comments button:hover {
+      background-color: #C6A664;
+      color: #fffdf9;
+    }
+
+    .comment-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
     }
 
     footer {
-      background-color: #1c1c1c;
+      background-color: #0f2e1f;
       color: #fff;
-      padding: 30px 20px;
       text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-icon {
+      margin: 0 12px;
+      color: #C6A664;
+      font-size: 1.6rem;
+      transition: color 0.3s;
+    }
+
+    .footer-icon:hover {
+      color: #fff;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <a href="index.html" class="logo"><img src="logo.png" alt="Jennifer Akong Logo" /></a>
-  <nav>
-    <ul>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
+  
+<!-- Hero Image -->
+<section style="width: 100%; overflow: hidden;">
+  <img src="images/Afro-fusion.png" alt="Designing With Heritage Banner" style="width: 100%; display: block; object-fit: cover;">
+</section>
+<!-- Hero -->
 <section class="hero">
-  <h1>Designing With Heritage: Why Afro-Fusion Fashion Is More Than a Trend</h1>
-  <p><em>“Fashion is not just fabric — it’s memory, identity, resistance, and how we carry legacy forward.”</em></p>
+  <h2>Why Afro-Fusion Fashion Is More Than a Trend</h2>
+  <p>“Fashion is not just fabric — it’s memory, identity, resistance, and how we carry legacy forward.”</p>
 </section>
 
 <section class="content">
@@ -145,7 +151,6 @@
     allowfullscreen>
   </iframe>
 </div>
-
 
   <!-- MAIN BLOG CONTENT -->
   <p>When I launched <strong>MANIA by Jennifer</strong>, I knew I wasn’t just creating clothes. I was building a visual language for women like me, women who feel the beat of tradition in their chest but move boldly in modern spaces. Women who are multifaceted, cultured, creative, and never quite content with being one thing. The brand was born from that tension and harmony between roots and rhythm, between tribe and trends.</p>
@@ -194,39 +199,33 @@ That’s what we wear.</p>
   <a href="https://www.maniabyjennifer.co.uk" target="_blank">maniabyjennifer.co.uk</a><br>
   @maniabyjennifer</p>
 </section>
-  
-<section class="comments mt-5" style="padding: 40px 20px; background-color: #f9f5ee;">
+
+<!-- Comment Section -->
+<section class="comments">
   <div style="max-width: 800px; margin: 0 auto;">
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 20px;">Leave a Comment</h3>
-    
-    <form id="comment-form" style="display: flex; flex-direction: column; gap: 15px;">
-      <input type="text" name="entry.1012665514" placeholder="Your Name" required 
-             style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
-      
-      <input type="email" name="entry.1141227850" placeholder="Your Email" required 
-             style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
-      
-      <textarea name="entry.752414235" placeholder="Your Comment" rows="5" required 
-                style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
-      
-      <button type="submit" 
-              style="background-color: #C6A664; color: white; border: none; padding: 12px 20px; font-size: 1rem; border-radius: 8px; cursor: pointer;">
-        Post Comment
-      </button>
-
-      <p id="comment-msg" style="display: none; margin-top: 10px; text-align: center;"></p>
+    <h3>Leave a Comment</h3>
+    <form id="comment-form">
+      <input type="text" name="entry.1012665514" placeholder="Your Name" required>
+      <input type="email" name="entry.1141227850" placeholder="Your Email" required>
+      <textarea name="entry.752414235" placeholder="Your Comment" rows="5" required></textarea>
+      <button type="submit">Post Comment</button>
+      <p id="comment-msg" style="text-align: center; margin-top: 10px;"></p>
     </form>
-
-    <!-- Display submitted comments -->
-    
     <div id="comment-list" class="comment-list" style="margin-top: 40px;"></div>
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
-  <p>© 2025 Jennifer Akong. All Rights Reserved.</p>
+  <div class="mb-3">
+    <a href="https://instagram.com/jenn.akong" target="_blank" class="footer-icon"><i class="bi bi-instagram"></i></a>
+    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+    <a href="https://youtube.com/@jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-youtube"></i></a>
+  </div>
+  <p class="mb-0">&copy; 2025 Jennifer Akong. All rights reserved.</p>
 </footer>
-<!-- Comment form functionality -->
+
+<!-- Comment Script -->
 <script>
   const form = document.getElementById("comment-form");
   const message = document.getElementById("comment-msg");
@@ -234,7 +233,6 @@ That’s what we wear.</p>
   form.addEventListener("submit", function(e) {
     e.preventDefault();
     const formData = new FormData(form);
-
     fetch("https://docs.google.com/forms/d/e/1FAIpQLSdYJTIjXG7i57qdtO3Mio3_MyF7q9aevwDkzIr4-4ew6SSEjQ/formResponse", {
       method: "POST",
       mode: "no-cors",
@@ -251,10 +249,7 @@ That’s what we wear.</p>
       message.style.color = "red";
     });
   });
-</script>
 
-<!-- Optional: Load submitted comments (if you have your JSON endpoint ready) -->
-<script>
   async function loadComments() {
     const response = await fetch('https://script.google.com/macros/s/AKfycbz69qDugQiVrmKGVzSDPH2SdLLVNtUJRkNDa8PFmUe1wr0n3f2OcGdZi8an2uDWJ5KM/exec');
     const data = await response.json();
@@ -262,40 +257,18 @@ That’s what we wear.</p>
     const commentList = document.getElementById('comment-list');
     commentList.innerHTML = '';
 
-  data.forEach(entry => {
-  console.log(entry); // 👈 See what data is actually coming through
-  
-  const name = entry.name || 'Anonymous';
-  const comment = entry.comment;
+    data.forEach(entry => {
+      const name = entry.name || 'Anonymous';
+      const comment = entry.comment;
 
-  const commentDiv = document.createElement('div');
-  commentDiv.classList.add('comment-item');
-  commentDiv.style.marginBottom = "20px";
-  commentDiv.style.padding = "15px";
-  commentDiv.style.border = "1px solid #ddd";
-  commentDiv.style.borderRadius = "8px";
-  commentDiv.style.backgroundColor = "#fff";
-
-  commentDiv.innerHTML = `
-    <h5 style="margin: 0 0 8px;">${name}</h5>
-    <p style="margin: 0;">${comment}</p>
-  `;
-  commentList.appendChild(commentDiv);
-});
+      const commentDiv = document.createElement('div');
+      commentDiv.classList.add('comment-item');
+      commentDiv.innerHTML = `<h5>${name}</h5><p>${comment}</p>`;
+      commentList.appendChild(commentDiv);
+    });
+  }
 
   document.addEventListener('DOMContentLoaded', loadComments);
-</script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.2,
-    spaceBetween: 15,
-    freeMode: true,
-    breakpoints: {
-      576: { slidesPerView: 2.2 },
-      768: { slidesPerView: 3 }
-    }
-  });
 </script>
 </body>
 </html>
