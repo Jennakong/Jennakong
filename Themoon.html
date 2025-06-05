@@ -4,17 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Night Held Its Breath | Jennifer Akong</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
- <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWZ73DJBE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LSWZ73DJBE');
-</script>
-   <style>
+  <meta name="description" content="A poetic story about silence, presence, and night by Jennifer Akong. Read more on JenniferAkong.com.">
+  <meta name="author" content="Jennifer Akong">
+  <meta property="og:title" content="The Night Held Its Breath | Jennifer Akong" />
+  <meta property="og:description" content="A poetic story about silence, presence, and night by Jennifer Akong." />
+  <meta property="og:image" content="images/Themoon2.png" />
+  <meta property="og:type" content="article" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWZ73DJBE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LSWZ73DJBE');
+  </script>
+  <style>
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #fffdf9;
@@ -22,234 +29,200 @@
       padding: 0;
       color: #1c1c1c;
     }
-    header {
-      background-color: #f5ebdd;
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    .logo img {
-      width: 100px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #1c1c1c;
-      font-weight: 500;
+    .logo-img {
+      max-height: 90px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
     }
     .hero {
+      background-color: #0f2e1f;
+      padding: 60px 20px 40px;
       text-align: center;
-      padding: 60px 20px;
-      background-color: #f0e0cb;
     }
-    .hero h1 {
+    .hero h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
+      color: #C6A664;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
     .hero p {
+      color: #ffffff;
       font-size: 1.1rem;
       max-width: 700px;
-      margin: 10px auto;
+      margin: 0 auto;
     }
-    .content {
-      max-width: 900px;
+    .gold-box-soft {
+      background-color: #fffdf9;
+      border: 1px solid #C6A664;
+      padding: 40px 25px;
       margin: 50px auto;
-      padding: 0 20px;
+      max-width: 900px;
     }
-    .content p {
+    .gold-box-soft p {
+      font-size: 1.05rem;
       line-height: 1.8;
-      font-size: 1rem;
       margin-bottom: 20px;
     }
-    .content img {
-      width: 100%;
-      border-radius: 10px;
-      margin: 30px 0;
-    }
-    footer {
-      background-color: #1c1c1c;
+    footer.footer-green {
+      background-color: #0f2e1f;
       color: #fff;
-      padding: 30px 20px;
+      padding: 40px 20px;
       text-align: center;
     }
-    .social-icons {
-      margin: 15px 0;
+    .footer-icon {
+      margin: 0 12px;
+      color: #C6A664;
+      font-size: 1.6rem;
+      transition: color 0.3s;
     }
-    .social-icons a {
-      margin: 0 10px;
+    .footer-icon:hover {
+      color: #fff;
     }
-    .social-icons img {
-      width: 24px;
-      height: 24px;
+    .comment-form input, .comment-form textarea {
+      padding: 12px;
+      width: 100%;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      margin-bottom: 15px;
+    }
+    .comment-form button {
+      background-color: #C6A664;
+      color: #fffdf9;
+      border: none;
+      padding: 12px 20px;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 0;
+    }
+    .comment-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <a href="index.html" class="logo"><img src="logo.png" alt="Jennifer Akong Logo" /></a>
-  <nav>
-    <ul>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container d-flex justify-content-between align-items-center py-2">
+    <a class="navbar-brand mx-auto" href="index.html">
+      <img src="logo1.png" alt="Jennifer Akong Logo" class="logo-img">
+    </a>
+  </div>
+</nav>
 
+<!-- Hero Image -->
+<div>
+  <img src="images/Themoon2.png" alt="Hero Image" style="width:100%; height:auto; margin-top:100px;">
+</div>
+
+<!-- Hero Text -->
 <section class="hero">
-  <h1>The Night Held Its Breath</h1>
+  <h2>The Night Held Its Breath</h2>
   <p>“The moon didn’t ask to be seen—it simply showed up, radiant and sure, draping its light across my floor like a memory I hadn’t opened in years.”</p>
 </section>
 
-  <img src="images/Themoon2.png" alt="Moonlight through window casting shadows in room" style="width:100%; height:auto; margin-top:20px; margin-bottom:30px;">
+<!-- Blog Content -->
+<section class="gold-box-soft">
+  <p>It wasn’t the silence that woke her—it was the weight of it.<br>
+  Heavy. Still.<br>
+  Like the kind of stillness that only comes when something has just left… or is about to arrive.</p>
 
+  <p>The moon poured in through the tall windows, uninvited but sovereign, casting fractured patterns across the floor. Shadows stretched like long-forgotten thoughts, creeping across the room with a purpose they didn’t explain.</p>
 
-<section class="content">
-    <p>It wasn’t the silence that woke her—it was the weight of it.<br>
-    Heavy. Still.<br>
-    Like the kind of stillness that only comes when something has just left… or is about to arrive.</p>
+  <p>Nothing moved.<br>
+  Not the leaves in the vase.<br>
+  Not the glass bottle on the table.<br>
+  Not even time—it seemed suspended, mid-inhale, as though the universe had paused to listen for a sound she couldn’t hear.</p>
 
-    <p>The moon poured in through the tall windows, uninvited but sovereign, casting fractured patterns across the floor. Shadows stretched like long-forgotten thoughts, creeping across the room with a purpose they didn’t explain.</p>
+  <p>And yet, in the hush, she could feel it.<br>
+  Something watching.<br>
+  Not from outside the window, but from <em>inside</em> the quiet.<br>
+  A presence stitched into the folds of the night, humming in frequencies beyond hearing. Not threatening. Not comforting. Just <em>there</em>.</p>
 
-    <p>Nothing moved.<br>
-    Not the leaves in the vase.<br>
-    Not the glass bottle on the table.<br>
-    Not even time—it seemed suspended, mid-inhale, as though the universe had paused to listen for a sound she couldn’t hear.</p>
+  <p>She wondered if she was the only one who noticed when the world turned like that. When light and shadow danced in perfect conspiracy, and the ordinary tilted just slightly… enough to slip into something else.</p>
 
-    <p>And yet, in the hush, she could feel it.<br>
-    Something watching.<br>
-    Not from outside the window, but from <em>inside</em> the quiet.<br>
-    A presence stitched into the folds of the night, humming in frequencies beyond hearing. Not threatening. Not comforting. Just <em>there</em>—too close to be far, too subtle to name.</p>
+  <p>She didn’t move. She didn’t speak.</p>
 
-    <p>She wondered if she was the only one who noticed when the world turned like that. When light and shadow danced in perfect conspiracy, and the ordinary tilted just slightly… enough to slip into something else.</p>
+  <p>She just watched.<br>
+  And the night watched back.</p>
 
-    <p>She didn’t move. She didn’t speak.</p>
-
-    <p>She just watched.<br>
-    And the night watched back.</p>
-  </section>
-
-
-<section class="content">
-    <h3>A Final Note</h3>
-    <p><strong>Have you ever had a moment so still, you weren’t sure if you were awake—or remembering a dream?</strong></p>
-  </section>
-</article>
+  <p><strong>A Final Note</strong><br>
+  Have you ever had a moment so still, you weren’t sure if you were awake—or remembering a dream?</p>
 </section>
 
-<section class="comments mt-5" style="padding: 40px 20px; background-color: #f9f5ee;">
-  <div style="max-width: 800px; margin: 0 auto;">
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 20px;">Leave a Comment</h3>
-    
-    <form id="comment-form" style="display: flex; flex-direction: column; gap: 15px;">
-      <input type="text" name="entry.1012665514" placeholder="Your Name" required 
-             style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
-      
-      <input type="email" name="entry.1141227850" placeholder="Your Email" required 
-             style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
-      
-      <textarea name="entry.752414235" placeholder="Your Comment" rows="5" required 
-                style="padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
-      
-      <button type="submit" 
-              style="background-color: #C6A664; color: white; border: none; padding: 12px 20px; font-size: 1rem; border-radius: 8px; cursor: pointer;">
-        Post Comment
-      </button>
+<!-- Comment Section -->
+<section class="gold-box-soft" style="max-width: 800px;">
+  <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem;">Leave a Comment</h3>
+  <form id="comment-form" class="comment-form">
+    <input type="text" name="entry.1012665514" placeholder="Your Name" required />
+    <input type="email" name="entry.1141227850" placeholder="Your Email" required />
+    <textarea name="entry.752414235" rows="5" placeholder="Your Comment" required></textarea>
+    <button type="submit">Post Comment</button>
+    <p id="comment-msg" style="display:none; margin-top:10px;"></p>
+  </form>
 
-      <p id="comment-msg" style="display: none; margin-top: 10px; text-align: center;"></p>
-    </form>
+  <div id="comment-list" style="margin-top: 40px;"></div>
+</section>
 
-    <!-- Display submitted comments -->
-    
-    <div id="comment-list" class="comment-list" style="margin-top: 40px;"></div>
+<!-- Footer -->
+<footer class="footer-green">
+  <div class="mb-3">
+    <a href="https://instagram.com/jenn.akong" target="_blank" class="footer-icon"><i class="bi bi-instagram"></i></a>
+    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+    <a href="https://youtube.com/@jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-youtube"></i></a>
   </div>
-</section>
-
-
-<footer class="text-center py-3 bg-dark text-white">
-    <div class="social-icons mb-3">
-      <div class="social-icons mb-3">
-    <a href="https://instagram.com/jenn.akong" target="_blank" class="mx-2 text-white">
-        <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
-    </a>
-    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="mx-2 text-white">
-        <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
-    </a>
-    <a href="https://youtube.com/@jenniferakong1" target="_blank" class="mx-2 text-white">
-        <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
-    </a>
-</div>
-
-    </div>
-    <p>© 2025 Jennifer Akong. All Rights Reserved.</p>
+  <p class="mb-0">&copy; 2025 Jennifer Akong. All rights reserved.</p>
 </footer>
 
-<!-- Comment form functionality -->
+<!-- Comment JS -->
 <script>
   const form = document.getElementById("comment-form");
-  const message = document.getElementById("comment-msg");
-
+  const msg = document.getElementById("comment-msg");
   form.addEventListener("submit", function(e) {
     e.preventDefault();
     const formData = new FormData(form);
-
     fetch("https://docs.google.com/forms/d/e/1FAIpQLSdYJTIjXG7i57qdtO3Mio3_MyF7q9aevwDkzIr4-4ew6SSEjQ/formResponse", {
       method: "POST",
       mode: "no-cors",
       body: formData
     }).then(() => {
       form.reset();
-      message.innerText = "🎉 Thanks for your comment!";
-      message.style.display = "block";
-      message.style.color = "#1c1c1c";
-      message.style.fontWeight = "500";
+      msg.innerText = "🎉 Thanks for your comment!";
+      msg.style.display = "block";
+      msg.style.color = "#1c1c1c";
     }).catch(() => {
-      message.innerText = "Oops! Something went wrong. Try again later.";
-      message.style.display = "block";
-      message.style.color = "red";
+      msg.innerText = "Oops! Something went wrong.";
+      msg.style.display = "block";
+      msg.style.color = "red";
     });
   });
-</script>
 
-<!-- Optional: Load submitted comments (if you have your JSON endpoint ready) -->
-<script>
+  // Load comments
   async function loadComments() {
-    const response = await fetch('https://script.google.com/macros/s/AKfycbz69qDugQiVrmKGVzSDPH2SdLLVNtUJRkNDa8PFmUe1wr0n3f2OcGdZi8an2uDWJ5KM/exec');
-    const data = await response.json();
-
-    const commentList = document.getElementById('comment-list');
-    commentList.innerHTML = '';
-
-  data.forEach(entry => {
-  console.log(entry); // 👈 See what data is actually coming through
-  
-  const name = entry.name || 'Anonymous';
-  const comment = entry.comment;
-
-  const commentDiv = document.createElement('div');
-  commentDiv.classList.add('comment-item');
-  commentDiv.style.marginBottom = "20px";
-  commentDiv.style.padding = "15px";
-  commentDiv.style.border = "1px solid #ddd";
-  commentDiv.style.borderRadius = "8px";
-  commentDiv.style.backgroundColor = "#fff";
-
-  commentDiv.innerHTML = `
-    <h5 style="margin: 0 0 8px;">${name}</h5>
-    <p style="margin: 0;">${comment}</p>
-  `;
-  commentList.appendChild(commentDiv);
-});
-
-  document.addEventListener('DOMContentLoaded', loadComments);
+    const res = await fetch("https://script.google.com/macros/s/AKfycbz69qDugQiVrmKGVzSDPH2SdLLVNtUJRkNDa8PFmUe1wr0n3f2OcGdZi8an2uDWJ5KM/exec");
+    const data = await res.json();
+    const list = document.getElementById("comment-list");
+    list.innerHTML = "";
+    data.forEach(entry => {
+      const div = document.createElement("div");
+      div.className = "comment-item";
+      div.innerHTML = `<h5>${entry.name || 'Anonymous'}</h5><p>${entry.comment}</p>`;
+      list.appendChild(div);
+    });
+  }
+  document.addEventListener("DOMContentLoaded", loadComments);
 </script>
 
 </body>
 </html>
-
