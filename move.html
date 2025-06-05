@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Should Have Moved | Jennifer Akong</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A reflective poem by Jennifer Akong about movement, fear, and missed moments.">
+  <meta name="description" content="A reflective poem about missed moments and silent courage, written by Jennifer Akong.">
   <meta name="author" content="Jennifer Akong">
   <link rel="icon" href="images/favicon.png" type="image/png"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -18,80 +17,99 @@
       color: #1c1c1c;
       margin: 0;
     }
-
     .navbar {
       background-color: #fff;
       border-bottom: 1px solid #e2e2e2;
-      padding: 1rem 2rem;
     }
-
-    .navbar-brand img {
+    .navbar .navbar-brand img {
       height: 60px;
     }
-
-    .nav-link {
-      color: #1c1c1c;
-      font-weight: 500;
-    }
-
-    .nav-link:hover {
-      color: #C6A664;
-    }
-
     .hero {
       background-color: #0f2e1f;
       color: #fff;
-      padding: 60px 20px 40px;
       text-align: center;
+      padding: 60px 20px 40px;
     }
-
     .hero h2 {
       color: #C6A664;
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
     }
-
     .hero p {
-      font-size: 1.1rem;
       font-style: italic;
+      font-size: 1.1rem;
+      margin-bottom: 0;
     }
     .hero-img {
       width: 100%;
+      height: auto;
       display: block;
-      object-fit: cover;
     }
-
-    .content {
-      background: #fffdf9;
-      max-width: 800px;
-      margin: 50px auto;
+    .blog-box {
+      border: 1px solid #C6A664;
       padding: 40px 20px;
+      background-color: #fff;
+      max-width: 850px;
+      margin: 60px auto;
     }
-
-    .content h2 {
-      color: #C6A664;
+    .blog-box h2 {
       font-family: 'Playfair Display', serif;
+      color: #1c1c1c;
     }
-
-    .content p {
-      font-size: 1.1rem;
+    .blog-box p {
+      font-size: 1rem;
       line-height: 1.8;
     }
-
+    .comments {
+      background-color: #f5f2e9;
+      padding: 40px 20px;
+    }
+    .comments h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .comments input,
+    .comments textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0;
+    }
+    .comments button {
+      background-color: #0f2e1f;
+      color: #C6A664;
+      border: 1.5px solid #C6A664;
+      padding: 12px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 0;
+    }
+    .comments button:hover {
+      background-color: #C6A664;
+      color: #fffdf9;
+    }
+    .comment-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
     footer {
       background-color: #0f2e1f;
       color: #fff;
       text-align: center;
       padding: 40px 20px 20px;
     }
-
     .footer-icon {
       margin: 0 12px;
       color: #C6A664;
       font-size: 1.6rem;
       transition: color 0.3s;
     }
-
     .footer-icon:hover {
       color: #fff;
     }
@@ -99,17 +117,17 @@
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- NAVIGATION -->
   <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container justify-content-between align-items-center">
+    <div class="container">
       <a class="navbar-brand mx-auto" href="index.html">
         <img src="logo1.png" alt="Jennifer Akong Logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav text-center">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -118,18 +136,20 @@
       </div>
     </div>
   </nav>
+  <!-- HERO IMAGE -->
+  <section>
+    <img src="images/moved-blogcard.png" alt="Should Have Moved Poem Header" class="hero-img">
+  </section>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section class="hero">
-    <h2>Should Have Moved</h2>
+    <h2>SHOULD HAVE MOVED</h2>
     <p>by Jennifer Akong</p>
   </section>
 
-  <!-- Poem Content -->
-  <section class="content"><!-- Hero Image -->
-<section style="width: 100%; overflow: hidden;">
-  <img src="images/moved-blogcard.png" alt="Moved" style="width: 100%; display: block; object-fit: cover;">
-</section>
+
+  <!-- CONTENT BLOCK -->
+  <section class="blog-box">
     <p>I waited when I should have moved.<br>
     Sat still, while life kept passing through.<br>
     The waves kept calling me to go,<br>
@@ -151,7 +171,22 @@
     <p class="mt-4">— <strong>Jennifer Akong</strong></p>
   </section>
 
-  <!-- Footer -->
+  <!-- COMMENTS -->
+  <section class="comments">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h3>Leave a Comment</h3>
+      <form id="comment-form">
+        <input type="text" name="entry.1012665514" placeholder="Your Name" required>
+        <input type="email" name="entry.1141227850" placeholder="Your Email" required>
+        <textarea name="entry.752414235" placeholder="Your Comment" rows="5" required></textarea>
+        <button type="submit">Post Comment</button>
+        <p id="comment-msg" style="text-align: center; margin-top: 10px;"></p>
+      </form>
+      <div id="comment-list" style="margin-top: 40px;"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <div class="mb-3">
       <a href="https://instagram.com/jenn.akong" target="_blank" class="footer-icon"><i class="bi bi-instagram"></i></a>
@@ -161,7 +196,45 @@
     <p class="mb-0">&copy; 2025 Jennifer Akong. All rights reserved.</p>
   </footer>
 
-  <!-- Bootstrap Script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- COMMENTS SCRIPT -->
+  <script>
+    const form = document.getElementById("comment-form");
+    const message = document.getElementById("comment-msg");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch("https://docs.google.com/forms/d/e/1FAIpQLSdYJTIjXG7i57qdtO3Mio3_MyF7q9aevwDkzIr4-4ew6SSEjQ/formResponse", {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+      }).then(() => {
+        form.reset();
+        message.innerText = "🎉 Thanks for your comment!";
+        message.style.color = "#1c1c1c";
+        message.style.fontWeight = "500";
+      }).catch(() => {
+        message.innerText = "Oops! Something went wrong.";
+        message.style.color = "red";
+      });
+    });
+
+    async function loadComments() {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbz69qDugQiVrmKGVzSDPH2SdLLVNtUJRkNDa8PFmUe1wr0n3f2OcGdZi8an2uDWJ5KM/exec");
+      const data = await res.json();
+      const commentList = document.getElementById("comment-list");
+      commentList.innerHTML = "";
+      data.forEach(entry => {
+        const name = entry.name || "Anonymous";
+        const comment = entry.comment;
+        const item = document.createElement("div");
+        item.classList.add("comment-item");
+        item.innerHTML = `<h5>${name}</h5><p>${comment}</p>`;
+        commentList.appendChild(item);
+      });
+    }
+    document.addEventListener("DOMContentLoaded", loadComments);
+  </script>
+
 </body>
 </html>
