@@ -4,26 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lust in the City | Jennifer Akong</title>
-  <meta name="description" content="A Wattpad-style fanfiction blog post by Jennifer Akong. Explore romantic tension, softness, and sensuality in this unfolding chaptered series." />
+  <meta name="description" content="A Wattpad-style fanfiction blog post by Jennifer Akong. Explore romantic tension, softness, and sensuality in this unfolding chaptered series.">
+  <meta name="author" content="Jennifer Akong">
+  <meta name="keywords" content="Wattpad-style, fanfiction, romance, LGBTQ, intimacy, Jennifer Akong blog">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-  
-  <!-- Google Fonts -->
+
+  <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-  
-  <!-- Bootstrap & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
+
   <style>
-    .btn-gold {
+    img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.responsive-img-500 {
+  max-width: 500px;
+  width: 100%;
+}
+    .btn-custom {
       background-color: #0f2e1f;
-      border: 1px solid #C6A664;
       color: #C6A664;
       border-radius: 0;
+      border: none;
+      padding: 10px 20px;
+      font-weight: 500;
     }
-    .btn-gold:hover {
+    .btn-custom:hover {
       background-color: #C6A664;
+      color: #ffffff;
+    }
+    .blog-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px;
+      border: 1px solid #C6A664;
+      background-color: #ffffff;
+    }
+    .blog-content img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 30px auto;
+    }
+    .chapter-links a {
+      text-decoration: none;
+      display: inline-block;
+      margin: 8px 0;
       color: #0f2e1f;
+      font-weight: 500;
     }
     .comment-box {
       background-color: #f9f5ee;
@@ -48,35 +84,39 @@
     .footer-icon:hover {
       color: #fff;
     }
-    .hero-image {
-      max-width: 700px;
-      height: auto;
-      margin-top: 30px;
-      border-radius: 8px;
-    }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg bg-white border-bottom fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand mx-auto" href="index.html">
-      <img src="logo1.png" alt="Jennifer Akong Logo" class="img-fluid" style="height: 70px;">
+      <img src="logo1.png" alt="Jennifer Akong Logo" class="img-fluid">
     </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav">
+         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO IMAGE SECTION -->
 <section class="text-center text-white py-5" style="background-color: #0f2e1f; margin-top: 90px;">
   <div class="container">
+    <img src="images/Lust+in+the+City+Header.png" alt="Lust in the City Header"  class="img-fluid responsive-img-500 mb-4">
     <h1 class="display-5" style="font-family: 'Playfair Display', serif; color: #C6A664;">Lust in the City</h1>
     <p class="lead mb-4">A Wattpad Fan Fiction Series by Jennifer Akong</p>
-    <img src="images/Lust+in+the+City+Header.png" alt="Lust in the City Banner" class="hero-image img-fluid">
   </div>
 </section>
 
-  <!-- BLOG CONTENT -->
+<!-- BLOG CONTENT -->
 <section class="py-5">
   <div class="blog-content">
     <div class="text-center mb-4">
@@ -88,7 +128,7 @@
       </div>
     </div>
 
-    <div id="chapter1">
+        <div id="chapter1">
       <h2 style="font-family: 'Playfair Display', serif;" class="mt-5">Chapter One: Backseat Confessions</h2>
     <p>Sitting in the back seat of the taxi, her thighs pressed tightly together as she bit her lower lip, hard. The city lights blurred outside the window, but her mind was sharper than everplaying reel after reel of the things she wanted Alex to do to her. Needed her to do.</p>
     <p>God, the things that woman could do with just a look.</p> 
@@ -111,11 +151,11 @@
     </div>
 
     <div id="chapter2">
-   <h2 style="font-family: 'Playfair Display', serif;" class="mt-5">Chapter Two: Wine and Whispers</h2>
+      <h2 style="font-family: 'Playfair Display', serif;" class="mt-5">Chapter Two: Wine and Whispers</h2>
 <p>It was a cool Wednesday night, June’s favourite kind. A night to herself. No noise, no obligations. Just soft lights, her ridiculous but therapeutic skincare routine, and that feel good kind of silence that only came when you lived alone downtown. </p>
 
 <p>She had just smeared on her green clay face mask, the one that made her look like Princess Fiona from Shrek - and slipped under her duvet with a glass of wine, ready to binge her comfort series on Netflix, when her phone buzzed. </p>
-<p><img src="images/june-bedtime.jpg" alt="Woman in bed with face mask and wine" class="responsive-img""></p>
+<p><img src="images/june-bedtime.jpg" alt="Woman in bed with face mask and wine"  class="img-fluid responsive-img-500 mb-4"></p>
 <p>FaceTime. </p>
 
 <p>Alex. </p>
@@ -137,7 +177,7 @@
 <p>Alex had just come back from some chaotic hangout and was in storyteller mode, recounting a scene from the parking lot like it was a Netflix comedy special. June half-listened at first, sipping her wine. But slowly, as Alex spoke, her eyes wandered. The low-cut tank top. The way Alex’s collarbone caught the light. Her soft locs thrown to the. Her skin lit like caramel under the warm bulb overhead. And those lips. Those lips that moved so expressively with every word. </p>
 
 <p>Then she noticed it. </p>
-<p><img src="images/alex-facetime.jpg" alt="Facetime screen with soft-lit woman in tank top" class="responsive-img""></p>
+<p><img src="images/alex-facetime.jpg" alt="Facetime screen with soft-lit woman in tank top"  class="img-fluid responsive-img-500 mb-4"></p>
 <p>As Alex's breast jiggled as she laughed. </p>
 
 <p>Her nipples pressed against the fabric - subtle, but there. And once June noticed, she could not unsee it. She shifted under the covers. Something about watching her talk, so freely, so animatedly, made her chest feel tight… and her thoughts spiral. </p>
@@ -185,7 +225,7 @@
 
 <p>The drive was quiet. Her heartbeat louder than the radio.</p>
 <p>She wore a simple black knit dress-easy, soft, and familiar. No makeup, no heels. Just perfume and nerves. </p>
-  <p><img src="images/night-drive.jpg" alt="Woman driving through city at night" class="responsive-img""></p>
+  <p><img src="images/night-drive.jpg" alt="Woman driving through city at night"  class="img-fluid responsive-img-500 mb-4"></p>
 <p>When she got to Alex’s building, she did not go in right away. She sat in the car for a moment, staring at her own reflection in the rearview. Her hands were sweating. Her mouth was dry. </p>
 
 <p>But her body? Her body was already in motion. </p>
@@ -206,7 +246,7 @@
 <p>They talked. About nothing. And everything. The room was a little too warm. The wine a little too smooth. The way Alex looked at her made her skin tingle. </p>
 
 <p>At one point, Alex shifted closer. Their knees touched. Her hand rested gently on June’s thigh. </p>
-  <p><img src="images/candles-wine.jpg" alt="Lit candles and wine glasses on table" class="responsive-img""></p>
+  <p><img src="images/candles-wine.jpg" alt="Lit candles and wine glasses on table"  class="img-fluid responsive-img-500 mb-4"></p>
 <p>“Is this okay?” she asked. </p>
 
 <p>June nodded. “Yes.” </p>
@@ -227,7 +267,7 @@
 
 <p>They moved to the couch, still kissing. Alex reached behind her, slowly unzipping her dress, every motion deliberate. June’s hands ran over her bare back, feeling her warmth, her skin, her rhythm. </p>
 <p>They didn’t rush, just undressed each other like a slow song, like every layer was a question and every touch an answer. </p>
- <p><img src="images/couch-kiss.jpg" alt="Silhouetted kiss in candlelight" class="responsive-img""></p>
+ <p><img src="images/couch-kiss.jpg" alt="Silhouetted kiss in candlelight"  class="img-fluid responsive-img-500 mb-4"></p>
 <p>And when their bodies finally met - skin to skin, it wasn’t just lust. </p>
 <p>It was softness. </p>
 <p>It was heat. </p>
@@ -238,16 +278,13 @@
 <p>And when she finally came, under Alex’s mouth, under her fingers, under her gaze - it was with her eyes wide open. </p>
 
 <p>Alex watched her the whole time. </p>
-  <p><img src="images/sheets-warm.jpg" alt="Tangled sheets, soft candlelight" class="responsive-img""></p>
+  <p><img src="images/sheets-warm.jpg" alt="Tangled sheets, soft candlelight"  class="img-fluid responsive-img-500 mb-4"></p>
 
   <p>They lay there. Tangled. Breathing. Satisfied but not finished. </p>
 
   <p>Alex pulled her close, lips brushing her temple. “This is what I meant when I said I didn’t want to be alone tonight.”</p>
 
   <p>June smiled against her skin. “Good. Because I am not leaving anytime soon.”</p>
-
-      <p><strong>To be continued…</strong></p>
-      <p>Coming soon...</p>
     </div>
 
     <div id="chapter3">
@@ -322,3 +359,4 @@
 
 </body>
 </html>
+
