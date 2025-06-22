@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Owlet SMM Services</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      background-color: #fffdf9;
+      font-family: 'Poppins', sans-serif;
+      color: #1c1c1c;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    .gold-box {
+      background-color: #fffdf9;
+      border: 1px solid #C6A664;
+      padding: 30px 25px;
+      margin: 60px auto;
+      max-width: 750px;
+    }
+    .form-label {
+      font-weight: 500;
+      margin-top: 10px;
+    }
+    .btn-green-gold {
+      background-color: #0f2e1f;
+      color: #C6A664;
+      border: 1.5px solid #C6A664;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 0;
+      transition: 0.3s ease;
+    }
+    .btn-green-gold:hover {
+      background-color: #C6A664;
+      color: #fffdf9;
+    }
+    .footer-green {
+      background-color: #0f2e1f;
+      color: #fff;
+    }
+    .footer-icon {
+      margin: 0 12px;
+      color: #C6A664;
+      font-size: 1.6rem;
+      transition: color 0.3s;
+    }
+    .footer-icon:hover {
+      color: #fff;
+    }
+    .logo-img {
+      max-height: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center py-2">
+    <a class="navbar-brand mx-auto" href="../index.html">
+      <img src="../logo1.png" alt="Jennifer Akong Logo" class="logo-img">
+    </a>
+  </div>
+</nav>
+
+<div style="padding-top: 100px;"></div>
+
+<!-- Page Title -->
+<section class="text-center">
+  <h2 class="text-uppercase mb-3">Buy Social Media Followers</h2>
+  <p class="lead">Boost your Instagram, TikTok, and YouTube engagement instantly with Owlet SMM services.</p>
+</section>
+
+<!-- Form Section -->
+<div class="gold-box">
+  <form id="orderForm">
+    <div class="mb-3">
+      <label for="service" class="form-label">Select Service</label>
+      <select class="form-select" id="service" required>
+        <option value="">Choose one...</option>
+        <option value="123">Instagram Followers</option>
+        <option value="456">TikTok Views</option>
+        <option value="789">YouTube Likes</option>
+        <!-- Replace with real service IDs once API is connected -->
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="link" class="form-label">Profile/Post Link</label>
+      <input type="url" class="form-control" id="link" placeholder="https://www.instagram.com/yourprofile/" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="quantity" class="form-label">Quantity</label>
+      <input type="number" class="form-control" id="quantity" min="10" step="10" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email (for updates)</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+
+    <button type="submit" class="btn btn-green-gold w-100">Place Order</button>
+  </form>
+
+  <div id="confirmation" class="mt-4 text-success fw-semibold" style="display:none;"></div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer-green text-center text-white py-4">
+  <div class="mb-3">
+    <a href="https://instagram.com/jenn.akong" target="_blank" class="footer-icon"><i class="bi bi-instagram"></i></a>
+    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+    <a href="https://youtube.com/@jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-youtube"></i></a>
+  </div>
+  <p class="mb-0">&copy; 2025 Jennifer Akong. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript to simulate confirmation -->
+<script>
+  document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const selectedService = document.getElementById('service').selectedOptions[0].text;
+    document.getElementById('confirmation').style.display = 'block';
+    document.getElementById('confirmation').innerText = `✅ Your ${selectedService} order has been received! We'll contact you shortly.`;
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
