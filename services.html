@@ -16,33 +16,20 @@
 
   <!-- Your Custom CSS -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWZ73DJBE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LSWZ73DJBE');
-  </script>
 </head>
-<body>
+<body style="background-color: #fffdf9; font-family: 'Poppins', sans-serif; color: #1c1c1c;">
 
-<!-- Spacing below fixed navbar -->
-<div style="height: 0px;"></div>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(245, 235, 221, 0.95);">
-  <div class="container d-flex justify-content-between align-items-center">
-    <div class="left-spacer d-none d-lg-block"></div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center py-2">
     <a class="navbar-brand mx-auto" href="index.html">
-      <img src="logo.png" alt="Jennifer Akong Logo" class="logo-img">
+      <img src="logo1.png" alt="Jennifer Akong Logo" class="logo-img" style="max-height: 100px;">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav text-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -52,72 +39,77 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
-<header class="hero d-flex align-items-center text-center">
-  <div class="container">
-    <h1 class="display-5" style="font-family: 'Playfair Display', serif;">Building Brands That Stand Out</h1>
-    <p class="lead">Strategy, creativity, and clarity for brands that want to grow with purpose.</p>
-  </div>
-</header>
+<div style="padding-top: 100px;"></div>
+
+<!-- Hero -->
+<section class="text-center mb-5">
+  <h1 style="font-family: 'Playfair Display', serif;" class="display-5">Bringing Your Brand to Life</h1>
+  <p class="lead">Where clarity meets creativity, and strategy turns into success.</p>
+</section>
 
 <!-- Services Grid -->
-<section class="py-5">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-3 text-center">
+<section class="container">
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-3 text-center">
+      <div class="gold-box">
         <a href="marketing-strategy.html">
           <img src="images/marketing-strategy-banner.png" alt="Marketing Strategy" class="img-fluid rounded mb-3">
         </a>
         <h3 style="font-family: 'Playfair Display', serif;">Marketing Strategy</h3>
         <p>Developing tailored marketing plans that align with your brand’s goals.</p>
       </div>
+    </div>
 
-      <div class="col-md-6 col-lg-3 text-center">
+    <div class="col-md-6 col-lg-3 text-center">
+      <div class="gold-box">
         <a href="brand-development.html">
           <img src="images/brand-development.png" alt="Brand Development" class="img-fluid rounded mb-3">
         </a>
         <h3 style="font-family: 'Playfair Display', serif;">Brand Development</h3>
         <p>Creating brand identities that stand out in the digital landscape.</p>
       </div>
+    </div>
 
-      <div class="col-md-6 col-lg-3 text-center">
+    <div class="col-md-6 col-lg-3 text-center">
+      <div class="gold-box">
         <a href="content-marketing.html">
           <img src="images/content-marketing.png" alt="Content Marketing" class="img-fluid rounded mb-3">
         </a>
         <h3 style="font-family: 'Playfair Display', serif;">Content Marketing</h3>
         <p>Crafting compelling content that engages and converts your audience.</p>
       </div>
+    </div>
 
-      <div class="col-md-6 col-lg-3 text-center">
+    <div class="col-md-6 col-lg-3 text-center">
+      <div class="gold-box">
         <a href="social-media-management.html">
           <img src="images/social-media-management.png" alt="Social Media Management" class="img-fluid rounded mb-3">
         </a>
         <h3 style="font-family: 'Playfair Display', serif;">Social Media Management</h3>
-        <p>Helping brands dominate the digital space with high-impact strategies.</p>
-        <a href="smm.html" class="btn btn-green-gold">Buy Followers</a>
+        <p>Helping brands grow their audience with high-impact strategies.</p>
+        <a href="smm.html" class="btn btn-green-gold mt-2">Buy Followers</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA Section -->
-<section class="cta text-center py-5" style="background-color: #e8d3b9;">
-  <h2 style="font-family: 'Playfair Display', serif;">Let’s bring your brand to life.</h2>
-  <a href="contact.html" class="btn btn-lg mt-3" style="background-color: #C6A664; color: #fff;">Book a Discovery Call</a>
+<!-- CTA -->
+<section class="text-center my-5">
+  <h2 style="font-family: 'Playfair Display', serif;" class="mb-3">Let’s bring your brand to life.</h2>
+  <a href="contact.html" class="btn btn-gold-solid">Book a Discovery Call</a>
 </section>
 
-<!-- Footer -->
-<footer class="text-center py-4 bg-dark text-white">
+<!-- FOOTER -->
+<footer class="footer-green text-center text-white py-4">
   <div class="mb-3">
-    <a href="https://instagram.com/jenn.akong" target="_blank" class="mx-2 text-white"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
-    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="mx-2 text-white"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
-    <a href="https://youtube.com/@jenniferakong1" target="_blank" class="mx-2 text-white"><i class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
+    <a href="https://instagram.com/jenn.akong" target="_blank" class="footer-icon"><i class="bi bi-instagram"></i></a>
+    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+    <a href="https://youtube.com/@jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-youtube"></i></a>
   </div>
-  <p>&copy; 2025 Jennifer Akong. All Rights Reserved.</p>
+  <p class="mb-0">&copy; 2025 Jennifer Akong. All rights reserved.</p>
 </footer>
 
-<!-- Bootstrap JS Bundle -->
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
