@@ -185,6 +185,26 @@
     }
   });
 </script>
+<script>
+  async function fetchServices() {
+    try {
+      const res = await fetch('/.netlify/functions/services');
+      const services = await res.json();
+
+      const select = document.getElementById('service');
+      services.forEach(service => {
+        const option = document.createElement('option');
+        option.value = service.service; // the ID
+        option.text = `${service.name} — ${service.rate} per ${service.min}-${service.max}`;
+        select.appendChild(option);
+      });
+    } catch (err) {
+      console.error('Failed to load services:', err);
+    }
+  }
+
+  window.onload = fetchServices;
+</script>
 
 </body>
 </html>
