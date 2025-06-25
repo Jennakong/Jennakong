@@ -90,16 +90,12 @@
       <label for="service" class="form-label">Select Service</label>
       <select class="form-select" id="service" required>
         <option value="">Choose one...</option>
-        <option value="123">Instagram Followers</option>
-        <option value="456">TikTok Views</option>
-        <option value="789">YouTube Likes</option>
-        <!-- Replace with real service IDs once API is connected -->
       </select>
     </div>
 
     <div class="mb-3">
       <label for="link" class="form-label">Profile/Post Link</label>
-      <input type="url" class="form-control" id="link" placeholder="https://www.instagram.com/yourprofile/" required>
+      <input type="url" class="form-control" id="link" required>
     </div>
 
     <div class="mb-3">
@@ -112,10 +108,10 @@
       <input type="email" class="form-control" id="email" required>
     </div>
 
-    <button type="submit" class="btn btn-green-gold w-100">Place Order</button>
+    <button type="submit" class="btn btn-green-gold w-100">Submit Order</button>
   </form>
 
-  <div id="confirmation" class="mt-4 text-success fw-semibold" style="display:none;"></div>
+  <div id="confirmation" class="mt-4 fw-semibold text-success" style="display:none;"></div>
 </div>
 
 <!-- FOOTER -->
@@ -128,14 +124,65 @@
   <p class="mb-0">&copy; 2025 Jennifer Akong. All rights reserved.</p>
 </footer>
 
-<!-- JavaScript to simulate confirmation -->
+<!-- JavaScript -->
 <script>
-  document.getElementById('orderForm').addEventListener('submit', function(e) {
+  const netlifyURL = "https://owlet-smm-panel.netlify.app"; // replace if different
+
+  // Load services dynamically
+  async function loadServices() {
+    try {
+      const response = await fetch(`${netlifyURL}/.netlify/functions/services`);
+      const services = await response.json();
+      const dropdown = document.getElementById("service");
+      services.forEach(service => {
+        const option = document.createElement("option");
+        option.value = service.service;
+        option.textContent = `${service.name} (${service.category})`;
+        dropdown.appendChild(option);
+      });
+    } catch (error) {
+      console.error("Error loading services:", error);
+    }
+  }
+
+  loadServices();
+
+  // Handle order submission
+  document.getElementById("orderForm").addEventListener("submit", async function (e) {
     e.preventDefault();
-    const selectedService = document.getElementById('service').selectedOptions[0].text;
-    document.getElementById('confirmation').style.display = 'block';
-    document.getElementById('confirmation').innerText = `✅ Your ${selectedService} order has been received! We'll contact you shortly.`;
-    this.reset();
+
+    const service = document.getElementById("service").value;
+    const link = document.getElementById("link").value;
+    const quantity = document.getElementById("quantity").value;
+    const email = document.getElementById("email").value;
+
+    try {
+      const response = await fetch(`${netlifyURL}/.netlify/functions/order`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          service,
+          link,
+          quantity,
+          email
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.order || result.order_id) {
+        document.getElementById("confirmation").style.display = "block";
+        document.getElementById("confirmation").innerText = `✅ Order #${result.order || result.order_id} placed successfully!`;
+        this.reset();
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Order failed:", error);
+      alert("Order failed. Please try again.");
+    }
   });
 </script>
 
