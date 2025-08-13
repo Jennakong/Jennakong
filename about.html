@@ -1,341 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Jennifer Akong</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media Kit & Rate Card – Jenn Akong</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap & Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-  <link rel="stylesheet" href="style.css"> <!-- Your custom stylesheet -->
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
+  <!-- Site CSS (if you have styles.css already) -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Page styles to ensure on-brand look even without external CSS -->
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fffdf9;
-      color: #1c1c1c;
-      margin: 0;
-      padding: 0;
+    :root{
+      --green:#0F2E1F; /* user green */
+      --gold:#C6A664;  /* user gold */
+      --ivory:#FAFAF7;
     }
-
-    .navbar {
-      background-color: #ffffff; /* SOLID white navbar */
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      z-index: 999;
+    body{
+      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:#fff;
     }
+    .navbar{border-bottom:1px solid var(--gold); background:#fff;}
+    .navbar-brand{margin:0 auto;}
+    .navbar .nav-link{color:#111;}
+    .navbar .nav-link:hover{color:var(--green);}
+    .logo-wrap img{height:56px;}
 
-    .logo-img {
-      max-height: 100px;
-      height: auto;
-      width: auto;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-    }
+    .hero{background:var(--green); color:#fff; padding:4rem 0;}
+    .hero h1{color:var(--gold); font-family:"Playfair Display", Georgia, serif; font-weight:700;}
+    .hero p{opacity:.95;}
+    .btn-green{background:var(--green); color:var(--gold); border:1px solid var(--gold); border-radius:0; padding:.6rem 1rem;}
+    .btn-green:hover{opacity:.92; color:var(--gold);}
 
-    .hero-box {
-      background-color: #0f2e1f;
-      padding: 10px 20px 30px; /* No margin-top */
-      border-bottom: 2px solid #C6A664;
-      text-align: center;
-    }
+    .section-title{font-family:"Playfair Display", Georgia, serif; color:var(--gold); border-bottom:1.5px solid var(--gold); display:inline-block; padding-bottom:.35rem; margin-bottom:1.25rem;}
+    .soft-box{background:#fff; border:1.5px solid var(--gold); padding:1.25rem; margin-bottom:1.25rem;}
+    .gold-heading{color:var(--green); letter-spacing:.2px; font-weight:600;}
+    .rate-row{border-top:1px solid var(--gold);}
+    .rate-title{font-weight:600; color:var(--green);}
+    .gold-divider{height:1px; background:var(--gold); width:100%; margin:1rem 0;}
+    .ig-embed{max-width:540px; margin:0 auto;}
 
-    .hero-box h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: bold;
-      color: #C6A664;
-      margin-bottom: 12px;
-    }
-
-    .hero-box p {
-      margin: 0;
-      color: #fff;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .section-box {
-      padding: 40px 20px;
-    }
-
-    .soft-box {
-      background-color: #ffffff;
-      border: 1px solid #C6A664;
-      padding: 40px 30px;
-      margin-bottom: 40px;
-    }
-
-    .soft-box h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .soft-box p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    .btn-gold {
-      background-color: #C6A664;
-      color: #fff;
-      padding: 10px 18px;
-      font-weight: 500;
-      border-radius: 0;
-      text-decoration: none;
-    }
-
-    .btn-gold:hover {
-      background-color: #a88a48;
-      color: #fffdf9;
-    }
-
-    .footer-green {
-      background-color: #0f2e1f;
-      color: #fff;
-    }
-
-    .footer-icon {
-      margin: 0 12px;
-      color: #C6A664;
-      font-size: 1.6rem;
-      transition: color 0.3s;
-    }
-
-    .footer-icon:hover {
-      color: #fff;
-    }
-
-    @media (max-width: 768px) {
-      .hero-box {
-        padding-top: 20px;
-      }
-
-      .hero-box h2 {
-        font-size: 1.8rem;
-      }
-
-      .soft-box {
-        padding: 30px 20px;
-      }
-    }
-    <style>
-  .carousel-inner img {
-    border: 1px solid #C6A664;
-    border-radius: 4px;
-    max-height: 450px;
-    object-fit: cover;
-  }
-</style>
+    .footer{background:var(--green); color:#fff; padding:2rem 0; margin-top:2rem;}
+    .footer a{color:var(--gold); text-decoration:none;}
+    .footer .icon{font-size:1.25rem; color:var(--gold);}
   </style>
 </head>
 <body>
 
-<!-- Navbar (not fixed) -->
-<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-  <div class="container d-flex justify-content-center">
-    <a class="navbar-brand mx-auto" href="index.html">
-      <img src="logo1.png" alt="Jennifer Akong Logo" class="logo-img">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Spacer -->
-<div style="height: 80px;"></div>
-
-<!-- Hero Section -->
-<section class="hero-box text-center py-5">
-  <div class="container">
-    <img src="images/Jennifer-Akong.png" alt="Jennifer Akong Portrait" class="img-fluid rounded-circle mb-4" style="max-width: 180px; border: 3px solid #C6A664;">
-    <h2 class="hero-title">MEET JENNIFER</h2>
-    <p class="lead" style="max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
-      Creative Voice for Afro Innovation. Fashion Entrepreneur. Digital Project Manager.
-    </p>
-  </div>
-</section>
-
-<!-- Main Content -->
-<section class="section-box">
-  <div class="soft-box">
-  <h2>My Digital Project Portfolio</h2>
-  <p>I’ve worked on digital campaigns, websites, and training programmes that empower communities and elevate stories.</p>
-
-  <!-- PROJECT 2 -->
-  <div class="mb-4">
-    <h5>A Thousand Women – Digital Literacy & Campaign Series</h5>
-    <p><strong>Role:</strong> Digital Skills & Outreach Project Coordinator</p>
-    <p><strong>Tools:</strong> Trello, WordPress, Mailchimp, Canva, Google Analytics</p>
-    <p>Led multiple digital campaigns for World Health Day, Education Day, and End Period Poverty Initiative. Delivered community training to improve digital confidence and built reusable toolkits for outreach teams. Tracked performance and user engagement using UTM codes and dashboards.</p>
-  <div id="atwCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
-  <div class="carousel-inner border border-warning" style="border-width: 2px;">
-    <div class="carousel-item active">
-      <img src="images/atw1.png" class="d-block w-100" alt="ATW Campaign 1">
-    </div>
-    <div class="carousel-item">
-      <img src="images/atw2.png" class="d-block w-100" alt="ATW Campaign 2">
-    </div>
-    <div class="carousel-item">
-      <img src="images/atw3.png" class="d-block w-100" alt="ATW World Day Project">
-    </div>
-    <div class="carousel-item">
-      <img src="images/atw4.png" class="d-block w-100" alt="ATW Period Poverty Initiative">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#atwCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#atwCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-  </div>
-   </div>
-  
- <div class="soft-box">
-  <!-- PROJECT 3 -->
-<div class="mb-5">
-  <h4>Personal Portfolio Website – GitHub Hosted Build</h4>
-  <p><strong>Role:</strong> Developer & Designer</p>
-  <p><strong>Tools:</strong> HTML, CSS, Bootstrap, GitHub Pages, Formspree, APIs</p>
-  <p>Designed and coded my personal brand site using GitHub. Used Bootstrap for layout, integrated lightbox galleries, contact forms, and anchor navigation to showcase my full digital identity.</p>
-
-  <!-- Visual Grid -->
-  <div class="row g-3">
-    <div class="col-md-6">
-      <a href="images/portfolio-home.png" class="glightbox" data-gallery="github">
-        <img src="images/portfolio-home.png" class="img-fluid border border-warning" alt="Portfolio Homepage">
+  <!-- Centered Logo Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand logo-wrap" href="/">
+        <!-- Use your actual logo file -->
+        <img src="logo1.png" alt="Jenn Akong">
       </a>
+      <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="mainNav" class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="/fashion.html">Fashion</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="col-md-6">
-      <a href="images/portfolio-contact.png" class="glightbox" data-gallery="github">
-        <img src="images/portfolio-contact.png" class="img-fluid border border-warning" alt="Contact Page">
-      </a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9">
+          <h1 class="mb-3">Media Kit & Rate Card</h1>
+          <p class="lead">Fashion Entrepreneur • Digital Marketing Professional • Project Manager • Brand Strategist • Author</p>
+          <div class="mt-3">
+            <a href="https://instagram.com/jenn.akong" target="_blank" class="btn btn-green me-2"><i class="bi bi-instagram me-1"></i>@jenn.akong</a>
+            <a href="https://tiktok.com/@jenn.akongg" target="_blank" class="btn btn-green"><i class="bi bi-tiktok me-1"></i>@jenn.akongg</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
- </div>
+  </header>
 
-  <div class="soft-box">
-    <!-- SKILLS SUMMARY -->
-  <div class="mt-5">
-    <h5>Core Digital Skills & Tools</h5>
-    <ul>
-      <li>Project & Campaign Management (PRINCE2 Foundation)</li>
-      <li>Agile Planning with Trello, Notion, and Asana</li>
-      <li>CMS (WordPress), SEO & Content Upload</li>
-      <li>HTML, CSS, GitHub, APIs, and light coding</li>
-      <li>Canva, Adobe Express, Mailchimp, Google Analytics</li>
-    </ul>
-  </div>
-  </div>
+  <!-- Media Kit (Instagram Embeds) -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Media Kit: Featured Instagram Work</h2>
+      <div class="row g-4">
+        <!-- Talking video with product overlay -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="soft-box">
+            <p class="gold-heading mb-2">Talking Video + Product Overlay</p>
+            <blockquote class="instagram-media ig-embed"
+              data-instgrm-permalink="https://www.instagram.com/reel/DNS0uWWIRcs/?igsh=MXJzNHAwMWJ3Zjd0aQ=="
+              data-instgrm-version="14"></blockquote>
+            <div class="gold-divider"></div>
+            <small>Conversational demo with on-screen product cues and clear CTA.</small>
+          </div>
+        </div>
 
- <div class="soft-box">
-  <!-- CERTIFICATIONS -->
-  <div class="mt-4">
-    <h5>Certifications</h5>
-    <ul>
-      <li>PRINCE2® Foundation – Axelos</li>
-      <li>Google Project Management Certificate – Coursera</li>
-      <li>Google Digital Marketing Certificate – Coursera</li>
-      <li>LinkedIn Marketing Strategy, Creative Design & Insights</li>
-    </ul>
-  </div>
-</div>
+        <!-- Educational promo (200k+ views) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="soft-box">
+            <p class="gold-heading mb-2">Educational Promo (200k+ Views)</p>
+            <blockquote class="instagram-media ig-embed"
+              data-instgrm-permalink="https://www.instagram.com/reel/DLZ8-2UIeXm/?igsh=bWd4b3ZhYm5pZmxy"
+              data-instgrm-version="14"></blockquote>
+            <div class="gold-divider"></div>
+            <small>Brand partnerships format tailored for ads; hooks and benefit overlays.</small>
+          </div>
+        </div>
 
-</div>
-  <div class="soft-box">
-    <!-- PROJECT 1 -->
- <div class="mb-5">
-  <h2>eCommerce Fashion Brand Launch - MANIA BY JENNIFER</h2>
-  <p><strong>Role:</strong> Project Lead & Creative Director</p>
-  <p><strong>Tools:</strong> Shopify, Canva, Meta Suite, Mailchimp</p>
-  <p>Designed and launched the full eCommerce platform, integrating brand visuals, seasonal collections, influencer campaigns, and seamless user flow from shop to checkout.</p>
+        <!-- Luxury brand ad (Boss perfume) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="soft-box">
+            <p class="gold-heading mb-2">Luxury Lifestyle Ad – BOSS</p>
+            <blockquote class="instagram-media ig-embed"
+              data-instgrm-permalink="https://www.instagram.com/reel/DFpVjjDAhuf/?igsh=MXFmdDY0OXppaXZ3YQ=="
+              data-instgrm-version="14"></blockquote>
+            <div class="gold-divider"></div>
+            <small>Premium aesthetic; soft lighting, clean framing, editorial feel.</small>
+          </div>
+        </div>
+      </div>
 
-  <!-- Visual Grid -->
-  <div class="row g-3">
-    <div class="col-md-4">
-      <a href="images/mania-home.png" class="glightbox" data-gallery="mania">
-        <img src="images/mania-home.png" class="img-fluid border border-warning" alt="MANIA Homepage">
-      </a>
+      <div class="text-center mt-3">
+        <a href="https://instagram.com/jenn.akong" class="btn btn-green" target="_blank">See More on Instagram</a>
+      </div>
     </div>
-    <div class="col-md-4">
-      <a href="images/mania-product.png" class="glightbox" data-gallery="mania">
-        <img src="images/mania-product.png" class="img-fluid border border-warning" alt="Product Page">
-      </a>
+  </section>
+
+  <!-- Rate Card -->
+  <section class="py-4">
+    <div class="container">
+      <h2 class="section-title">Creator Rate Card</h2>
+
+      <div class="soft-box">
+        <div class="row gy-3">
+          <div class="col-12">
+            <h5 class="gold-heading mb-2">Content Packages</h5>
+          </div>
+
+          <div class="col-12 rate-row pt-3">
+            <div class="d-flex justify-content-between align-items-start flex-wrap">
+              <div>
+                <div class="rate-title">Non-Talking Routine Video</div>
+                <small>30–45s vertical (e.g. “Morning Skincare”, “Go to Bed with Me”, “How I Achieve a Snatched Chin”); trending audio; 1080×1920; 1× hook, 3–5 shots, CTA end card.</small>
+              </div>
+              <div class="fw-semibold">£180</div>
+            </div>
+          </div>
+
+          <div class="col-12 rate-row pt-3">
+            <div class="d-flex justify-content-between align-items-start flex-wrap">
+              <div>
+                <div class="rate-title">Talking / Testimonial Video</div>
+                <small>30–60s on-camera or VO; product demo + close-ups; caption copy; CTA overlay; light script included.</small>
+              </div>
+              <div class="fw-semibold">£300</div>
+            </div>
+          </div>
+
+          <div class="col-12 rate-row pt-3">
+            <div class="d-flex justify-content-between align-items-start flex-wrap">
+              <div>
+                <div class="rate-title">Tutorial / GRWM Feature</div>
+                <small>45–60s step-by-step education; on-screen overlays; before/after where suitable; ideal for launches.</small>
+              </div>
+              <div class="fw-semibold">£350</div>
+            </div>
+          </div>
+
+          <div class="col-12 rate-row pt-3">
+            <div class="d-flex justify-content-between align-items-start flex-wrap">
+              <div>
+                <div class="rate-title">UGC Photo Set (6–8)</div>
+                <small>Lifestyle + product close-ups; vertical & 4:5 crops; clean editorial framing; minor retouching.</small>
+              </div>
+              <div class="fw-semibold">£120</div>
+            </div>
+          </div>
+
+          <div class="col-12 rate-row pt-3">
+            <div class="d-flex justify-content-between align-items-start flex-wrap">
+              <div>
+                <div class="rate-title">Carousel (5–7 frames)</div>
+                <small>Story-led frames with headlines, benefits, how-to, and CTA; export as IG carousel + Pinterest.</small>
+              </div>
+              <div class="fw-semibold">£160</div>
+            </div>
+          </div>
+
+          <div class="col-12 mt-4">
+            <h6 class="gold-heading mb-2">Posting on My Channels (Optional)</h6>
+            <div class="row gy-2">
+              <div class="col-md-6 d-flex justify-content-between"><span>Instagram Reel (feed + story)</span><strong>£250</strong></div>
+              <div class="col-md-6 d-flex justify-content-between"><span>TikTok Post</span><strong>£350</strong></div>
+            </div>
+          </div>
+
+          <div class="col-12 mt-4">
+            <h6 class="gold-heading mb-2">Usage, Licensing & Extras</h6>
+            <ul class="mb-0">
+              <li>Organic social usage (brand channels): <strong>Included 3 months</strong></li>
+              <li>Paid ads / whitelisting (per platform): <strong>+£150 / 30 days</strong></li>
+              <li>Website / e-commerce (PDP/A+), email, retail: <strong>+£120 / 6 months</strong></li>
+              <li>Raw / working files: <strong>+£60</strong></li>
+              <li>Exclusivity (per category, per month): <strong>+25–40%</strong></li>
+              <li>Rush fee (&lt;48h TAT): <strong>+30%</strong></li>
+            </ul>
+          </div>
+
+          <div class="col-12 mt-4">
+            <h6 class="gold-heading mb-2">Bundles (Best Value)</h6>
+            <ul class="mb-0">
+              <li><strong>Starter — £450</strong>: 1 Talking + 1 Routine Video + 5 photos; 3-month organic usage.</li>
+              <li><strong>Launch — £800</strong>: 2 Talking + 2 Routine Videos + 10 photos + 5 story frames; 3-month organic + 30 days paid.</li>
+              <li><strong>Always-On — £1,500</strong>: 4 videos (mix) + 15 photos + 8 story frames; 3-month organic + 60 days paid; 1 concept reshoot.</li>
+            </ul>
+          </div>
+
+          <div class="col-12 mt-3">
+            <div class="gold-divider"></div>
+            <p class="mb-2"><strong>Compliance:</strong> I provide product-testing content and honest reviews in line with platform policies. For Amazon, reviews must be unbiased and compliant with Amazon’s guidelines. If a public Amazon review isn’t permitted, I can deliver UGC assets for your PDP/A+ instead.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="mailto:akongjennifer@gmail.com?subject=UGC%20Collaboration%20Inquiry" class="btn btn-green">Enquire / Book</a>
+      </div>
     </div>
-  
-  </div>
-</div>
-    <h2>Fashion Journey</h2>
-    <p>I come from a family of tailors. My aunt was a local champion, she made clothes for everyone in our community, from the chiefs and their wives to the children eagerly waiting on Christmas Eve. Watching her work, season after season, stirred something in me. That joy on people’s faces as they received their festive outfits,that was where my love for fashion was born.</p>
-    <p>At 14, I got my first sewing machine. I started stitching for myself and my siblings, and then for friends and neighbours. Soon after, I began modelling and met designers who opened my eyes to the global fashion scene. From that point on, the vision was clear.</p>
-    <a href="images/early-model-days.png" class="glightbox" data-gallery="about"><img src="images/early-model-days.png" alt="Modelling and early designs" class="img-fluid my-3"></a>
-    <p>For over a decade, I’ve had the honour of designing for royalty, brides, celebrities, and everyday icons. I’ve poured my heritage into every piece, crafting fashion that celebrates culture with confidence. This journey isn’t just mine,it’s about elevating African fashion and telling our stories through every stitch. I believe Africa deserves to be seen, celebrated, and represented in global spaces,and fashion is my loudest language.</p>
-    <a href="images/decades-work.png" class="glightbox" data-gallery="about"><img src="images/decades-work.png" alt="Runway and cultural fashion" class="img-fluid my-3"></a>
-  </div>
+  </section>
 
-  <div class="soft-box">
-    <h2>What I Believe</h2>
-    <p>I believe in fashion that speaks,fashion that remembers where it came from and dreams of where it’s going. I believe in building brands that feel as good as they look, creating work that reflects both purpose and pride.</p>
-    <p>To me, creativity is more than aesthetics. It’s how we show up, how we solve problems, how we express identity and inspire others. That’s the kind of energy I bring to everything I create, from garments to campaigns.</p>
-    <a href="images/what-i-believe.png" class="glightbox" data-gallery="about"><img src="images/what-i-believe.png" alt="Creative branding workspace" class="img-fluid my-3"></a>
-  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-md-6 text-center text-md-start">
+          <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start">
+            <i class="bi bi-flower1 icon"></i>
+            <div>
+              <div class="fw-semibold" style="color:var(--gold);">JenniferAkong.com</div>
+              <small>© <span id="year"></span> All rights reserved.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex gap-3 justify-content-center justify-content-md-end">
+            <a href="mailto:akongjennifer@gmail.com" aria-label="Email"><i class="bi bi-envelope icon"></i></a>
+            <a href="https://instagram.com/jenn.akong" target="_blank" aria-label="Instagram"><i class="bi bi-instagram icon"></i></a>
+            <a href="https://tiktok.com/@jenn.akongg" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok icon"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <div class="soft-box">
-    <h2>My Debut & Evolution</h2>
-    <p>In 2014, I took a bold step from the runway to the design studio, launching my first collection in Calabar. It was humbling to be featured in <a href="https://fotofashion9ja.blogspot.com/2014/12/calabar-based-runway-model-launches-her.html#more" target="_blank">FotoFashion9ja</a>, highlighting my transition as a runway model breaking into design. That debut set the tone for what would become a decade-long journey of bold choices and cultural storytelling through fashion.</p>
-     <a href="images/debut-collection.png" class="glightbox" data-gallery="about"><img src="images/debut-collection.png" alt="Debut Collection" class="img-fluid my-3"></a>
-    <p>Today, <strong>MANIA by Jennifer</strong> is a proudly Afro-fusion fashion brand, inspired by the French word <em>manière</em>, meaning "a way." It represents not just how we dress, but how we live, with expression, heritage, and edge. Our collections like <em>Tribe x Trends</em> reflect this ethos, combining bold West African fabrics with modern cuts for people who walk through life like it's a runway.</p>
-    <p>Headquartered in Manchester, UK, and rooted deeply in Nigeria, our brand exists across two continents. Our mission is to create timeless pieces that speak across cultures,making heritage wearable, and style unforgettable.</p>
-    <a href="images/tribe-trend-2025.png" class="glightbox" data-gallery="about"><img src="images/tribe-trend-2025.png" alt="Brand global presence map" class="img-fluid my-3"></a>
-  </div>
+  <!-- Instagram embed script -->
+  <script async src="https://www.instagram.com/embed.js"></script>
 
-    <div class="soft-box">
-    <h2>My Book</h2>
-    <p><strong><em>The Marketing Roadmap: From Intern to an Expert</em></strong> shares the exact lessons, strategies, and stories that helped me grow from a marketing intern to a confident, results-driven professional.</p>
-    <p>It’s more than a guide, it’s a toolkit for ambitious creatives, professionals, and entrepreneurs ready to build their brand, grow their skills, and make their mark in the digital space.</p>
-    <p>Whether you're just starting out or levelling up, this book is your step-by-step manual to thriving in modern marketing, with real insight and zero fluff.</p>
-    <a href="https://www.amazon.co.uk/Marketing-Roadmap-Beginners-Jennifer-Akong/dp/B0DHTL51LF" target="_blank" class="btn btn-gold">Get the Book</a>
-    <a href="images/the-marketing-roadmap.png" class="glightbox" data-gallery="about"><img src="images/the-marketing-roadmap.png" alt="The Marketing Roadmap book cover" class="img-fluid my-3"></a>
-  </div>
-  
-</section>
-
-<!-- FOOTER -->
-<footer class="footer-green text-center text-white py-4">
-  <div class="mb-3">
-    <a href="https://instagram.com/jenn.akong" target="_blank" class="footer-icon"><i class="bi bi-instagram"></i></a>
-    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-linkedin"></i></a>
-    <a href="https://youtube.com/@jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-youtube"></i></a>
-  </div>
-  <p class="mb-0">&copy; 2025 Jennifer Akong. All rights reserved.</p>
-</footer>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script>
-  const lightbox = GLightbox({ selector: '.glightbox' });
-</script>
+  <!-- Bootstrap JS + (optional) your script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
