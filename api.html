@@ -1,143 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Interactive API Intelligence Landing Page</title>
+  <title>51Degrees – IP Intelligence</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Google Font for playful headline -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-  <!-- AOS (Animate On Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Optional playful headline font (for emphasis words) -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      overflow-x: hidden;
+    :root{
+      --red:#ED1C24;
+      --charcoal:#333333;
+      --grey:#f7f7f7;
+      --blue:#0099FF;
+      --yellow:#FFC107;
+    }
+    body{ color:var(--charcoal); }
+    .navbar-brand img{ height:28px; }
+    .btn-cta{ background:var(--red); color:#fff; border:none; }
+    .btn-cta:hover{ filter:brightness(0.95); color:#fff; }
+    .btn-outline-dark{ border-width:2px; }
+
+    /* HERO */
+    .hero{
+      background:var(--grey);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero h1{
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .hero .boom{
+      font-family:"Fredoka", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color:var(--red);
+      font-size:clamp(32px,6vw,64px);
+      line-height:1;
+      text-transform:uppercase;
+    }
+    /* confetti accents */
+    .confetti span{
+      position:absolute; width:80px; height:6px; border-radius:4px;
+      transform:rotate(18deg);
+    }
+    .confetti .c1{ background:var(--blue); top:18%; left:6%; transform:rotate(24deg); }
+    .confetti .c2{ background:var(--yellow); top:10%; left:42%; transform:rotate(-18deg);}
+    .confetti .c3{ background:var(--red); top:24%; left:78%; transform:rotate(10deg);}
+    .confetti .c4{ background:var(--blue); bottom:12%; left:12%; transform:rotate(-22deg);}
+    .confetti .c5{ background:var(--yellow); bottom:8%; left:60%; transform:rotate(28deg);}
+
+    /* value cards */
+    .value-card{
+      border:none; border-radius:16px; background:#fff;
+      box-shadow:0 6px 22px rgba(0,0,0,.06);
+      transition:transform .2s ease, box-shadow .2s ease;
+      height:100%;
+    }
+    .value-card:hover{ transform:translateY(-3px); box-shadow:0 10px 28px rgba(0,0,0,.09); }
+    .value-icon{
+      width:56px; height:56px; border-radius:12px; display:inline-flex;
+      align-items:center; justify-content:center; background:var(--grey); font-size:26px;
     }
 
-    .hero {
-      background-color: #f7f7f7;
-      padding: 6rem 1rem;
-      text-align: center;
-      position: relative;
+    /* logo strip placeholders */
+    .logo-pill{
+      height:28px; width:120px; border-radius:6px; background:#e6e6e6;
+      display:inline-block; margin:.5rem 1rem;
     }
 
-    .hero h1 {
-      font-family: 'Fredoka One', cursive;
-      color: #ED1C24;
-      font-size: 2.5rem;
-      text-transform: uppercase;
-      font-weight: bold;
-      position: relative;
+    /* feature image placeholder */
+    .img-placeholder{
+      width:100%; aspect-ratio:4/3; background:repeating-linear-gradient(135deg,#eaeaea 0 12px,#f6f6f6 12px 24px);
+      border-radius:16px; border:1px solid #eee;
     }
 
-    .confetti-line {
-      position: absolute;
-      width: 80px;
-      height: 6px;
-      border-radius: 4px;
-    }
-
-    .line1 { background-color: #0099FF; top: 20px; left: 20%; transform: rotate(25deg); }
-    .line2 { background-color: #FFC107; top: 60px; left: 80%; transform: rotate(-25deg); }
-    .line3 { background-color: #ED1C24; top: 30px; left: 50%; transform: rotate(10deg); }
-
-    .btn-primary-custom {
-      background-color: #ED1C24;
-      border: none;
-      transition: transform 0.3s ease;
-    }
-
-    .btn-primary-custom:hover {
-      transform: scale(1.05);
-    }
-
-    .feature-icon {
-      font-size: 2rem;
-      color: #ED1C24;
-    }
-
-    .testimonial {
-      background-color: #f0f0f0;
-      padding: 2rem;
-      margin: 2rem auto;
-      border-radius: 10px;
-      max-width: 600px;
-      font-style: italic;
-    }
+    /* footer */
+    footer{ background:#111; color:#ddd; }
+    footer a{ color:#ddd; text-decoration:none; }
+    footer a:hover{ color:#fff; }
   </style>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <span class="confetti-line line1"></span>
-    <span class="confetti-line line2"></span>
-    <span class="confetti-line line3"></span>
-    <div class="container" data-aos="fade-up">
-      <h1>What if your API intelligence actually knew what to do next?</h1>
-      <p class="lead mt-3">Connect in minutes. Understand your users. Outperform your competitors.</p>
-      <a href="#get-started" class="btn btn-primary-custom btn-lg mt-4">Get Early Access</a>
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <!-- Replace with real logo -->
+      <img src="https://dummyimage.com/160x36/ffffff/000.png&text=51Degrees" alt="51Degrees logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Solutions</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">IP Intelligence</a></li>
+            <li><a class="dropdown-item" href="#">Device Detection</a></li>
+            <li><a class="dropdown-item" href="#">Fraud & Risk</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Developers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+      </ul>
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#earlyAccessModal">Get Started</button>
+        <a class="btn btn-outline-dark" href="#contact">Contact Us</a>
+      </div>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <!-- FEATURES SECTION -->
-  <section class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4 text-danger" data-aos="fade-right">API intelligence today is bloated, slow, and expensive.</h2>
-      <p data-aos="fade-up">Tired of overpaying for insights you don’t use? Struggling to get clear, actionable data from your APIs?</p>
-      <p data-aos="fade-up"><strong>[Your Brand Name]</strong>, a fast, developer-friendly API intelligence tool gives real-time, decision-ready insights without the enterprise red tape.</p>
+<!-- HERO -->
+<header class="hero py-5 py-lg-6">
+  <div class="confetti d-none d-md-block">
+    <span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c5"></span>
+  </div>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <p class="text-uppercase mb-1 fw-bold" style="color:var(--red);letter-spacing:.08em;">New • IP Intelligence</p>
+        <h1 class="display-5 mb-2">Turn IP data into <span class="boom">Business Intelligence</span></h1>
+        <p class="lead mb-4">Smarter targeting. Fraud prevention. Global accuracy. 51Degrees transforms raw IP data into actionable insights your teams can use instantly.</p>
 
-      <div class="row mt-5" data-aos="fade-up">
-        <div class="col-md-3">
-          <div class="feature-icon mb-2">📦</div>
-          <h5>Plug-and-Play SDK</h5>
-          <p>Integrate in minutes</p>
+        <!-- PRE-LAUNCH CTA -->
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-cta btn-lg" data-bs-toggle="modal" data-bs-target="#earlyAccessModal">Join Early Access</button>
+          <button class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#demoModal">Request a Demo</button>
         </div>
-        <div class="col-md-3">
-          <div class="feature-icon mb-2">⚡</div>
-          <h5>Real-Time Data</h5>
-          <p>Device, geo, network, and more</p>
-        </div>
-        <div class="col-md-3">
-          <div class="feature-icon mb-2">🔐</div>
-          <h5>Privacy-Compliant</h5>
-          <p>Fully GDPR and CCPA aligned</p>
-        </div>
-        <div class="col-md-3">
-          <div class="feature-icon mb-2">💬</div>
-          <h5>Live Developer Support</h5>
-          <p>Talk to a human when you need one</p>
+
+        <small class="d-block mt-3 text-muted">Launching soon — join to get priority access & roadmap updates.</small>
+      </div>
+
+      <div class="col-lg-6">
+        <!-- Replace with hero artwork or screenshot -->
+        <div class="img-placeholder d-flex align-items-center justify-content-center">
+          <div class="text-center">
+            <div class="mb-2 fw-bold" style="color:var(--red);">Hero Visual</div>
+            <div class="small text-muted">Replace with product illustration / map+network graphic</div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</header>
 
-  <!-- TESTIMONIAL -->
-  <section class="testimonial text-center" data-aos="zoom-in">
-    <div class="container">
-      <p>“Our intelligence doesn’t just tell. It tells you what to do next.”</p>
-      <p><strong>- Early User</strong></p>
+<!-- VALUE PILLARS -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 text-center mb-2">
+        <h2 class="h3 fw-bold">Why IP Intelligence</h2>
+        <p class="text-muted mb-0">Concise value pillars — swap text later.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card value-card p-4">
+          <div class="value-icon mb-3">🎯</div>
+          <h5 class="fw-bold mb-2">Smarter Targeting</h5>
+          <p class="mb-0">Personalise content and ads with location & context awareness.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card value-card p-4">
+          <div class="value-icon mb-3">🔒</div>
+          <h5 class="fw-bold mb-2">Fraud Prevention</h5>
+          <p class="mb-0">Detect anomalies, reduce risk, protect revenue in real time.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card value-card p-4">
+          <div class="value-icon mb-3">🌍</div>
+          <h5 class="fw-bold mb-2">Global Coverage</h5>
+          <p class="mb-0">Accurate insight across millions of IPs and networks.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card value-card p-4">
+          <div class="value-icon mb-3">✅</div>
+          <h5 class="fw-bold mb-2">Privacy-First</h5>
+          <p class="mb-0">Compliance-ready enrichment (GDPR & regional standards).</p>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA SECTION -->
-  <section class="text-center py-5 bg-light" id="get-started" data-aos="fade-up">
-    <div class="container">
-      <h2>Ready to join the next generation of API intelligence?</h2>
-      <a href="#" class="btn btn-primary-custom btn-lg mt-3">Get Started</a>
-      <a href="#" class="btn btn-outline-dark btn-lg mt-3 ms-3">View Docs</a>
+<!-- SOCIAL PROOF -->
+<section class="py-4 bg-light">
+  <div class="container text-center">
+    <div class="mb-2 text-uppercase small fw-bold text-muted">Trusted by industry leaders</div>
+    <span class="logo-pill"></span>
+    <span class="logo-pill"></span>
+    <span class="logo-pill"></span>
+    <span class="logo-pill"></span>
+    <span class="logo-pill"></span>
+  </div>
+</section>
+
+<!-- FEATURE / USE-CASE SPLIT -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 order-lg-2">
+        <div class="img-placeholder d-flex align-items-center justify-content-center">
+          <div class="text-center">
+            <div class="mb-2 fw-bold" style="color:var(--red);">Use-Case Visual</div>
+            <div class="small text-muted">Replace with dashboard / map / KPIs</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="fw-bold">Made for your team</h3>
+        <ul class="mt-3 list-unstyled">
+          <li class="mb-2">• <strong>Marketing:</strong> geo-aware experiences & campaign lift</li>
+          <li class="mb-2">• <strong>Security:</strong> risk scoring & anomaly detection</li>
+          <li class="mb-2">• <strong>Product:</strong> routing, compliance & localisation</li>
+          <li>• <strong>Analytics:</strong> clean IP context in reporting</li>
+        </ul>
+        <div class="d-flex gap-2 mt-3">
+          <button class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#demoModal">See a Live Walkthrough</button>
+          <a href="#" class="btn btn-outline-dark">View Docs</a>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- JS SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+<!-- RESOURCE CTA -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <h4 class="fw-bold mb-1">Download the 2025 IP Trends Report</h4>
+        <p class="mb-0 text-muted">Thought leadership sample placeholder — summarise market shifts and best practices. Keep ungated or add embedded CTAs.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a href="#" class="btn btn-outline-dark btn-lg">Download (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FINAL CTA -->
+<section id="contact" class="py-5">
+  <div class="container text-center">
+    <h3 class="fw-bold mb-2">Ready to turn IP data into outcomes?</h3>
+    <p class="text-muted mb-4">Talk to our team about targets, risk, and performance goals.</p>
+    <div class="d-flex justify-content-center gap-2">
+      <button class="btn btn-cta btn-lg" data-bs-toggle="modal" data-bs-target="#demoModal">Request a Demo</button>
+      <button class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#earlyAccessModal">Join Early Access</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4">
+  <div class="container">
+    <div class="row gy-3 align-items-center">
+      <div class="col-md-6">
+        <small>© 51Degrees — IP Intelligence (mockup). Replace with legal text.</small>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <small><a href="#">Privacy</a> · <a href="#">Security</a> · <a href="#">Status</a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- EARLY ACCESS MODAL (Pre-launch CTA) -->
+<div class="modal fade" id="earlyAccessModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <form class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Join Early Access</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">First name</label>
+            <input class="form-control" placeholder="Ada">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Last name</label>
+            <input class="form-control" placeholder="Lovelace">
+          </div>
+          <div class="col-12">
+            <label class="form-label">Work email</label>
+            <input type="email" class="form-control" placeholder="you@company.com">
+          </div>
+          <div class="col-12">
+            <label class="form-label">Company</label>
+            <input class="form-control" placeholder="Company Ltd">
+          </div>
+          <div class="col-12">
+            <label class="form-label">Role</label>
+            <input class="form-control" placeholder="Head of Marketing">
+          </div>
+          <small class="text-muted">Submitting this mock form doesn’t send data — hook up to your backend later.</small>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-cta" type="button" data-bs-dismiss="modal">Request Invite</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- DEMO MODAL (Lead CTA) -->
+<div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <form class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Request a Demo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-12">
+            <label class="form-label">Work email</label>
+            <input type="email" class="form-control" placeholder="you@company.com">
+          </div>
+          <div class="col-12">
+            <label class="form-label">What would you like to explore?</label>
+            <select class="form-select">
+              <option>Targeting & Personalisation</option>
+              <option>Fraud & Risk</option>
+              <option>Compliance & Routing</option>
+              <option>All of the above</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Notes (optional)</label>
+            <textarea class="form-control" rows="3" placeholder="Goals, KPIs, timelines…"></textarea>
+          </div>
+          <small class="text-muted">This is a static mock. Connect to CRM/form handler later.</small>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-cta" type="button" data-bs-dismiss="modal">Submit Request</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
