@@ -1,364 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>51Degrees – IP Intelligence</title>
+  <title>51Degrees — IP Intelligence</title>
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Optional playful headline font (for emphasis words) -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+  <!-- 51Degrees-like typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --red:#ED1C24;
-      --charcoal:#333333;
-      --grey:#f7f7f7;
-      --blue:#0099FF;
-      --yellow:#FFC107;
+      --red:#e60000;
+      --charcoal:#222222;
+      --muted:#6a6a6a;
+      --smoke:#f6f6f6;
+      --border:#e9e9e9;
     }
-    body{ color:var(--charcoal); }
-    .navbar-brand img{ height:28px; }
-    .btn-cta{ background:var(--red); color:#fff; border:none; }
-    .btn-cta:hover{ filter:brightness(0.95); color:#fff; }
-    .btn-outline-dark{ border-width:2px; }
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; font-family:"Roboto",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--charcoal); background:#fff; line-height:1.5; }
+
+    /* NAV */
+    .nav{
+      position:sticky; top:0; z-index:999;
+      background:#fff; border-bottom:1px solid var(--border);
+    }
+    .nav-inner{
+      max-width:1200px; margin:0 auto; padding:16px 20px;
+      display:flex; align-items:center; gap:20px;
+    }
+    .brand{ font-weight:900; color:var(--red); font-size:1.5rem; white-space:nowrap; }
+    .menu{ margin-left:auto; display:flex; gap:22px; flex-wrap:wrap; }
+    .menu a{ text-decoration:none; color:var(--charcoal); font-weight:600; }
+    .menu .cta{ background:var(--red); color:#fff; padding:10px 16px; border-radius:6px; }
+    .menu .outline{ border:2px solid var(--charcoal); padding:8px 14px; border-radius:6px; }
+
+    /* UTIL */
+    .container{ max-width:1200px; margin:0 auto; padding:0 20px; }
+    .btn{ display:inline-block; text-decoration:none; font-weight:700; padding:14px 22px; border-radius:8px; transition:.15s ease; }
+    .btn-primary{ background:var(--red); color:#fff; }
+    .btn-primary:hover{ filter:brightness(0.95); }
+    .btn-outline{ border:2px solid var(--charcoal); color:var(--charcoal); }
+    .btn-outline:hover{ background:var(--charcoal); color:#fff; }
+    .muted{ color:var(--muted); }
 
     /* HERO */
-    .hero{
-      background:var(--grey);
-      position:relative;
-      overflow:hidden;
-    }
-    .hero h1{
-      font-weight:800;
-      letter-spacing:.2px;
-    }
-    .hero .boom{
-      font-family:"Fredoka", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      color:var(--red);
-      font-size:clamp(32px,6vw,64px);
-      line-height:1;
-      text-transform:uppercase;
-    }
-    /* confetti accents */
-    .confetti span{
-      position:absolute; width:80px; height:6px; border-radius:4px;
-      transform:rotate(18deg);
-    }
-    .confetti .c1{ background:var(--blue); top:18%; left:6%; transform:rotate(24deg); }
-    .confetti .c2{ background:var(--yellow); top:10%; left:42%; transform:rotate(-18deg);}
-    .confetti .c3{ background:var(--red); top:24%; left:78%; transform:rotate(10deg);}
-    .confetti .c4{ background:var(--blue); bottom:12%; left:12%; transform:rotate(-22deg);}
-    .confetti .c5{ background:var(--yellow); bottom:8%; left:60%; transform:rotate(28deg);}
+    .hero{ padding:64px 0; }
+    .hero-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center; }
+    .eyebrow{ color:var(--red); font-weight:900; letter-spacing:.08em; font-size:.9rem; text-transform:uppercase; margin:0 0 8px; }
+    .hero h1{ font-size:3rem; line-height:1.15; margin:0 0 16px; font-weight:900; }
+    .hero h1 .accent{ color:var(--red); }
+    .hero p{ font-size:1.05rem; color:var(--muted); margin:0 0 20px; }
+    .cta-row{ display:flex; gap:14px; flex-wrap:wrap; margin:10px 0 6px; }
+    .subnote{ font-size:.95rem; color:var(--muted); }
 
-    /* value cards */
-    .value-card{
-      border:none; border-radius:16px; background:#fff;
-      box-shadow:0 6px 22px rgba(0,0,0,.06);
-      transition:transform .2s ease, box-shadow .2s ease;
-      height:100%;
-    }
-    .value-card:hover{ transform:translateY(-3px); box-shadow:0 10px 28px rgba(0,0,0,.09); }
-    .value-icon{
-      width:56px; height:56px; border-radius:12px; display:inline-flex;
-      align-items:center; justify-content:center; background:var(--grey); font-size:26px;
+    .visual{
+      border-radius:16px; border:1px solid var(--border);
+      background:repeating-linear-gradient(45deg,#fafafa 0 18px,#f1f1f1 18px 36px);
+      min-height:300px; display:flex; align-items:center; justify-content:center;
+      text-align:center; color:var(--red); font-weight:900;
     }
 
-    /* logo strip placeholders */
-    .logo-pill{
-      height:28px; width:120px; border-radius:6px; background:#e6e6e6;
-      display:inline-block; margin:.5rem 1rem;
+    /* VALUE PILLARS */
+    .section{ padding:56px 0; }
+    .section h2{ font-size:1.9rem; margin:0 0 8px; font-weight:900; }
+    .pillars{ display:grid; gap:18px; grid-template-columns:repeat(4,1fr); margin-top:22px; }
+    .card{
+      background:#fff; border:1px solid var(--border); border-radius:14px; padding:22px;
+      box-shadow:0 8px 18px rgba(0,0,0,.04); height:100%;
+      transition:.15s ease; 
     }
+    .card:hover{ transform:translateY(-2px); box-shadow:0 12px 26px rgba(0,0,0,.06); }
+    .icon{ width:52px; height:52px; display:inline-flex; align-items:center; justify-content:center;
+           border-radius:12px; background:var(--smoke); font-size:26px; margin-bottom:10px; }
 
-    /* feature image placeholder */
-    .img-placeholder{
-      width:100%; aspect-ratio:4/3; background:repeating-linear-gradient(135deg,#eaeaea 0 12px,#f6f6f6 12px 24px);
-      border-radius:16px; border:1px solid #eee;
-    }
+    /* LOGO STRIP */
+    .logo-strip{ background:var(--smoke); padding:28px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .logos{ display:flex; flex-wrap:wrap; gap:22px; justify-content:center; }
+    .logo-ph{ width:120px; height:28px; border-radius:6px; background:#e3e3e3; }
 
-    /* footer */
-    footer{ background:#111; color:#ddd; }
-    footer a{ color:#ddd; text-decoration:none; }
+    /* SPLIT FEATURE */
+    .split{ display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center; }
+    .list{ margin:14px 0 0; padding-left:0; list-style:none; }
+    .list li{ margin:10px 0; }
+
+    /* RESOURCE CTA */
+    .banner{ background:var(--smoke); border:1px solid var(--border); border-radius:16px; padding:22px; display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+
+    /* FOOTER */
+    footer{ background:#111; color:#d7d7d7; padding:28px 0; margin-top:40px; }
+    footer a{ color:#d7d7d7; text-decoration:none; }
     footer a:hover{ color:#fff; }
+
+    /* RESPONSIVE */
+    @media (max-width:992px){
+      .hero-grid{ grid-template-columns:1fr; }
+      .split{ grid-template-columns:1fr; }
+      .pillars{ grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width:600px){
+      .pillars{ grid-template-columns:1fr; }
+      .nav-inner{ flex-wrap:wrap; }
+      .menu{ width:100%; justify-content:flex-start; gap:14px; }
+    }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <!-- Replace with real logo -->
-      <img src="https://dummyimage.com/160x36/ffffff/000.png&text=51Degrees" alt="51Degrees logo">
-    </a>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">51Degrees</div>
+      <nav class="menu">
+        <a href="#">Solutions</a>
+        <a href="#">Services</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources</a>
+        <a href="#">Developers</a>
+        <a class="outline" href="#demo">Contact</a>
+        <a class="cta" href="#early">Get Started</a>
+      </nav>
+    </div>
+  </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">New • IP Intelligence</p>
+          <h1>Turn IP data into <span class="accent">BUSINESS INTELLIGENCE</span></h1>
+          <p>Smarter targeting. Fraud prevention. Global accuracy. 51Degrees transforms raw IP data into actionable insights your teams can use instantly.</p>
 
-    <div id="nav" class="collapse navbar-collapse">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Solutions</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">IP Intelligence</a></li>
-            <li><a class="dropdown-item" href="#">Device Detection</a></li>
-            <li><a class="dropdown-item" href="#">Fraud & Risk</a></li>
+          <div class="cta-row">
+            <a id="early" href="#" class="btn btn-primary">Join Early Access</a>
+            <a id="demo" href="#" class="btn btn-outline">Request a Demo</a>
+          </div>
+          <div class="subnote">Launching soon — join to get priority access & roadmap updates.</div>
+        </div>
+
+        <div class="visual">
+          HERO VISUAL — Replace with product illustration / map + network graphic
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE PILLARS -->
+  <section class="section">
+    <div class="container">
+      <h2>Why IP Intelligence</h2>
+      <div class="muted">High-value benefits at a glance — swap copy later.</div>
+
+      <div class="pillars">
+        <div class="card">
+          <div class="icon">🎯</div>
+          <h3 style="margin:0 0 6px;">Smarter Targeting</h3>
+          <div class="muted">Personalise content and ads with precise location & context.</div>
+        </div>
+        <div class="card">
+          <div class="icon">🔒</div>
+          <h3 style="margin:0 0 6px;">Fraud Prevention</h3>
+          <div class="muted">Detect anomalies, reduce risk, and protect revenue in real-time.</div>
+        </div>
+        <div class="card">
+          <div class="icon">🌍</div>
+          <h3 style="margin:0 0 6px;">Global Coverage</h3>
+          <div class="muted">Accurate enrichment across millions of IPs and networks.</div>
+        </div>
+        <div class="card">
+          <div class="icon">✅</div>
+          <h3 style="margin:0 0 6px;">Privacy-First</h3>
+          <div class="muted">Compliance-ready (GDPR and regional standards).</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO STRIP -->
+  <div class="logo-strip">
+    <div class="container">
+      <div class="muted" style="text-align:center; margin-bottom:10px; text-transform:uppercase; font-weight:700; letter-spacing:.06em;">
+        Trusted by industry leaders
+      </div>
+      <div class="logos">
+        <span class="logo-ph"></span><span class="logo-ph"></span><span class="logo-ph"></span>
+        <span class="logo-ph"></span><span class="logo-ph"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPLIT FEATURE / USE-CASE -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="visual" style="min-height:260px;">
+          DASHBOARD / KPI VISUAL — Replace with product screenshot
+        </div>
+        <div>
+          <h2>Made for your team</h2>
+          <ul class="list">
+            <li><strong>Marketing:</strong> geo-aware experiences and campaign lift</li>
+            <li><strong>Security:</strong> IP risk signals & anomaly detection</li>
+            <li><strong>Product:</strong> routing, localisation, compliance logic</li>
+            <li><strong>Analytics:</strong> cleaner IP context for better decisions</li>
           </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Developers</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
-      </ul>
-
-      <div class="d-flex gap-2">
-        <button class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#earlyAccessModal">Get Started</button>
-        <a class="btn btn-outline-dark" href="#contact">Contact Us</a>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header class="hero py-5 py-lg-6">
-  <div class="confetti d-none d-md-block">
-    <span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c5"></span>
-  </div>
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <p class="text-uppercase mb-1 fw-bold" style="color:var(--red);letter-spacing:.08em;">New • IP Intelligence</p>
-        <h1 class="display-5 mb-2">Turn IP data into <span class="boom">Business Intelligence</span></h1>
-        <p class="lead mb-4">Smarter targeting. Fraud prevention. Global accuracy. 51Degrees transforms raw IP data into actionable insights your teams can use instantly.</p>
-
-        <!-- PRE-LAUNCH CTA -->
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-cta btn-lg" data-bs-toggle="modal" data-bs-target="#earlyAccessModal">Join Early Access</button>
-          <button class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#demoModal">Request a Demo</button>
-        </div>
-
-        <small class="d-block mt-3 text-muted">Launching soon — join to get priority access & roadmap updates.</small>
-      </div>
-
-      <div class="col-lg-6">
-        <!-- Replace with hero artwork or screenshot -->
-        <div class="img-placeholder d-flex align-items-center justify-content-center">
-          <div class="text-center">
-            <div class="mb-2 fw-bold" style="color:var(--red);">Hero Visual</div>
-            <div class="small text-muted">Replace with product illustration / map+network graphic</div>
+          <div class="cta-row" style="margin-top:12px;">
+            <a href="#" class="btn btn-primary">See a Live Walkthrough</a>
+            <a href="#" class="btn btn-outline">View Docs</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </section>
 
-<!-- VALUE PILLARS -->
-<section class="py-5">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-12 text-center mb-2">
-        <h2 class="h3 fw-bold">Why IP Intelligence</h2>
-        <p class="text-muted mb-0">Concise value pillars — swap text later.</p>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="card value-card p-4">
-          <div class="value-icon mb-3">🎯</div>
-          <h5 class="fw-bold mb-2">Smarter Targeting</h5>
-          <p class="mb-0">Personalise content and ads with location & context awareness.</p>
+  <!-- RESOURCE CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="banner">
+        <div>
+          <h3 style="margin:0 0 6px; font-weight:900;">Download the 2025 IP Trends Report</h3>
+          <div class="muted">Thought-leadership placeholder — keep ungated or embed CTAs inside.</div>
         </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="card value-card p-4">
-          <div class="value-icon mb-3">🔒</div>
-          <h5 class="fw-bold mb-2">Fraud Prevention</h5>
-          <p class="mb-0">Detect anomalies, reduce risk, protect revenue in real time.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="card value-card p-4">
-          <div class="value-icon mb-3">🌍</div>
-          <h5 class="fw-bold mb-2">Global Coverage</h5>
-          <p class="mb-0">Accurate insight across millions of IPs and networks.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="card value-card p-4">
-          <div class="value-icon mb-3">✅</div>
-          <h5 class="fw-bold mb-2">Privacy-First</h5>
-          <p class="mb-0">Compliance-ready enrichment (GDPR & regional standards).</p>
-        </div>
+        <a href="#" class="btn btn-outline">Download (PDF)</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SOCIAL PROOF -->
-<section class="py-4 bg-light">
-  <div class="container text-center">
-    <div class="mb-2 text-uppercase small fw-bold text-muted">Trusted by industry leaders</div>
-    <span class="logo-pill"></span>
-    <span class="logo-pill"></span>
-    <span class="logo-pill"></span>
-    <span class="logo-pill"></span>
-    <span class="logo-pill"></span>
-  </div>
-</section>
-
-<!-- FEATURE / USE-CASE SPLIT -->
-<section class="py-5">
-  <div class="container">
-    <div class="row g-5 align-items-center">
-      <div class="col-lg-6 order-lg-2">
-        <div class="img-placeholder d-flex align-items-center justify-content-center">
-          <div class="text-center">
-            <div class="mb-2 fw-bold" style="color:var(--red);">Use-Case Visual</div>
-            <div class="small text-muted">Replace with dashboard / map / KPIs</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <h3 class="fw-bold">Made for your team</h3>
-        <ul class="mt-3 list-unstyled">
-          <li class="mb-2">• <strong>Marketing:</strong> geo-aware experiences & campaign lift</li>
-          <li class="mb-2">• <strong>Security:</strong> risk scoring & anomaly detection</li>
-          <li class="mb-2">• <strong>Product:</strong> routing, compliance & localisation</li>
-          <li>• <strong>Analytics:</strong> clean IP context in reporting</li>
-        </ul>
-        <div class="d-flex gap-2 mt-3">
-          <button class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#demoModal">See a Live Walkthrough</button>
-          <a href="#" class="btn btn-outline-dark">View Docs</a>
-        </div>
+  <!-- FINAL CTA -->
+  <section class="section">
+    <div class="container" style="text-align:center;">
+      <h2>Ready to turn IP data into outcomes?</h2>
+      <p class="muted">Talk to our team about targeting, risk, and performance goals.</p>
+      <div class="cta-row" style="justify-content:center;">
+        <a href="#" class="btn btn-primary">Request a Demo</a>
+        <a href="#" class="btn btn-outline">Join Early Access</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- RESOURCE CTA -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-8">
-        <h4 class="fw-bold mb-1">Download the 2025 IP Trends Report</h4>
-        <p class="mb-0 text-muted">Thought leadership sample placeholder — summarise market shifts and best practices. Keep ungated or add embedded CTAs.</p>
-      </div>
-      <div class="col-lg-4 text-lg-end">
-        <a href="#" class="btn btn-outline-dark btn-lg">Download (PDF)</a>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="display:flex; gap:12px; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+      <div><small>© 51Degrees — IP Intelligence (mock page). Replace with legal text.</small></div>
+      <div style="display:flex; gap:16px;">
+        <small><a href="#">Privacy</a></small>
+        <small><a href="#">Security</a></small>
+        <small><a href="#">Status</a></small>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- CONTACT / FINAL CTA -->
-<section id="contact" class="py-5">
-  <div class="container text-center">
-    <h3 class="fw-bold mb-2">Ready to turn IP data into outcomes?</h3>
-    <p class="text-muted mb-4">Talk to our team about targets, risk, and performance goals.</p>
-    <div class="d-flex justify-content-center gap-2">
-      <button class="btn btn-cta btn-lg" data-bs-toggle="modal" data-bs-target="#demoModal">Request a Demo</button>
-      <button class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#earlyAccessModal">Join Early Access</button>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-4">
-  <div class="container">
-    <div class="row gy-3 align-items-center">
-      <div class="col-md-6">
-        <small>© 51Degrees — IP Intelligence (mockup). Replace with legal text.</small>
-      </div>
-      <div class="col-md-6 text-md-end">
-        <small><a href="#">Privacy</a> · <a href="#">Security</a> · <a href="#">Status</a></small>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- EARLY ACCESS MODAL (Pre-launch CTA) -->
-<div class="modal fade" id="earlyAccessModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <form class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Join Early Access</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label class="form-label">First name</label>
-            <input class="form-control" placeholder="Ada">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Last name</label>
-            <input class="form-control" placeholder="Lovelace">
-          </div>
-          <div class="col-12">
-            <label class="form-label">Work email</label>
-            <input type="email" class="form-control" placeholder="you@company.com">
-          </div>
-          <div class="col-12">
-            <label class="form-label">Company</label>
-            <input class="form-control" placeholder="Company Ltd">
-          </div>
-          <div class="col-12">
-            <label class="form-label">Role</label>
-            <input class="form-control" placeholder="Head of Marketing">
-          </div>
-          <small class="text-muted">Submitting this mock form doesn’t send data — hook up to your backend later.</small>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-cta" type="button" data-bs-dismiss="modal">Request Invite</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- DEMO MODAL (Lead CTA) -->
-<div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <form class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Request a Demo</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row g-3">
-          <div class="col-12">
-            <label class="form-label">Work email</label>
-            <input type="email" class="form-control" placeholder="you@company.com">
-          </div>
-          <div class="col-12">
-            <label class="form-label">What would you like to explore?</label>
-            <select class="form-select">
-              <option>Targeting & Personalisation</option>
-              <option>Fraud & Risk</option>
-              <option>Compliance & Routing</option>
-              <option>All of the above</option>
-            </select>
-          </div>
-          <div class="col-12">
-            <label class="form-label">Notes (optional)</label>
-            <textarea class="form-control" rows="3" placeholder="Goals, KPIs, timelines…"></textarea>
-          </div>
-          <small class="text-muted">This is a static mock. Connect to CRM/form handler later.</small>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-cta" type="button" data-bs-dismiss="modal">Submit Request</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
