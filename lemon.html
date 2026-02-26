@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>When Life Gives You Lemon</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 body {
@@ -17,46 +16,53 @@ body {
     overflow-x: hidden;
 }
 
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
 .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 120px 20px 60px;
+    padding: 20px;
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 64px;
     margin: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.2s ease;
 }
 
 .tagline {
     margin-top: 20px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.8;
-    opacity: 0.85;
+    max-width: 600px;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.6s ease;
 }
 
-.counter {
-    margin-top: 30px;
-    font-size: 18px;
-    opacity: 0.6;
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.form-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 form {
-    max-width: 520px;
-    margin: 60px auto;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(25px);
     background: rgba(255,255,255,0.05);
-    padding: 40px;
     border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 550px;
+    transition: 0.6s ease;
 }
 
 input, textarea {
@@ -70,7 +76,10 @@ input, textarea {
     font-size: 15px;
 }
 
-textarea { height: 150px; resize: none; }
+textarea {
+    height: 150px;
+    resize: none;
+}
 
 button {
     width: 100%;
@@ -79,6 +88,7 @@ button {
     border: none;
     background: white;
     color: black;
+    font-weight: 500;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -91,123 +101,73 @@ button:hover {
     display: none;
     margin-top: 20px;
     font-style: italic;
-    opacity: 0.85;
-    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.background-glow {
+    position: fixed;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255,215,0,0.08), transparent 60%);
+    top: -200px;
+    left: -200px;
+    animation: floatGlow 15s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+@keyframes floatGlow {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(200px, 200px); }
 }
 </style>
 </head>
 
 <body>
 
-<canvas id="lemonCanvas"></canvas>
+<div class="background-glow"></div>
 
 <section class="hero">
-    <h1>When Life Gives You Lemon</h1>
-    <div class="tagline">
+    <h1 id="title">When Life Gives You Lemon</h1>
+    <p class="tagline" id="tagline">
         They told us to make lemonade.  
         We are not convinced.  
-        <br><br>
         When life gives you lemon — what do you do?
-    </div>
-
-    <div class="counter" id="counter">
-        Loading lemons...
-    </div>
+    </p>
 </section>
 
-<form id="lemonForm">
-    <input type="text" id="name" placeholder="First name / What you go by" required>
-    <input type="text" id="country" placeholder="City / Country" required>
-    <textarea id="response" placeholder="When life gives you lemon..." required></textarea>
-    <button type="submit">Submit</button>
-
-    <div id="success">
-        Your lemon has been planted.  
-        Nothing shared here is small.  
-        When it becomes something, we will let you know.
-    </div>
-</form>
+<section class="form-section">
+    <form id="lemonForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <input type="text" name="name" placeholder="First name / What you go by" required>
+        <input type="text" name="country" placeholder="City / Country" required>
+        <textarea name="response" placeholder="When life gives you lemon..." required></textarea>
+        <button type="submit">Submit</button>
+        <div id="success">
+            Your words have been received.  
+            Nothing shared here is small.  
+            When it becomes something, you will know.
+        </div>
+    </form>
+</section>
 
 <script>
-// 🔑 INSERT YOUR SUPABASE INFO
-const SUPABASE_URL = "YOUR_SUPABASE_URL";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
-
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-// 🍋 Load Counter
-async function loadCounter() {
-    const { count } = await supabaseClient
-        .from('lemons')
-        .select('*', { count: 'exact', head: true });
-
-    document.getElementById('counter').innerText =
-        `${count || 0} lemons planted worldwide`;
-}
-loadCounter();
-
-// 🍋 Submit
-document.getElementById("lemonForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const country = document.getElementById("country").value;
-    const response = document.getElementById("response").value;
-
-    await supabaseClient.from('lemons').insert([
-        { name, country, response }
-    ]);
-
-    document.getElementById("success").style.display = "block";
-    e.target.reset();
-    loadCounter();
+window.addEventListener("load", () => {
+    document.getElementById("title").classList.add("show");
+    document.getElementById("tagline").classList.add("show");
 });
 
-// 🍋 Falling Lemons Animation
-const canvas = document.getElementById("lemonCanvas");
-const ctx = canvas.getContext("2d");
+const form = document.getElementById("lemonForm");
+const success = document.getElementById("success");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let lemons = [];
-
-for (let i = 0; i < 30; i++) {
-    lemons.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        size: Math.random() * 20 + 10,
-        speed: Math.random() * 1 + 0.5,
-        opacity: Math.random() * 0.2 + 0.05
+form.addEventListener("submit", async function(e){
+    e.preventDefault();
+    const data = new FormData(form);
+    await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
     });
-}
-
-function drawLemon(l) {
-    ctx.beginPath();
-    ctx.ellipse(l.x, l.y, l.size, l.size * 0.7, 0, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(255, 223, 50, ${l.opacity})`;
-    ctx.fill();
-}
-
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    lemons.forEach(l => {
-        l.y += l.speed;
-        if (l.y > canvas.height) {
-            l.y = -20;
-            l.x = Math.random() * canvas.width;
-        }
-        drawLemon(l);
-    });
-
-    requestAnimationFrame(animate);
-}
-animate();
-
-window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    form.reset();
+    success.style.display = "block";
 });
 </script>
 
