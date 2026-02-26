@@ -421,3 +421,25 @@ footer .social-icons a {
     width: 50%;
   }
 }
+@media (max-width: 768px) {
+  .headline-main {
+    font-size: 2rem;
+  }
+  .headline-sub,
+  .headline-question {
+    font-size: 1rem;
+  }
+  .form-section input,
+  .form-section textarea {
+    width: 90%;
+  }
+  .form-section button {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .form-section {
+    padding: 40px 15px;
+    border-radius: 15px 15px 0 0;
+  }
+}
