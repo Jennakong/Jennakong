@@ -231,3 +231,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 })();
+function scaleObjects() {
+  if(window.innerWidth < 768) {
+    tree.scale.set(0.5, 0.5, 0.5);
+    lemon.scale.set(0.35, 0.35, 0.35);
+  } else {
+    tree.scale.set(0.8, 0.8, 0.8);
+    lemon.scale.set(0.5, 0.5, 0.5);
+  }
+}
+scaleObjects();
+
+window.addEventListener("resize", scaleObjects);
+window.addEventListener("click", () => birds.play());
+window.addEventListener("touchstart", () => birds.play());
+const treeSegments = window.innerWidth < 480 ? 16 : 64;
+const lemonSegments = window.innerWidth < 480 ? 16 : 64;
+
+const treeGeometry = new THREE.SphereGeometry(3, treeSegments, treeSegments);
+const lemonGeometry = new THREE.SphereGeometry(0.5, lemonSegments, lemonSegments);
+window.addEventListener("resize", () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
