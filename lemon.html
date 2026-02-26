@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When Life Gives You Lemon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<style>
+body {
+    margin: 0;
+    background: #0f0f0f;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px 60px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    margin: 0;
+}
+
+.tagline {
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+.counter {
+    margin-top: 30px;
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+form {
+    max-width: 520px;
+    margin: 60px auto;
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.05);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 15px;
+}
+
+textarea { height: 150px; resize: none; }
+
+button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+#success {
+    display: none;
+    margin-top: 20px;
+    font-style: italic;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="lemonCanvas"></canvas>
+
+<section class="hero">
+    <h1>When Life Gives You Lemon</h1>
+    <div class="tagline">
+        They told us to make lemonade.  
+        We are not convinced.  
+        <br><br>
+        When life gives you lemon — what do you do?
+    </div>
+
+    <div class="counter" id="counter">
+        Loading lemons...
+    </div>
+</section>
+
+<form id="lemonForm">
+    <input type="text" id="name" placeholder="First name / What you go by" required>
+    <input type="text" id="country" placeholder="City / Country" required>
+    <textarea id="response" placeholder="When life gives you lemon..." required></textarea>
+    <button type="submit">Submit</button>
+
+    <div id="success">
+        Your lemon has been planted.  
+        Nothing shared here is small.  
+        When it becomes something, we will let you know.
+    </div>
+</form>
+
+<script>
+// 🔑 INSERT YOUR SUPABASE INFO
+const SUPABASE_URL = "YOUR_SUPABASE_URL";
+const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// 🍋 Load Counter
+async function loadCounter() {
+    const { count } = await supabaseClient
+        .from('lemons')
+        .select('*', { count: 'exact', head: true });
+
+    document.getElementById('counter').innerText =
+        `${count || 0} lemons planted worldwide`;
+}
+loadCounter();
+
+// 🍋 Submit
+document.getElementById("lemonForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const country = document.getElementById("country").value;
+    const response = document.getElementById("response").value;
+
+    await supabaseClient.from('lemons').insert([
+        { name, country, response }
+    ]);
+
+    document.getElementById("success").style.display = "block";
+    e.target.reset();
+    loadCounter();
+});
+
+// 🍋 Falling Lemons Animation
+const canvas = document.getElementById("lemonCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let lemons = [];
+
+for (let i = 0; i < 30; i++) {
+    lemons.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 20 + 10,
+        speed: Math.random() * 1 + 0.5,
+        opacity: Math.random() * 0.2 + 0.05
+    });
+}
+
+function drawLemon(l) {
+    ctx.beginPath();
+    ctx.ellipse(l.x, l.y, l.size, l.size * 0.7, 0, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255, 223, 50, ${l.opacity})`;
+    ctx.fill();
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    lemons.forEach(l => {
+        l.y += l.speed;
+        if (l.y > canvas.height) {
+            l.y = -20;
+            l.x = Math.random() * canvas.width;
+        }
+        drawLemon(l);
+    });
+
+    requestAnimationFrame(animate);
+}
+animate();
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+</script>
+
+</body>
+</html>
