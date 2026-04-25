@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why Do We Need More Clothes? | Jennifer Akong</title>
+  <meta name="description" content="On value, waste, and what it means to make something that lasts. By Jennifer Akong, founder of MANIA by Jennifer.">
+  <meta name="author" content="Jennifer Akong">
+  <link rel="icon" href="images/logo1.png" type="image/png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --green:      #0f2e1f;
+      --green-mid:  #1a4a2e;
+      --gold:       #C6A664;
+      --gold-dark:  #a78c47;
+      --cream:      #fffdf9;
+      --off-white:  #f5f2e9;
+      --border:     #ddd;
+      --text:       #1c1c1c;
+      --muted:      #666;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cream);
+      color: var(--text);
+      padding-top: 80px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+    /* READING BAR */
+    #reading-bar {
+      position: fixed; top: 0; left: 0;
+      height: 3px; width: 0%;
+      background: linear-gradient(to right, var(--gold), var(--gold-dark));
+      z-index: 9999; transition: width 0.1s linear;
+    }
+
+    /* NAVBAR */
+    .navbar { background-color: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+    .navbar-nav .nav-link { color: var(--text); font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em; }
+    .navbar-nav .nav-link:hover { color: var(--gold); }
+    .logo-img { max-height: 70px; object-fit: contain; }
+
+    /* HERO BANNER */
+    .hero-banner-placeholder {
+      width: 100%; height: 400px;
+      background-color: #1a3d28;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 10px;
+      color: rgba(255,255,255,0.45);
+    }
+    .hero-banner-placeholder i { font-size: 3rem; }
+    .hero-banner-placeholder .ph-label { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .hero-banner-placeholder .ph-src { font-family: monospace; font-size: 0.72rem; background: rgba(255,255,255,0.08); padding: 4px 12px; border-radius: 4px; }
+
+    /* HERO TEXT */
+    .hero {
+      background-color: var(--green);
+      text-align: center;
+      padding: 56px 20px 48px;
+      border-bottom: 2px solid var(--gold);
+    }
+    .hero-meta {
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px; margin-bottom: 20px;
+      font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+    .hero-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+    .tag {
+      display: inline-block; background-color: var(--gold); color: #fff;
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 3px 10px; border-radius: 3px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--gold); margin-bottom: 14px; line-height: 1.2;
+    }
+    .hero p { color: rgba(255,255,255,0.7); font-size: 1rem; max-width: 600px; margin: 0 auto; font-style: italic; }
+
+    /* ARTICLE */
+    .content-wrapper { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+    .content-wrapper p { font-size: 1rem; line-height: 1.9; margin-bottom: 26px; color: #2e2e2e; }
+
+    /* PULL QUOTE */
+    .pull-quote {
+      border-left: 4px solid var(--gold);
+      background-color: var(--off-white);
+      padding: 28px 32px; margin: 40px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-style: italic; color: var(--green) !important;
+      margin: 0 !important; line-height: 1.45;
+    }
+
+    /* SECTION DIVIDER */
+    .section-divider { display: flex; align-items: center; gap: 14px; margin: 44px 0 32px; }
+    .section-divider span { display: block; height: 1px; flex: 1; background: var(--border); }
+    .section-divider i { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background-color: var(--green); color: #fff;
+      border-radius: 8px; padding: 28px 32px; margin: 36px 0;
+    }
+    .highlight-box p { color: rgba(255,255,255,0.9) !important; margin: 0 !important; }
+    .highlight-box strong { color: var(--gold); }
+
+    /* IMAGE / VIDEO PLACEHOLDERS */
+    .media-block { margin: 40px 0; }
+    .media-block figcaption { font-size: 0.82rem; color: var(--muted); margin-top: 10px; text-align: center; font-style: italic; }
+    .media-block img { width: 100%; border-radius: 8px; display: block; }
+
+    .img-placeholder {
+      width: 100%; border-radius: 8px;
+      background-color: #d8e8de;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 10px; padding: 56px 20px;
+      color: var(--green-mid);
+    }
+    .img-placeholder i { font-size: 2.6rem; opacity: 0.4; }
+    .img-placeholder .ph-label { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; text-align: center; }
+    .img-placeholder .ph-src { font-family: monospace; font-size: 0.72rem; background: rgba(15,46,31,0.1); padding: 4px 10px; border-radius: 4px; color: var(--green); }
+
+    .img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+    .img-grid .img-placeholder { padding: 40px 12px; }
+    @media (max-width: 560px) { .img-grid { grid-template-columns: 1fr; } }
+
+    .video-placeholder {
+      width: 100%; aspect-ratio: 16/9;
+      background-color: #111; border-radius: 8px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 12px;
+      color: rgba(255,255,255,0.45); position: relative; overflow: hidden;
+    }
+    .video-placeholder::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(15,46,31,0.7), rgba(198,166,100,0.1));
+    }
+    .video-placeholder i { font-size: 3.5rem; z-index: 1; }
+    .video-placeholder .ph-label { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; z-index: 1; }
+    .video-placeholder .ph-src { font-family: monospace; font-size: 0.72rem; background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px; z-index: 1; }
+
+    /* SHARE */
+    .share-bar {
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      padding: 28px 0;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      margin: 20px 0 56px;
+    }
+    .share-label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 8px 16px; border-radius: 5px;
+      border: 1px solid var(--border); background: transparent;
+      font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 500;
+      color: var(--text); cursor: pointer; transition: all 0.2s; text-decoration: none;
+    }
+    .share-btn:hover { background: var(--green); color: var(--gold); border-color: var(--green); }
+
+    /* AUTHOR */
+    .author-card {
+      display: flex; gap: 20px; align-items: flex-start;
+      background-color: var(--off-white); border: 1px solid var(--border);
+      border-radius: 10px; padding: 28px; margin-bottom: 72px;
+    }
+    .author-avatar {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 1.5rem;
+      color: var(--gold); flex-shrink: 0;
+    }
+    .author-info h4 { font-size: 1.1rem; margin-bottom: 4px; }
+    .author-info p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin: 0; }
+    @media (max-width: 480px) { .author-card { flex-direction: column; } }
+
+    /* COMMENTS */
+    .comments-section { background-color: var(--off-white); padding: 60px 20px; }
+    .comments-inner { max-width: 760px; margin: 0 auto; }
+    .comments-inner h3 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 32px; }
+    #comment-list { margin-bottom: 48px; }
+    .comment-item {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 8px; padding: 20px; margin-bottom: 16px;
+      animation: fadeUp 0.3s ease forwards;
+    }
+    .comment-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .comment-avatar {
+      width: 36px; height: 36px; border-radius: 50%; background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--gold); flex-shrink: 0;
+    }
+    .comment-name { font-weight: 500; font-size: 0.9rem; }
+    .comment-date { font-size: 0.75rem; color: var(--muted); }
+    .comment-body { font-size: 0.92rem; color: #3a3a3a; line-height: 1.7; }
+
+    .comment-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 540px) { .form-row { grid-template-columns: 1fr; } }
+    .comment-form input,
+    .comment-form textarea {
+      padding: 13px 15px; font-family: 'Poppins', sans-serif; font-size: 0.92rem;
+      border: 1px solid var(--border); border-radius: 6px;
+      background: #fff; color: var(--text); transition: border-color 0.2s, box-shadow 0.2s; width: 100%;
+    }
+    .comment-form input:focus, .comment-form textarea:focus {
+      outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(198,166,100,0.15);
+    }
+    .comment-form textarea { resize: vertical; min-height: 120px; }
+    .submit-btn {
+      align-self: flex-start;
+      background-color: var(--green); color: var(--gold);
+      border: 1.5px solid var(--gold);
+      padding: 12px 28px; font-family: 'Poppins', sans-serif;
+      font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; border-radius: 5px; cursor: pointer; transition: all 0.2s;
+    }
+    .submit-btn:hover { background-color: var(--gold); color: #fff; }
+    .success-msg {
+      display: none; background: #eaf4ee; border: 1px solid #b0d9bc;
+      color: #226640; border-radius: 6px; padding: 12px 16px; font-size: 0.88rem;
+    }
+
+    /* RELATED */
+    .related { background-color: var(--green); padding: 70px 6%; }
+    .related h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--gold); text-align: center; margin-bottom: 36px; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 860px; margin: 0 auto; }
+    .related-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(198,166,100,0.3);
+      border-radius: 10px; padding: 28px 24px; text-decoration: none; color: #fff;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+    .related-card:hover { background: rgba(198,166,100,0.1); border-color: var(--gold); transform: translateY(-3px); }
+    .related-card .tag { margin-bottom: 14px; }
+    .related-card h4 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 10px; line-height: 1.35; }
+    .related-card p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+    /* FOOTER */
+    footer { background-color: var(--green); border-top: 1px solid rgba(198,166,100,0.3); color: rgba(255,255,255,0.6); text-align: center; padding: 40px 20px 28px; }
+    .footer-icon { margin: 0 12px; color: var(--gold); font-size: 1.5rem; transition: color 0.2s; }
+    .footer-icon:hover { color: #fff; }
+    footer p { font-size: 0.82rem; margin-top: 16px; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<div id="reading-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="d-none d-lg-block" style="width:100px;"></div>
+    <a class="navbar-brand mx-auto" href="index.html">
+      <img src="images/logo1.png" alt="Jennifer Akong Logo" class="logo-img">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Meet Jenn</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO BANNER — replace this block with <img src="images/YOUR-FILE.jpg"> when ready -->
+<div class="hero-banner-placeholder">
+  <i class="bi bi-image"></i>
+  <span class="ph-label">Hero banner image</span>
+  <span class="ph-src">images/blog-why-clothes-hero.jpg</span>
+</div>
+
+<!-- HERO TEXT -->
+<section class="hero">
+  <div class="hero-meta">
+    <span class="tag">Fashion</span>
+    <span class="dot"></span>
+    <span>April 2025</span>
+    <span class="dot"></span>
+    <span>5 min read</span>
+  </div>
+  <h1>Why Do We Need More Clothes?</h1>
+  <p>On value, waste, and what it means to make something that lasts.</p>
+</section>
+
+<!-- ARTICLE -->
+<div class="content-wrapper">
+
+  <p class="fade-in">"Why do we need more clothes?" That was the question a tutor at the Jimmy Choo Fashion Academy asked me during a conversation we were having. I knew he was trying to pick my brain a little, but my answer came almost immediately.</p>
+
+  <p class="fade-in">"We don't."</p>
+  <p class="fade-in">And I meant it.</p>
+  <p class="fade-in">We don't need more clothes in this world. There is already so much, too much, even. But then I caught myself and said something else:</p>
+
+  <div class="pull-quote fade-in">
+    <p>"If we must make clothes, then what value are we adding?"</p>
+  </div>
+
+  <p class="fade-in">That's really the question. Because fashion, for me, has never just been about making something new. It's about meaning. It's about what that piece does for someone. Does it bring joy? Does it empower them? Does it mark a special moment in their life? Does it carry a story?</p>
+
+  <p class="fade-in">I grew up understanding clothes this way.</p>
+
+  <!-- IMAGE 1: Personal / family -->
+  <figure class="media-block fade-in">
+    <!--
+      REPLACE THIS PLACEHOLDER:
+      <img src="images/YOUR-IMAGE.jpg" alt="Description of image">
+    -->
+    <div class="img-placeholder">
+      <i class="bi bi-image"></i>
+      <span class="ph-label">Personal image — family, your aunt sewing, or early work</span>
+      <span class="ph-src">images/blog-why-clothes-personal.jpg</span>
+    </div>
+    <figcaption>Add your caption here — a memory, your aunt's workroom, or early pieces.</figcaption>
+  </figure>
+
+  <div class="section-divider fade-in"><span></span><i></i><span></span></div>
+
+  <p class="fade-in">I come from a family where garments were passed down. Pieces didn't just disappear after one wear. They stayed, they evolved. I remember my mum giving me an aso-oke dress she had owned for years. Instead of leaving it as it was, I transformed it into a jumpsuit. It became something new, but it still carried its history with it.</p>
+
+  <div class="highlight-box fade-in">
+    <p><strong>That's value.</strong> That's what I think we're losing in fashion today.</p>
+  </div>
+
+  <p class="fade-in">Now everything feels fast. Disposable. One wear, one post, and it's gone. But clothing shouldn't be like that. It shouldn't be temporary.</p>
+
+  <p class="fade-in">And I understand. Someone might say, "Well, I can afford it. I can wear it once and move on." But I think there's a more important question we should be asking:</p>
+
+  <div class="pull-quote fade-in">
+    <p>Where does the waste go?</p>
+  </div>
+
+  <p class="fade-in">It's a question a lot of people don't even stop to consider. When you throw something away, where does it actually end up? Because it doesn't just disappear.</p>
+
+  <p class="fade-in">We're living in a world, especially in parts of Africa, where the effects of waste are visible. Where systems are already strained. Where conversations around sustainability, waste, and even clean energy are becoming more urgent.</p>
+
+  <!-- IMAGE 2: Waste / sustainability -->
+  <figure class="media-block fade-in">
+    <!--
+      REPLACE THIS PLACEHOLDER:
+      <img src="images/YOUR-IMAGE.jpg" alt="Fashion waste">
+    -->
+    <div class="img-placeholder">
+      <i class="bi bi-image"></i>
+      <span class="ph-label">Image — fashion waste, textile dump, or sustainability</span>
+      <span class="ph-src">images/blog-why-clothes-waste.jpg</span>
+    </div>
+    <figcaption>Add your caption here — the visible cost of disposable fashion.</figcaption>
+  </figure>
+
+  <p class="fade-in">The small decisions we make, what we buy, how we wear it, how quickly we discard it, add up over time. You may not see the impact immediately, but in the long run, it's there.</p>
+
+  <p class="fade-in">So before it becomes "one wear, one post, and it's gone" simply because you can afford to replace it, pause and ask yourself: where does that waste go?</p>
+
+  <div class="section-divider fade-in"><span></span><i></i><span></span></div>
+
+  <!-- VIDEO -->
+  <figure class="media-block fade-in">
+    <!--
+      YOUTUBE EMBED — replace this block with:
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allowfullscreen></iframe>
+      </div>
+
+      YOUR OWN VIDEO FILE — replace this block with:
+      <video controls style="width:100%;border-radius:8px;">
+        <source src="images/your-video.mp4" type="video/mp4">
+      </video>
+    -->
+    <div class="video-placeholder">
+      <i class="bi bi-play-circle"></i>
+      <span class="ph-label">Video — your story, a campaign clip, or a reel</span>
+      <span class="ph-src">images/your-video.mp4 — or YouTube embed</span>
+    </div>
+    <figcaption>Add your caption here.</figcaption>
+  </figure>
+
+  <p class="fade-in">I aspire to create pieces that last. Pieces that people keep, love, and eventually pass down. Clothes that become heirlooms. Clothes that mean something long after the moment they were first worn.</p>
+
+  <p class="fade-in">I remember making a dress for a Namibian celebrity in 2018. Years later, when I went back to find photos of my work, I noticed something before I even got to that year. She had worn the dress again in 2020, or 2021.</p>
+
+  <p class="fade-in">And that meant everything to me. Because she didn't have to. She could have worn it once and moved on. But she didn't. The dress still held value for her.</p>
+
+  <!-- IMAGE GRID: the 2018 dress, worn again -->
+  <div class="img-grid fade-in">
+    <figure style="margin:0;">
+      <!--
+        REPLACE: <img src="images/YOUR-IMAGE.jpg" alt="The 2018 dress">
+      -->
+      <div class="img-placeholder">
+        <i class="bi bi-image"></i>
+        <span class="ph-label">The 2018 dress</span>
+        <span class="ph-src">images/blog-dress-2018.jpg</span>
+      </div>
+      <figcaption style="font-size:0.8rem;color:var(--muted);margin-top:6px;text-align:center;font-style:italic;">The original, 2018.</figcaption>
+    </figure>
+    <figure style="margin:0;">
+      <!--
+        REPLACE: <img src="images/YOUR-IMAGE.jpg" alt="Worn again 2020">
+      -->
+      <div class="img-placeholder">
+        <i class="bi bi-image"></i>
+        <span class="ph-label">Worn again — 2020 or 2021</span>
+        <span class="ph-src">images/blog-dress-reworn.jpg</span>
+      </div>
+      <figcaption style="font-size:0.8rem;color:var(--muted);margin-top:6px;text-align:center;font-style:italic;">Still worn, years later.</figcaption>
+    </figure>
+  </div>
+
+  <div class="highlight-box fade-in">
+    <p>That is the kind of fashion I believe in.</p>
+  </div>
+
+  <p class="fade-in">So no, we don't need more clothes. We need more thoughtful clothes. More intentional clothes. More sustainable clothes. Clothes that are made with care, for the wearer and for the world.</p>
+
+  <p class="fade-in">Because fashion affects more than just how we look. It affects our environment, our communities, and our future.</p>
+
+  <p class="fade-in">If you're a designer, I think this is something you should always ask yourself: what value am I creating? Not just for today, but for years to come.</p>
+
+  <p class="fade-in">Fashion, in its own way, can heal the world. But only if we choose to create differently.</p>
+
+  <!-- IMAGE 3: Closing — MANIA collection or you at work -->
+  <figure class="media-block fade-in">
+    <!--
+      REPLACE: <img src="images/YOUR-IMAGE.jpg" alt="MANIA by Jennifer">
+    -->
+    <div class="img-placeholder">
+      <i class="bi bi-image"></i>
+      <span class="ph-label">Closing image — MANIA collection, you designing, or a favourite piece</span>
+      <span class="ph-src">images/blog-why-clothes-closing.jpg</span>
+    </div>
+    <figcaption>Add your caption here.</figcaption>
+  </figure>
+
+  <!-- SHARE -->
+  <div class="share-bar fade-in">
+    <span class="share-label">Share</span>
+    <a class="share-btn" href="https://twitter.com/intent/tweet?text=Why+Do+We+Need+More+Clothes%3F+by+Jennifer+Akong&url=" target="_blank">
+      <i class="bi bi-twitter-x"></i> X / Twitter
+    </a>
+    <button class="share-btn" onclick="copyLink()">
+      <i class="bi bi-link-45deg"></i> <span id="copy-label">Copy Link</span>
+    </button>
+  </div>
+
+  <!-- AUTHOR -->
+  <div class="author-card fade-in">
+    <div class="author-avatar">J</div>
+    <div class="author-info">
+      <h4>Jennifer Akong</h4>
+      <p>Founder of Mania by Jennifer and A Thousand Women. Fashion designer, creative director, and writer exploring craft, culture, and the meaning behind what we wear.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- COMMENTS -->
+<section class="comments-section">
+  <div class="comments-inner">
+    <h3>Leave a Comment</h3>
+    <div id="comment-list">
+      <div class="comment-item">
+        <div class="comment-header">
+          <div class="comment-avatar">A</div>
+          <div>
+            <div class="comment-name">Adaeze O.</div>
+            <div class="comment-date">3 days ago</div>
+          </div>
+        </div>
+        <p class="comment-body">This is exactly the conversation we need. The aso-oke jumpsuit story is everything. Pass it down, not throw it down.</p>
+      </div>
+    </div>
+    <div class="comment-form">
+      <div class="form-row">
+        <input type="text" id="c-name" placeholder="Your name" />
+        <input type="email" id="c-email" placeholder="Your email (not published)" />
+      </div>
+      <textarea id="c-body" placeholder="Share your thoughts..."></textarea>
+      <div class="success-msg" id="success-msg">Thank you. Your comment has been posted.</div>
+      <button class="submit-btn" onclick="postComment()">Post Comment</button>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="related">
+  <h3>You May Also Like</h3>
+  <div class="related-grid">
+    <a href="blog-afro-fusion.html" class="related-card">
+      <span class="tag">Campaign</span>
+      <h4>Designing With Heritage: Why Afro-Fusion Fashion Is More Than a Trend</h4>
+      <p>Fashion is not just fabric. It's memory, identity, resistance, and how we carry legacy forward.</p>
+    </a>
+    <a href="blog-fashion-brand.html" class="related-card">
+      <span class="tag">Business</span>
+      <h4>How I Built a Fashion Brand from Scratch</h4>
+      <p>Behind the scenes of MANIA by Jennifer, from sourcing to campaign launch.</p>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="mb-3">
+    <a href="https://instagram.com/jenn.akong" target="_blank" class="footer-icon"><i class="bi bi-instagram"></i></a>
+    <a href="https://linkedin.com/in/jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+    <a href="https://youtube.com/@jenniferakong1" target="_blank" class="footer-icon"><i class="bi bi-youtube"></i></a>
+  </div>
+  <p>&copy; 2025 Jennifer Akong. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Reading bar
+  window.addEventListener('scroll', () => {
+    const d = document.documentElement;
+    const pct = (d.scrollTop / (d.scrollHeight - d.clientHeight)) * 100;
+    document.getElementById('reading-bar').style.width = pct + '%';
+  });
+
+  // Fade-in on scroll
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+  // Copy link
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const lbl = document.getElementById('copy-label');
+      lbl.textContent = 'Copied!';
+      setTimeout(() => { lbl.textContent = 'Copy Link'; }, 2200);
+    });
+  }
+
+  // Post comment
+  function postComment() {
+    const name = document.getElementById('c-name').value.trim();
+    const body = document.getElementById('c-body').value.trim();
+    if (!name || !body) { alert('Please fill in your name and comment.'); return; }
+    const list = document.getElementById('comment-list');
+    const div = document.createElement('div');
+    div.className = 'comment-item';
+    div.innerHTML = `
+      <div class="comment-header">
+        <div class="comment-avatar">${name[0].toUpperCase()}</div>
+        <div>
+          <div class="comment-name">${name}</div>
+          <div class="comment-date">Just now</div>
+        </div>
+      </div>
+      <p class="comment-body">${body}</p>`;
+    list.appendChild(div);
+    document.getElementById('c-name').value = '';
+    document.getElementById('c-email').value = '';
+    document.getElementById('c-body').value = '';
+    const msg = document.getElementById('success-msg');
+    msg.style.display = 'block';
+    setTimeout(() => { msg.style.display = 'none'; }, 4000);
+    div.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+</script>
+</body>
+</html>
